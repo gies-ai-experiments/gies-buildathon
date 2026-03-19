@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gies Buildathon 2026 — Where Business Meets Innovation</title>
+  <meta name="description" content="24-hour innovation competition for Gies College of Business students at UIUC. Build solutions across Finance, HR, Marketing, Technology, and more. April 2026.">
+  <meta property="og:title" content="Gies Buildathon 2026">
+  <meta property="og:description" content="Where Business Meets Innovation. April 2026 at Gies College of Business, UIUC.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy-deep: #0A1628;
+      --navy: #13294B;
+      --navy-light: #1C3D5A;
+      --navy-card: #111D32;
+      --orange: #E84A27;
+      --orange-light: #FF6F3C;
+      --orange-glow: rgba(232, 74, 39, 0.25);
+      --white: #FFFFFF;
+      --white-90: rgba(255,255,255,0.9);
+      --white-70: rgba(255,255,255,0.7);
+      --white-50: rgba(255,255,255,0.5);
+      --white-20: rgba(255,255,255,0.2);
+      --white-10: rgba(255,255,255,0.1);
+      --white-05: rgba(255,255,255,0.05);
+      --font-display: 'Unbounded', sans-serif;
+      --font-body: 'Manrope', sans-serif;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--navy-deep);
+      color: var(--white-90);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      cursor: none;
+    }
+
+    /* Noise overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ===== SCROLL PROGRESS BAR ===== */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange), var(--orange-light));
+      z-index: 200;
+      width: 0%;
+      transition: width 0.05s linear;
+      box-shadow: 0 0 10px var(--orange-glow);
+    }
+
+    /* ===== CUSTOM CURSOR ===== */
+    .cursor-dot {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: var(--orange);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s, height 0.2s, background 0.2s;
+      mix-blend-mode: difference;
+    }
+    .cursor-ring {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border: 1.5px solid var(--orange);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out), border-color 0.3s, opacity 0.3s;
+      opacity: 0.5;
+    }
+    .cursor-ring.hovering {
+      width: 60px;
+      height: 60px;
+      border-color: var(--orange-light);
+      opacity: 0.8;
+    }
+    .cursor-dot.hovering {
+      width: 12px;
+      height: 12px;
+    }
+    @media (pointer: coarse) {
+      .cursor-dot, .cursor-ring { display: none; }
+      body { cursor: auto; }
+    }
+
+    /* ===== CURSOR GLOW ===== */
+    .cursor-glow {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(232, 74, 39, 0.07) 0%, transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: var(--orange);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0 0 8px 8px;
+      z-index: 200;
+      font-weight: 600;
+      text-decoration: none;
+      transition: top 0.3s;
+      cursor: none;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    @media (min-width: 768px) { .container { padding: 0 2rem; } }
+    @media (min-width: 1024px) { .container { padding: 0 4rem; } }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.25rem 0;
+      transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+    }
+    .nav.scrolled {
+      background: rgba(10, 22, 40, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      padding: 0.75rem 0;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--orange); }
+    .nav-links { display: none; gap: 2rem; }
+    @media (min-width: 768px) { .nav-links { display: flex; } }
+    .nav-links a {
+      color: var(--white-70);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width 0.3s var(--ease-out);
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      display: none;
+      padding: 0.6rem 1.5rem;
+      background: var(--orange);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      letter-spacing: 0.02em;
+      position: relative;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) { .nav-cta { display: inline-block; } }
+    .nav-cta:hover {
+      background: var(--orange-light);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px var(--orange-glow);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: none;
+      padding: 8px;
+      z-index: 110;
+    }
+    @media (min-width: 768px) { .hamburger { display: none; } }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: transform 0.3s, opacity 0.3s;
+      border-radius: 2px;
+    }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 22, 40, 0.98);
+      backdrop-filter: blur(24px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 105;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    .mobile-menu.open { opacity: 1; pointer-events: all; }
+    .mobile-menu a {
+      color: var(--white);
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--orange); transform: scale(1.05); }
+    .mobile-menu .mobile-cta {
+      margin-top: 1rem;
+      padding: 1rem 2.5rem;
+      background: var(--orange);
+      border-radius: 10px;
+      font-size: 1.1rem;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Background image */
+    .hero-bg-image {
+      position: absolute;
+      inset: 0;
+      background: url('gies-building.jpg') center center / cover no-repeat;
+      transform: scale(1.1);
+      transition: transform 0.1s linear;
+      will-change: transform;
+    }
+
+    /* Dark overlay */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(10, 22, 40, 0.85) 0%,
+        rgba(19, 41, 75, 0.88) 40%,
+        rgba(10, 22, 40, 0.95) 100%
+      );
+      z-index: 1;
+    }
+
+    /* Animated gradient layer */
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg,
+        rgba(232, 74, 39, 0.08) 0%,
+        transparent 30%,
+        rgba(232, 74, 39, 0.05) 60%,
+        transparent 100%
+      );
+      background-size: 300% 300%;
+      animation: heroGradient 12s ease infinite;
+      z-index: 2;
+    }
+    @keyframes heroGradient {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* Grid pattern */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--white-05) 1px, transparent 1px),
+        linear-gradient(90deg, var(--white-05) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+      z-index: 3;
+      animation: gridPulse 8s ease-in-out infinite;
+    }
+    @keyframes gridPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    /* Particle canvas */
+    #particles {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    /* Floating geometric shapes with parallax */
+    .geo {
+      position: absolute;
+      pointer-events: none;
+      z-index: 5;
+      opacity: 0.5;
+      will-change: transform;
+    }
+    .geo-1 {
+      width: 70px; height: 70px;
+      border: 2px solid var(--orange);
+      border-radius: 14px;
+      top: 12%; left: 6%;
+      transform: rotate(45deg);
+      animation: float1 8s ease-in-out infinite, glow1 4s ease-in-out infinite alternate;
+    }
+    .geo-2 {
+      width: 50px; height: 50px;
+      background: var(--orange);
+      opacity: 0.12;
+      border-radius: 50%;
+      top: 18%; right: 10%;
+      animation: float2 6s ease-in-out infinite;
+    }
+    .geo-3 {
+      width: 28px; height: 28px;
+      border: 2px solid var(--white-20);
+      top: 72%; left: 12%;
+      animation: float3 10s ease-in-out infinite;
+    }
+    .geo-4 {
+      width: 90px; height: 90px;
+      border: 2px solid var(--white-10);
+      border-radius: 50%;
+      bottom: 18%; right: 8%;
+      animation: float1 12s ease-in-out infinite;
+    }
+    .geo-5 {
+      top: 58%; right: 18%;
+      color: var(--orange);
+      font-size: 2.5rem;
+      font-weight: 300;
+      opacity: 0.25;
+      animation: float2 9s ease-in-out infinite, spin 20s linear infinite;
+    }
+    .geo-6 {
+      width: 18px; height: 18px;
+      background: var(--orange);
+      opacity: 0.18;
+      border-radius: 4px;
+      top: 32%; left: 18%;
+      transform: rotate(30deg);
+      animation: float3 7s ease-in-out infinite;
+    }
+    .geo-7 {
+      width: 55px; height: 55px;
+      border: 2px solid var(--white-10);
+      border-radius: 10px;
+      bottom: 28%; left: 4%;
+      transform: rotate(15deg);
+      animation: float2 11s ease-in-out infinite;
+    }
+    .geo-8 {
+      width: 12px; height: 12px;
+      background: var(--orange-light);
+      opacity: 0.3;
+      border-radius: 50%;
+      top: 45%; right: 6%;
+      animation: float1 5s ease-in-out infinite, pulse 2s ease-in-out infinite;
+    }
+    .geo-9 {
+      width: 40px; height: 40px;
+      border: 2px solid rgba(232, 74, 39, 0.3);
+      border-radius: 8px;
+      top: 80%; right: 25%;
+      animation: float3 8s ease-in-out infinite, spin 30s linear infinite reverse;
+    }
+
+    @keyframes float1 {
+      0%, 100% { transform: translateY(0) rotate(var(--base-rotate, 45deg)); }
+      50% { transform: translateY(-30px) rotate(calc(var(--base-rotate, 45deg) + 5deg)); }
+    }
+    @keyframes float2 {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes float3 {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-25px) rotate(12deg); }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes glow1 {
+      from { box-shadow: 0 0 5px transparent; }
+      to { box-shadow: 0 0 20px rgba(232, 74, 39, 0.3); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.5); opacity: 0.6; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      padding: 6rem 1.5rem 4rem;
+    }
+    .hero-date {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.3em;
+      color: var(--orange);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s var(--ease-out) 0.3s forwards;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(3rem, 10vw, 7.5rem);
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s var(--ease-out) 0.5s forwards;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--orange), var(--orange-light), var(--orange));
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientText 5s ease infinite;
+    }
+    @keyframes gradientText {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .hero-tagline {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--white-70);
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s var(--ease-out) 0.7s forwards;
+    }
+    /* Typewriter container */
+    .typewriter-text { display: inline; }
+    .typewriter-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.2em;
+      background: var(--orange);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 0.8s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .hero-location {
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
+      color: var(--white-50);
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s var(--ease-out) 0.9s forwards;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s var(--ease-out) 1.1s forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Buttons with ripple */
+    .btn-primary, .btn-secondary {
+      position: relative;
+      overflow: hidden;
+      cursor: none;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: var(--orange);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 10px;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      min-width: 44px;
+      min-height: 44px;
+    }
+    .btn-primary:hover {
+      background: var(--orange-light);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 40px var(--orange-glow), 0 0 80px rgba(232, 74, 39, 0.15);
+    }
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: transparent;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 1.5px solid var(--white-20);
+      transition: border-color 0.3s, background 0.3s, transform 0.3s;
+      min-width: 44px;
+      min-height: 44px;
+    }
+    .btn-secondary:hover {
+      border-color: var(--white-50);
+      background: var(--white-05);
+      transform: translateY(-3px) scale(1.03);
+    }
+    /* Ripple effect */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transform: scale(0);
+      animation: rippleAnim 0.6s ease-out forwards;
+      pointer-events: none;
+    }
+    @keyframes rippleAnim {
+      to { transform: scale(4); opacity: 0; }
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--white-50);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      z-index: 10;
+      opacity: 0;
+      animation: fadeUp 0.8s var(--ease-out) 1.4s forwards;
+    }
+    .scroll-arrow {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+    .scroll-arrow svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--white-50);
+      fill: none;
+      stroke-width: 2;
+    }
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* ===== WAVE DIVIDERS ===== */
+    .wave-divider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .wave-divider svg {
+      display: block;
+      width: 100%;
+      height: 60px;
+    }
+    .wave-divider.flip { transform: scaleY(-1); }
+
+    /* ===== SECTION STYLES ===== */
+    .section { padding: 5rem 0; position: relative; }
+    @media (min-width: 768px) { .section { padding: 7rem 0; } }
+    @media (min-width: 1024px) { .section { padding: 9rem 0; } }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      color: var(--orange);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+    /* Animated underline on section titles */
+    .section-title .title-word {
+      display: inline-block;
+      transition: transform 0.4s var(--ease-out), color 0.4s;
+    }
+    .section-title:hover .title-word {
+      color: var(--orange);
+    }
+    .section-subtitle {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--white-50);
+      max-width: 600px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    @media (min-width: 768px) {
+      .about-grid { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    }
+    .about-text {
+      font-size: 1.05rem;
+      color: var(--white-70);
+      line-height: 1.8;
+    }
+    .about-text p + p { margin-top: 1.25rem; }
+    .about-text strong { color: var(--white); font-weight: 600; }
+    .about-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .about-card {
+      background: var(--navy-card);
+      border: 1px solid var(--white-10);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(232,74,39,0.08) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .about-card:hover::after { opacity: 1; }
+    .about-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(232, 74, 39, 0.1);
+    }
+    .about-card h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+    .about-card p {
+      font-size: 0.9rem;
+      color: var(--white-70);
+      line-height: 1.6;
+    }
+
+    /* Divider */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--white-10) 50%, transparent);
+    }
+
+    /* ===== TRACKS ===== */
+    .tracks-grid {
+      display: grid;
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+    @media (min-width: 768px) { .tracks-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .tracks-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .track-card {
+      background: var(--navy-card);
+      border: 1px solid var(--white-10);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s, box-shadow 0.4s;
+      cursor: default;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    /* Card spotlight effect */
+    .track-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--orange), var(--orange-light));
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .track-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(232,74,39,0.06) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+    }
+    .track-card:hover {
+      border-color: rgba(232, 74, 39, 0.4);
+      box-shadow: 0 20px 60px rgba(232, 74, 39, 0.12), 0 0 0 1px rgba(232, 74, 39, 0.1);
+    }
+    .track-card:hover::before { opacity: 1; }
+    .track-card:hover::after { opacity: 1; }
+
+    .track-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(232, 74, 39, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      color: var(--orange);
+      transition: transform 0.4s var(--ease-out), background 0.4s;
+    }
+    .track-card:hover .track-icon {
+      transform: scale(1.1) rotate(-5deg);
+      background: rgba(232, 74, 39, 0.2);
+    }
+    .track-icon svg { width: 24px; height: 24px; }
+    .track-card h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .track-card p {
+      font-size: 0.9rem;
+      color: var(--white-50);
+      line-height: 1.6;
+    }
+    .track-badge {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--orange);
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.8rem;
+      border: 1px solid rgba(232, 74, 39, 0.25);
+      border-radius: 100px;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .track-card:hover .track-badge {
+      background: rgba(232, 74, 39, 0.1);
+      border-color: rgba(232, 74, 39, 0.5);
+    }
+
+    @media (min-width: 1024px) {
+      .track-card.wide { grid-column: 2 / 3; }
+    }
+
+    /* ===== HOW IT WORKS ===== */
+    .steps {
+      display: grid;
+      gap: 2rem;
+      margin-top: 3rem;
+      counter-reset: step;
+    }
+    @media (min-width: 768px) {
+      .steps { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    }
+    .step {
+      text-align: center;
+      position: relative;
+      padding: 2rem 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 3.5rem;
+        right: -0.75rem;
+        width: calc(100% - 4rem);
+        height: 2px;
+        background: linear-gradient(90deg, var(--orange), var(--white-10));
+        left: calc(50% + 2rem);
+        animation: lineGrow 1s var(--ease-out) forwards;
+        transform-origin: left;
+      }
+    }
+    @keyframes lineGrow {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+    .step-number {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(232, 74, 39, 0.08);
+      border: 2px solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: var(--orange);
+      transition: background 0.4s, transform 0.4s, box-shadow 0.4s;
+      position: relative;
+    }
+    .step:hover .step-number {
+      background: var(--orange);
+      color: var(--white);
+      transform: scale(1.1);
+      box-shadow: 0 0 30px var(--orange-glow);
+    }
+    /* Pulse ring on step numbers */
+    .step-number::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px solid var(--orange);
+      opacity: 0;
+      animation: stepPulse 3s ease-in-out infinite;
+    }
+    .step:nth-child(1) .step-number::after { animation-delay: 0s; }
+    .step:nth-child(2) .step-number::after { animation-delay: 1s; }
+    .step:nth-child(3) .step-number::after { animation-delay: 2s; }
+    @keyframes stepPulse {
+      0%, 100% { opacity: 0; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+    .step h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .step p {
+      font-size: 0.9rem;
+      color: var(--white-50);
+      line-height: 1.6;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list {
+      max-width: 720px;
+      margin: 3rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .faq-item {
+      background: var(--navy-card);
+      border: 1px solid var(--white-10);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.4s, box-shadow 0.4s, transform 0.3s;
+    }
+    .faq-item:hover {
+      transform: translateX(4px);
+    }
+    .faq-item.open {
+      border-color: rgba(232, 74, 39, 0.3);
+      box-shadow: 0 4px 20px rgba(232, 74, 39, 0.08);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: left;
+      padding: 1.25rem 1.5rem;
+      cursor: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 44px;
+      transition: color 0.3s;
+    }
+    .faq-question:hover { color: var(--orange); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(232, 74, 39, 0.1);
+      position: relative;
+      transition: transform 0.4s var(--ease-out), background 0.4s;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: rgba(232, 74, 39, 0.25);
+    }
+    .faq-icon::before, .faq-icon::after {
+      content: '';
+      position: absolute;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+    .faq-icon::before {
+      width: 12px; height: 2px;
+      top: 13px; left: 8px;
+    }
+    .faq-icon::after {
+      width: 2px; height: 12px;
+      top: 8px; left: 13px;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s var(--ease-out);
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-answer-inner {
+      padding: 0 1.5rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--white-50);
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.4s 0.1s, transform 0.4s 0.1s var(--ease-out);
+    }
+    .faq-item.open .faq-answer-inner {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== REGISTER / FINAL CTA ===== */
+    .final-cta {
+      padding: 6rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(232, 74, 39, 0.1) 0%, transparent 55%);
+      pointer-events: none;
+      animation: ctaGlow 5s ease-in-out infinite alternate;
+    }
+    @keyframes ctaGlow {
+      from { opacity: 0.5; }
+      to { opacity: 1; }
+    }
+    .final-cta .section-title {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+    .final-cta .section-subtitle {
+      margin: 0 auto 2.5rem;
+    }
+
+    .register-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 460px;
+      margin: 2rem auto 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .register-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.9rem 1.25rem;
+      background: var(--navy-card);
+      border: 1.5px solid var(--white-10);
+      border-radius: 10px;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      min-height: 44px;
+      cursor: none;
+    }
+    .register-form input::placeholder { color: var(--white-50); }
+    .register-form input:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 20px rgba(232, 74, 39, 0.15);
+    }
+    .register-form button {
+      padding: 0.9rem 2rem;
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: none;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      min-height: 44px;
+      min-width: 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .register-form button:hover {
+      background: var(--orange-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px var(--orange-glow);
+    }
+
+    /* Success animation */
+    .register-form.success button {
+      background: #22c55e;
+      animation: successPop 0.4s var(--ease-out);
+    }
+    @keyframes successPop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      border-top: 1px solid var(--white-10);
+      padding: 3rem 0;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    @media (min-width: 768px) {
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--white-70);
+    }
+    .footer-logo span { color: var(--orange); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      color: var(--white-50);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.3s;
+      cursor: none;
+    }
+    .footer-links a:hover { color: var(--orange); }
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--white-50);
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+    .reveal-left.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+    .reveal-right.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+    .reveal-scale.revealed {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      .hero-bg-image { transform: none; }
+      .reveal, .reveal-left, .reveal-right, .reveal-scale { opacity: 1; transform: none; }
+      .hero-date, .hero h1, .hero-tagline, .hero-location, .hero-buttons, .scroll-indicator {
+        opacity: 1; transform: none;
+      }
+      .cursor-dot, .cursor-ring, .cursor-glow { display: none; }
+      body { cursor: auto; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="#">GIES <span>BUILDATHON</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdvLlDt8dBOhE6DsAhVJHVZfs-nLQa2aYMMavMdHt_lNdGP7g/viewform" target="_blank" rel="noopener">Register</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="#tracks">Tracks</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#faq">FAQ</a>
+    <a class="mobile-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdvLlDt8dBOhE6DsAhVJHVZfs-nLQa2aYMMavMdHt_lNdGP7g/viewform" target="_blank" rel="noopener">Register</a>
+  </div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg-image" data-parallax-speed="0.3"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-gradient"></div>
+      <div class="hero-grid"></div>
+      <canvas id="particles"></canvas>
+
+      <div class="geo geo-1"></div>
+      <div class="geo geo-2"></div>
+      <div class="geo geo-3"></div>
+      <div class="geo geo-4"></div>
+      <div class="geo geo-5">+</div>
+      <div class="geo geo-6"></div>
+      <div class="geo geo-7"></div>
+      <div class="geo geo-8"></div>
+      <div class="geo geo-9"></div>
+
+      <div class="hero-content">
+        <p class="hero-date">24 HOURS &bull; APRIL 2026</p>
+        <h1>GIES<br><span class="highlight">BUILDATHON</span></h1>
+        <p class="hero-tagline">
+          <span class="typewriter-text" data-text="Where Business Meets Innovation"></span><span class="typewriter-cursor" aria-hidden="true"></span>
+        </p>
+        <p class="hero-location">Gies College of Business &bull; University of Illinois Urbana-Champaign</p>
+        <div class="hero-buttons">
+          <a class="btn-primary magnetic" href="https://docs.google.com/forms/d/e/1FAIpQLSdvLlDt8dBOhE6DsAhVJHVZfs-nLQa2aYMMavMdHt_lNdGP7g/viewform" target="_blank" rel="noopener">Register Now</a>
+          <a class="btn-secondary magnetic" href="#about">Learn More</a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>SCROLL</span>
+        <div class="scroll-arrow">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,60 C360,0 720,0 1080,30 C1260,45 1380,60 1440,60 L1440,60 L0,60 Z" fill="var(--navy-deep)"/>
+      </svg>
+    </div>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="section-label reveal">ABOUT</p>
+        <h2 class="section-title reveal">Build Something That Matters</h2>
+        <p class="section-subtitle reveal">A weekend of innovation at the intersection of business and technology.</p>
+
+        <div class="about-grid">
+          <div class="about-text reveal-left">
+            <p>The <strong>Gies Buildathon</strong> is a 24-hour innovation sprint exclusively for Gies College of Business students. Whether you're an undergrad or grad student &mdash; coder, designer, or business strategist &mdash; this is your launchpad.</p>
+            <p>Compete across five focused tracks, work alongside industry mentors, and present your solutions to a panel of expert judges from leading companies. No coding experience necessary &mdash; just ambition and a willingness to build.</p>
+          </div>
+          <div class="about-cards">
+            <div class="about-card reveal-right reveal-delay-1">
+              <h3>Who</h3>
+              <p>Gies undergraduate and graduate students. All majors within Gies welcome. Solo hackers and teams alike.</p>
+            </div>
+            <div class="about-card reveal-right reveal-delay-2">
+              <h3>What</h3>
+              <p>A 24-hour buildathon where teams create innovative solutions for real business problems across five industry tracks.</p>
+            </div>
+            <div class="about-card reveal-right reveal-delay-3">
+              <h3>Why</h3>
+              <p>Network with industry leaders, sharpen your skills, and launch ideas that could shape the future of business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Tracks -->
+    <section id="tracks" class="section">
+      <div class="container">
+        <p class="section-label reveal">COMPETE</p>
+        <h2 class="section-title reveal">Competition Tracks</h2>
+        <p class="section-subtitle reveal">Choose your arena. Each track features expert judges evaluating innovation, feasibility, and impact.</p>
+
+        <div class="tracks-grid">
+          <div class="track-card reveal-scale reveal-delay-1" data-tilt>
+            <div class="track-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/>
+              </svg>
+            </div>
+            <h3>Finance & Accounting</h3>
+            <p>Reimagine financial workflows, automate accounting processes, and build tools that transform how businesses manage money.</p>
+            <span class="track-badge">2&ndash;3 Judges</span>
+          </div>
+
+          <div class="track-card reveal-scale reveal-delay-2" data-tilt>
+            <div class="track-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3>HR</h3>
+            <p>Create solutions for talent acquisition, employee experience, workforce analytics, and the future of work.</p>
+            <span class="track-badge">2&ndash;3 Judges</span>
+          </div>
+
+          <div class="track-card reveal-scale reveal-delay-3" data-tilt>
+            <div class="track-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <h3>Marketing & Sales</h3>
+            <p>Build tools that revolutionize customer engagement, analytics, personalization, and go-to-market strategies.</p>
+            <span class="track-badge">2&ndash;3 Judges</span>
+          </div>
+
+          <div class="track-card reveal-scale reveal-delay-4" data-tilt>
+            <div class="track-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3>Business Technology</h3>
+            <p>Develop infrastructure, automation, and enterprise solutions that power modern business operations.</p>
+            <span class="track-badge">2&ndash;3 Judges</span>
+          </div>
+
+          <div class="track-card reveal-scale reveal-delay-5 wide" data-tilt>
+            <div class="track-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+              </svg>
+            </div>
+            <h3>General Innovation</h3>
+            <p>Got a bold idea that defies categories? This open track welcomes any innovative solution that pushes boundaries and challenges the status quo.</p>
+            <span class="track-badge">Open Track</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <p class="section-label reveal" style="text-align:center">PROCESS</p>
+        <h2 class="section-title reveal" style="text-align:center">How It Works</h2>
+        <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto;">Three steps from idea to impact.</p>
+
+        <div class="steps">
+          <div class="step reveal reveal-delay-1">
+            <div class="step-number">1</div>
+            <h3>Register</h3>
+            <p>Sign up as an individual or team. Open to all Gies undergrad and grad students.</p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step-number">2</div>
+            <h3>Build</h3>
+            <p>Choose a track, form your team, and spend 24 hours building a solution with mentorship and resources.</p>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step-number">3</div>
+            <h3>Pitch</h3>
+            <p>Present your project to industry judges. Top teams win prizes and get connected with industry leaders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <p class="section-label reveal" style="text-align:center">QUESTIONS</p>
+        <h2 class="section-title reveal" style="text-align:center">Frequently Asked Questions</h2>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the Gies Buildathon?</span>
+              <div class="faq-icon" aria-hidden="true"></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">The Gies Buildathon is a 24-hour innovation competition exclusively for Gies College of Business students at UIUC. Teams build solutions to real business challenges across five industry tracks, with mentorship from industry professionals and judging by experts.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question" aria-expanded="false">
+              <span>Who can participate?</span>
+              <div class="faq-icon" aria-hidden="true"></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">The Gies Buildathon is open to all currently enrolled Gies College of Business undergraduate and graduate students. Whether you're studying finance, marketing, IS, or any other Gies program &mdash; if you want to build and innovate, you belong here.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do I need to know how to code?</span>
+              <div class="faq-icon" aria-hidden="true"></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">Not at all! Teams need diverse skills &mdash; business strategy, design, research, presentation, and user testing are just as valuable as coding. We also offer beginner-friendly workshops and AI tools to help everyone contribute.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-3">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do teams work?</span>
+              <div class="faq-icon" aria-hidden="true"></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">You can register with a pre-formed team or sign up solo. We'll host a team-forming mixer at the start of the event to help individuals find teammates with complementary skills.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-4">
+            <button class="faq-question" aria-expanded="false">
+              <span>What should I build?</span>
+              <div class="faq-icon" aria-hidden="true"></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">Anything that solves a business problem within your chosen track! This could be a web app, mobile prototype, AI tool, data dashboard, or even a well-researched business model with a demo. Creativity and impact matter most.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-4">
+            <button class="faq-question" aria-expanded="false">
+              <span>How will projects be judged?</span>
+              <div class="faq-icon" aria-hidden="true"></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">Each track has 2&ndash;3 expert judges evaluating projects on innovation, feasibility, business impact, and presentation quality. The General Innovation track is open to cross-cutting ideas that don't fit neatly into one category.</div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal reveal-delay-5">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is there a cost to participate?</span>
+              <div class="faq-icon" aria-hidden="true"></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">No! The Gies Buildathon is completely free to attend. We'll provide meals, snacks, swag, and all the resources you need for the 24 hours.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA / Register -->
+    <section id="register" class="final-cta">
+      <div class="container">
+        <h2 class="section-title reveal">Ready to Build?</h2>
+        <p class="section-subtitle reveal" style="margin: 0 auto;">24 hours. Five tracks. One chance to build something that matters. Sign up now and secure your spot.</p>
+        <div class="reveal" style="margin-top: 2.5rem;">
+          <a class="btn-primary magnetic" href="https://docs.google.com/forms/d/e/1FAIpQLSdvLlDt8dBOhE6DsAhVJHVZfs-nLQa2aYMMavMdHt_lNdGP7g/viewform" target="_blank" rel="noopener" style="font-size:1.1rem; padding: 1.1rem 3rem;">Register Now</a>
+        </div>
+        <p class="reveal" style="margin-top:1rem; font-size:0.8rem; color: var(--white-50);">Open to all Gies undergrad &amp; grad students.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">GIES <span>BUILDATHON</span> 2026</div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <p class="footer-copy">Gies College of Business &bull; University of Illinois Urbana-Champaign</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ===== CUSTOM CURSOR ===== */
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorRing = document.querySelector('.cursor-ring');
+    const cursorGlow = document.querySelector('.cursor-glow');
+    let mouseX = 0, mouseY = 0;
+    let ringX = 0, ringY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = mouseX + 'px';
+      cursorDot.style.top = mouseY + 'px';
+      cursorGlow.style.left = mouseX + 'px';
+      cursorGlow.style.top = mouseY + 'px';
+    });
+
+    // Smooth ring follow
+    function animateCursor() {
+      ringX += (mouseX - ringX) * 0.15;
+      ringY += (mouseY - ringY) * 0.15;
+      cursorRing.style.left = ringX + 'px';
+      cursorRing.style.top = ringY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover states
+    const hoverTargets = document.querySelectorAll('a, button, .track-card, .about-card, .faq-item');
+    hoverTargets.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursorDot.classList.add('hovering');
+        cursorRing.classList.add('hovering');
+      });
+      el.addEventListener('mouseleave', () => {
+        cursorDot.classList.remove('hovering');
+        cursorRing.classList.remove('hovering');
+      });
+    });
+
+    /* ===== SCROLL PROGRESS ===== */
+    const progressBar = document.querySelector('.scroll-progress');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (scrolled / maxScroll * 100) + '%';
+    }, { passive: true });
+
+    /* ===== NAV SCROLL ===== */
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    /* ===== MOBILE MENU ===== */
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* ===== PARALLAX ON HERO BG ===== */
+    const heroBg = document.querySelector('.hero-bg-image');
+    const geos = document.querySelectorAll('.geo');
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      if (scrolled < window.innerHeight * 1.5) {
+        heroBg.style.transform = `scale(1.1) translateY(${scrolled * 0.15}px)`;
+        geos.forEach((geo, i) => {
+          const speed = 0.02 + (i * 0.015);
+          geo.style.marginTop = `${scrolled * speed}px`;
+        });
+      }
+    }, { passive: true });
+
+    /* ===== MOUSE PARALLAX ON HERO ===== */
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const deltaX = (e.clientX - centerX) / centerX;
+      const deltaY = (e.clientY - rect.top - centerY) / centerY;
+
+      geos.forEach((geo, i) => {
+        const depth = 5 + (i * 3);
+        geo.style.transform = `translate(${deltaX * depth}px, ${deltaY * depth}px)`;
+      });
+    });
+
+    /* ===== PARTICLE SYSTEM ===== */
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = (Math.random() - 0.5) * 0.4;
+        this.opacity = Math.random() * 0.5 + 0.1;
+        this.isOrange = Math.random() > 0.7;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        // Mouse attraction
+        const dx = mouseX - this.x;
+        const dy = mouseY - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 150) {
+          this.x += dx * 0.002;
+          this.y += dy * 0.002;
+          this.opacity = Math.min(this.opacity + 0.01, 0.8);
+        }
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        if (this.isOrange) {
+          ctx.fillStyle = `rgba(232, 74, 39, ${this.opacity})`;
+        } else {
+          ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity * 0.5})`;
+        }
+        ctx.fill();
+      }
+    }
+
+    // Create particles
+    for (let i = 0; i < 60; i++) {
+      particles.push(new Particle());
+    }
+
+    // Draw connections between close particles
+    function drawConnections() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(232, 74, 39, ${0.06 * (1 - dist / 120)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      drawConnections();
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    /* ===== 3D TILT ON TRACK CARDS ===== */
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -8;
+        const rotateY = ((x - centerX) / centerX) * 8;
+
+        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = 'transform 0.5s var(--ease-out), border-color 0.4s, box-shadow 0.4s';
+        setTimeout(() => { card.style.transition = ''; }, 500);
+      });
+    });
+
+    /* ===== CARD SPOTLIGHT (About cards) ===== */
+    document.querySelectorAll('.about-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+        card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+      });
+    });
+
+    /* ===== TYPEWRITER EFFECT ===== */
+    function typewriter(element, text, speed = 50) {
+      let i = 0;
+      element.textContent = '';
+      function type() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+      type();
+    }
+
+    // Start typewriter after hero animation
+    setTimeout(() => {
+      const tw = document.querySelector('.typewriter-text');
+      if (tw) {
+        typewriter(tw, tw.dataset.text, 45);
+      }
+    }, 1200);
+
+    /* ===== MAGNETIC BUTTONS ===== */
+    document.querySelectorAll('.magnetic').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.03)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+        btn.style.transition = 'transform 0.4s var(--ease-out)';
+        setTimeout(() => { btn.style.transition = ''; }, 400);
+      });
+    });
+
+    /* ===== RIPPLE EFFECT ON BUTTONS ===== */
+    document.querySelectorAll('.btn-primary, .btn-secondary, .register-form button').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        this.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    /* ===== SCROLL REVEAL ===== */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    /* ===== FAQ ACCORDION ===== */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* ===== FORM SUBMIT ===== */
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const input = this.querySelector('input');
+      const btn = this.querySelector('button');
+      this.classList.add('success');
+      btn.textContent = "You're In!";
+      input.value = '';
+      input.disabled = true;
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Notify Me';
+        this.classList.remove('success');
+        input.disabled = false;
+        btn.disabled = false;
+      }, 3000);
+    });
+
+    /* ===== SMOOTH ANCHOR SCROLL ===== */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    /* ===== HIDE SCROLL INDICATOR ON SCROLL ===== */
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        scrollIndicator.style.opacity = '0';
+      } else {
+        scrollIndicator.style.opacity = '';
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>
