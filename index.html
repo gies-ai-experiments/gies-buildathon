@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gies Buildathon 2026 — Where Business Meets Innovation</title>
+  <title>Gies AI for Impact Challenge — Agentic AI Build-a-Thon 2026</title>
   <meta name="description" content="24-hour innovation competition for Gies College of Business students at UIUC. Build solutions across Finance, HR, Marketing, Technology, and more. April 2026.">
-  <meta property="og:title" content="Gies Buildathon 2026">
-  <meta property="og:description" content="Where Business Meets Innovation. April 2026 at Gies College of Business, UIUC.">
+  <meta property="og:title" content="Gies AI for Impact Challenge 2026">
+  <meta property="og:description" content="Agentic AI Build-a-Thon. April 2026 at Gies College of Business, UIUC.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Montserrat:wght@400;600;700;900&family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -29,8 +29,10 @@
       --white-20: rgba(255,255,255,0.2);
       --white-10: rgba(255,255,255,0.1);
       --white-05: rgba(255,255,255,0.05);
-      --font-display: 'Unbounded', sans-serif;
-      --font-body: 'Manrope', sans-serif;
+      --font-display: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+      --font-body: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+      --font-emphasis: 'SuperFly', 'Montserrat', sans-serif;
+      --font-stats: 'Chronicle Black', 'Georgia', serif;
       --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -296,7 +298,7 @@
     .hero-bg-image {
       position: absolute;
       inset: 0;
-      background: url('gies-building.jpg') center center / cover no-repeat;
+      background: url('gies-exterior-night.png') center center / cover no-repeat;
       transform: scale(1.1);
       transition: transform 0.1s linear;
       will-change: transform;
@@ -481,7 +483,7 @@
     .hero h1 {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: clamp(3rem, 10vw, 7.5rem);
+      font-size: clamp(3.5rem, 12vw, 9rem);
       line-height: 1;
       color: var(--white);
       margin-bottom: 1.5rem;
@@ -670,7 +672,7 @@
     .section-title {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-size: clamp(2.5rem, 5vw, 4rem);
       color: var(--white);
       margin-bottom: 1rem;
       line-height: 1.15;
@@ -688,6 +690,19 @@
       color: var(--white-50);
       max-width: 600px;
     }
+
+    /* ===== SECTION BACKGROUNDS ===== */
+    .section-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .section.has-bg { position: relative; overflow: hidden; }
+    .section.has-bg > .container { position: relative; z-index: 2; }
 
     /* ===== ABOUT ===== */
     .about-grid {
@@ -738,7 +753,7 @@
     .about-card h3 {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.25rem;
       color: var(--orange);
       margin-bottom: 0.5rem;
     }
@@ -762,7 +777,7 @@
       margin-top: 3rem;
     }
     @media (min-width: 768px) { .tracks-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .tracks-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 1024px) { .tracks-grid { grid-template-columns: repeat(3, minmax(0, 380px)); justify-content: center; } }
 
     .track-card {
       background: var(--navy-card);
@@ -824,7 +839,7 @@
     .track-card h3 {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 1.35rem;
       color: var(--white);
       margin-bottom: 0.6rem;
     }
@@ -848,10 +863,6 @@
     .track-card:hover .track-badge {
       background: rgba(232, 74, 39, 0.1);
       border-color: rgba(232, 74, 39, 0.5);
-    }
-
-    @media (min-width: 1024px) {
-      .track-card.wide { grid-column: 2 / 3; }
     }
 
     /* ===== HOW IT WORKS ===== */
@@ -897,7 +908,7 @@
       align-items: center;
       justify-content: center;
       margin: 0 auto 1.25rem;
-      font-family: var(--font-display);
+      font-family: var(--font-stats);
       font-weight: 900;
       font-size: 1.3rem;
       color: var(--orange);
@@ -930,7 +941,7 @@
     .step h3 {
       font-family: var(--font-display);
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1.35rem;
       color: var(--white);
       margin-bottom: 0.6rem;
     }
@@ -971,7 +982,7 @@
       color: var(--white);
       font-family: var(--font-body);
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.15rem;
       text-align: left;
       padding: 1.25rem 1.5rem;
       cursor: none;
@@ -1030,6 +1041,94 @@
       transform: translateY(0);
     }
 
+    /* ===== SPONSORS & PARTNERS ===== */
+    .sponsors {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sponsors-tier {
+      margin-top: 3rem;
+    }
+    .sponsors-tier + .sponsors-tier { margin-top: 2.5rem; }
+    .tier-label {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white-50);
+      margin-bottom: 1.5rem;
+    }
+    .sponsor-cards {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .sponsor-card {
+      background: transparent;
+      border: none;
+      border-radius: 14px;
+      padding: 2rem 3rem;
+      min-width: 200px;
+      transition: transform 0.4s, filter 0.4s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .sponsor-card:hover {
+      transform: translateY(-4px);
+    }
+    .sponsor-card .sponsor-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--white);
+    }
+    .sponsor-card.featured {
+      padding: 2rem 3rem;
+    }
+    .sponsor-card.featured .sponsor-name {
+      font-size: 1.8rem;
+    }
+    .sponsor-logo {
+      display: block;
+      max-width: 420px;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+      transition: filter 0.3s, transform 0.3s;
+    }
+    .sponsor-card:hover .sponsor-logo {
+      filter: brightness(1.15);
+      transform: scale(1.05);
+    }
+    .partner-cards {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .partner-card {
+      background: var(--navy-card);
+      border: 1px solid var(--white-10);
+      border-radius: 12px;
+      padding: 1.5rem 2.5rem;
+      transition: border-color 0.4s, transform 0.4s;
+      cursor: default;
+    }
+    .partner-card:hover {
+      border-color: var(--white-20);
+      transform: translateY(-3px);
+    }
+    .partner-card .partner-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--white-90);
+    }
+
     /* ===== REGISTER / FINAL CTA ===== */
     .final-cta {
       padding: 6rem 0;
@@ -1050,7 +1149,7 @@
       to { opacity: 1; }
     }
     .final-cta .section-title {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
       margin-bottom: 1rem;
     }
     .final-cta .section-subtitle {
@@ -1237,6 +1336,7 @@
         <a href="#tracks">Tracks</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#faq">FAQ</a>
+        <a href="#sponsors">Sponsors</a>
       </div>
       <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdvLlDt8dBOhE6DsAhVJHVZfs-nLQa2aYMMavMdHt_lNdGP7g/viewform" target="_blank" rel="noopener">Register</a>
       <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -1251,6 +1351,7 @@
     <a href="#tracks">Tracks</a>
     <a href="#how-it-works">How It Works</a>
     <a href="#faq">FAQ</a>
+    <a href="#sponsors">Sponsors</a>
     <a class="mobile-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdvLlDt8dBOhE6DsAhVJHVZfs-nLQa2aYMMavMdHt_lNdGP7g/viewform" target="_blank" rel="noopener">Register</a>
   </div>
 
@@ -1275,9 +1376,9 @@
 
       <div class="hero-content">
         <p class="hero-date">24 HOURS &bull; APRIL 2026</p>
-        <h1>GIES<br><span class="highlight">BUILDATHON</span></h1>
+        <h1>GIES<br><span class="highlight">AI FOR IMPACT CHALLENGE</span></h1>
         <p class="hero-tagline">
-          <span class="typewriter-text" data-text="Where Business Meets Innovation"></span><span class="typewriter-cursor" aria-hidden="true"></span>
+          <span class="typewriter-text" data-text="Agentic AI Build-a-Thon"></span><span class="typewriter-cursor" aria-hidden="true"></span>
         </p>
         <p class="hero-location">Gies College of Business &bull; University of Illinois Urbana-Champaign</p>
         <div class="hero-buttons">
@@ -1304,7 +1405,8 @@
     </div>
 
     <!-- About -->
-    <section id="about" class="section">
+    <section id="about" class="section has-bg">
+      <div class="section-bg" style="background-image: url('gies-building.jpg');" aria-hidden="true"></div>
       <div class="container">
         <p class="section-label reveal">ABOUT</p>
         <h2 class="section-title reveal">Build Something That Matters</h2>
@@ -1336,7 +1438,8 @@
     <div class="divider"></div>
 
     <!-- Tracks -->
-    <section id="tracks" class="section">
+    <section id="tracks" class="section has-bg">
+      <div class="section-bg" style="background-image: url('gies-building-2.jpg');" aria-hidden="true"></div>
       <div class="container">
         <p class="section-label reveal">COMPETE</p>
         <h2 class="section-title reveal">Competition Tracks</h2>
@@ -1379,23 +1482,23 @@
           <div class="track-card reveal-scale reveal-delay-4" data-tilt>
             <div class="track-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-              </svg>
-            </div>
-            <h3>Business Technology</h3>
-            <p>Develop infrastructure, automation, and enterprise solutions that power modern business operations.</p>
-            <span class="track-badge">2&ndash;3 Judges</span>
-          </div>
-
-          <div class="track-card reveal-scale reveal-delay-5 wide" data-tilt>
-            <div class="track-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
               </svg>
             </div>
             <h3>General Innovation</h3>
             <p>Got a bold idea that defies categories? This open track welcomes any innovative solution that pushes boundaries and challenges the status quo.</p>
             <span class="track-badge">Open Track</span>
+          </div>
+
+          <div class="track-card reveal-scale reveal-delay-5" data-tilt>
+            <div class="track-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3>Business Technology</h3>
+            <p>Develop infrastructure, automation, and enterprise solutions that power modern business operations.</p>
+            <span class="track-badge">2&ndash;3 Judges</span>
           </div>
         </div>
       </div>
@@ -1404,7 +1507,8 @@
     <div class="divider"></div>
 
     <!-- How It Works -->
-    <section id="how-it-works" class="section">
+    <section id="how-it-works" class="section has-bg">
+      <div class="section-bg" style="background-image: url('gies-exterior-night.png');" aria-hidden="true"></div>
       <div class="container">
         <p class="section-label reveal" style="text-align:center">PROCESS</p>
         <h2 class="section-title reveal" style="text-align:center">How It Works</h2>
@@ -1506,6 +1610,39 @@
             </button>
             <div class="faq-answer" role="region">
               <div class="faq-answer-inner">No! The Gies Buildathon is completely free to attend. We'll provide meals, snacks, swag, and all the resources you need for the 24 hours.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Sponsors & Partners -->
+    <section id="sponsors" class="section sponsors">
+      <div class="container">
+        <p class="section-label reveal">SUPPORT</p>
+        <h2 class="section-title reveal">Sponsored By</h2>
+
+        <div class="sponsors-tier">
+          <div class="sponsor-cards">
+            <div class="sponsor-card featured reveal-scale reveal-delay-1" data-tilt>
+              <a href="https://giesbusiness.illinois.edu/" target="_blank" rel="noopener"><img src="logo-gies.png" alt="Gies College of Business" class="sponsor-logo"></a>
+            </div>
+            <div class="sponsor-card featured reveal-scale reveal-delay-2" data-tilt>
+              <a href="https://home.google.com/welcome/" target="_blank" rel="noopener"><img src="logo-google.webp" alt="Google" class="sponsor-logo"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sponsors-tier">
+          <p class="tier-label reveal">Brought to You By</p>
+          <div class="partner-cards">
+            <div class="partner-card reveal reveal-delay-1" style="background: transparent; border: none;">
+              <img src="logo-agenticai.png" alt="Agentic AI @ UIUC" class="partner-logo" style="max-width: 300px; height: auto;">
+            </div>
+            <div class="partner-card reveal reveal-delay-2" style="background: transparent; border: none;">
+              <img src="logo-dlab.png" alt="Disruption Lab" class="partner-logo" style="max-width: 300px; height: auto;">
             </div>
           </div>
         </div>
