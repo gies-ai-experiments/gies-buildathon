@@ -5,7 +5,8 @@ Landing page for the Gies Buildathon, a 24-hour hackathon for Gies undergrad and
 
 ## Tech Stack
 - Single-file HTML with inline CSS and JS
-- Google Fonts: Unbounded + Manrope
+- Google Fonts: Source Sans 3, Montserrat, Open Sans Condensed (official Gies brand fonts)
+- Font roles: Headlines & Body → Source Sans 3, Emphasis → SuperFly/Montserrat, Stats → Chronicle Black/Georgia
 - No build tools or frameworks
 - UIUC/Gies branding: Illini Navy (#13294B) + Illini Orange (#E84A27)
 

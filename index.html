@@ -1331,6 +1331,71 @@
     .reveal-delay-4 { transition-delay: 0.4s; }
     .reveal-delay-5 { transition-delay: 0.5s; }
 
+    /* ===== MOBILE FIXES ===== */
+    @media (max-width: 767px) {
+      .sponsor-card {
+        padding: 1.5rem 1rem;
+        min-width: 0;
+      }
+      .sponsor-logo {
+        max-width: 280px;
+      }
+      .partner-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      .partner-card {
+        padding: 1rem 1.5rem;
+      }
+      .partner-card .partner-logo {
+        max-width: 220px !important;
+      }
+      .hero-content {
+        padding: 5rem 1rem 3rem;
+      }
+      .hero h1 {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+      }
+      .geo {
+        display: none;
+      }
+      .section-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+      }
+      .final-cta .section-title {
+        font-size: clamp(2rem, 7vw, 3rem);
+      }
+      .step:not(:last-child)::after,
+      .step:not(:last-child)::before {
+        display: none;
+      }
+      .about-card {
+        padding: 1.25rem;
+      }
+      .track-card {
+        padding: 1.5rem;
+      }
+      .register-form {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .register-form input {
+        min-width: 0;
+      }
+      .faq-question {
+        font-size: 1rem;
+        padding: 1rem 1.25rem;
+      }
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .sponsor-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
     /* ===== REDUCED MOTION ===== */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -1661,7 +1726,7 @@
               <a href="https://giesbusiness.illinois.edu/" target="_blank" rel="noopener"><img src="assets/logos/logo-gies.png" alt="Gies College of Business" class="sponsor-logo"></a>
             </div>
             <div class="sponsor-card featured reveal-scale reveal-delay-2" data-tilt>
-              <a href="https://home.google.com/welcome/" target="_blank" rel="noopener"><img src="assets/logos/logo-google.webp" alt="Google" class="sponsor-logo" style="margin-top: 20px;"></a>
+              <a href="https://home.google.com/welcome/" target="_blank" rel="noopener"><img src="assets/logos/logo-google.png" alt="Google" class="sponsor-logo"></a>
             </div>
           </div>
         </div>
