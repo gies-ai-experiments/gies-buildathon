@@ -1,13 +1,17 @@
 # syntax=docker/dockerfile:1.7
 FROM nginxinc/nginx-unprivileged:1.27-alpine
 
+USER root
 WORKDIR /usr/share/nginx/html
 
 # Keep image contents minimal and copy only static site assets.
 RUN rm -rf ./*
-COPY --chown=101:101 index.html ./
-COPY --chown=101:101 assets ./assets
+COPY index.html ./
+COPY assets ./assets
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+RUN chown -R 101:101 /usr/share/nginx/html
+
+USER 101
 
 EXPOSE 8080
 
