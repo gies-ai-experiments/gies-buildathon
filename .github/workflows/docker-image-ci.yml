@@ -36,7 +36,33 @@ jobs:
           HARBOR_USER: ${{ secrets.HARBOR_USER }}
           HARBOR_PASSWORD: ${{ secrets.HARBOR_PASSWORD }}
         run: |
-          printf '%s' "$HARBOR_PASSWORD" | docker login hub.ncsa.illinois.edu --username "$HARBOR_USER" --password-stdin
+          set -euo pipefail
+
+          HARBOR_USER_CLEAN="$(printf '%s' "$HARBOR_USER" | tr -d '\r\n')"
+          HARBOR_PASSWORD_CLEAN="$(printf '%s' "$HARBOR_PASSWORD" | tr -d '\r\n')"
+
+          echo "Harbor user length: ${#HARBOR_USER_CLEAN}"
+          if [ "$HARBOR_USER" != "$HARBOR_USER_CLEAN" ] || [ "$HARBOR_PASSWORD" != "$HARBOR_PASSWORD_CLEAN" ]; then
+            echo "Detected trailing newlines in Harbor secrets and removed them."
+          fi
+
+          if printf '%s' "$HARBOR_PASSWORD_CLEAN" | docker login hub.ncsa.illinois.edu --username "${HARBOR_USER_CLEAN}" --password-stdin; then
+            exit 0
+          fi
+
+          # If username was stored as robot\$name, try unescaping to robot$name.
+          HARBOR_USER_UNESCAPED="${HARBOR_USER_CLEAN//\\$/\$}"
+          if [ "$HARBOR_USER_UNESCAPED" != "$HARBOR_USER_CLEAN" ]; then
+            echo "Retrying Harbor login with unescaped username."
+            if printf '%s' "$HARBOR_PASSWORD_CLEAN" | docker login hub.ncsa.illinois.edu --username "${HARBOR_USER_UNESCAPED}" --password-stdin; then
+              exit 0
+            fi
+          fi
+
+          echo "Harbor login failed (unauthorized)."
+          echo "Set HARBOR_USER exactly as Harbor shows it (for robots: robot\$name, not escaped), and use that account's CLI token/secret."
+          echo "Also verify push permission to gies-dsrs/buildathon."
+          exit 1
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
