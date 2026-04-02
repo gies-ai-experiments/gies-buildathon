@@ -865,6 +865,133 @@
       border-color: rgba(232, 74, 39, 0.5);
     }
 
+    /* ===== WORKSHOPS ===== */
+    .workshops-grid {
+      display: grid;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (min-width: 768px) { .workshops-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .workshops-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .workshop-card {
+      background: var(--navy-card);
+      border: 1px solid var(--white-10);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s, box-shadow 0.4s;
+      display: flex;
+      flex-direction: column;
+    }
+    .workshop-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--orange), var(--orange-light));
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .workshop-card:hover {
+      border-color: rgba(232, 74, 39, 0.4);
+      box-shadow: 0 20px 60px rgba(232, 74, 39, 0.12), 0 0 0 1px rgba(232, 74, 39, 0.1);
+    }
+    .workshop-card:hover::before { opacity: 1; }
+
+    .workshop-number {
+      font-family: var(--font-stats);
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      opacity: 0.3;
+    }
+    .workshop-card h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .workshop-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .workshop-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--orange-light);
+      font-weight: 600;
+    }
+    .workshop-meta-item svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+    .workshop-card p {
+      font-size: 0.9rem;
+      color: var(--white-50);
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+    .workshop-topics {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 1.25rem;
+    }
+    .workshop-topics li {
+      font-size: 0.85rem;
+      color: var(--white-70);
+      padding: 0.3rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .workshop-topics li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orange);
+      opacity: 0.6;
+    }
+    .workshop-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: auto;
+      padding: 0.7rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--orange);
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+      align-self: flex-start;
+    }
+    .workshop-cta:hover {
+      background: var(--orange-light);
+      transform: translateY(-2px);
+    }
+    .workshop-cta svg {
+      width: 16px;
+      height: 16px;
+    }
+
     /* ===== HOW IT WORKS ===== */
     .steps {
       display: grid;
@@ -1394,6 +1521,12 @@
         flex-direction: column;
         align-items: center;
       }
+      .workshop-card {
+        padding: 1.5rem;
+      }
+      .workshop-number {
+        font-size: 2.5rem;
+      }
     }
 
     /* ===== REDUCED MOTION ===== */
@@ -1431,6 +1564,7 @@
         <a href="#about">About</a>
         <a href="#tracks">Tracks</a>
         <a href="#how-it-works">How It Works</a>
+        <a href="#workshops">Workshops</a>
         <a href="#faq">FAQ</a>
         <a href="#sponsors">Sponsors</a>
       </div>
@@ -1446,6 +1580,7 @@
     <a href="#about">About</a>
     <a href="#tracks">Tracks</a>
     <a href="#how-it-works">How It Works</a>
+    <a href="#workshops">Workshops</a>
     <a href="#faq">FAQ</a>
     <a href="#sponsors">Sponsors</a>
     <a class="mobile-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdvLlDt8dBOhE6DsAhVJHVZfs-nLQa2aYMMavMdHt_lNdGP7g/viewform" target="_blank" rel="noopener">Register</a>
@@ -1632,6 +1767,163 @@
 
     <div class="divider"></div>
 
+    <!-- Workshops -->
+    <section id="workshops" class="section">
+      <div class="container">
+        <p class="section-label reveal" style="text-align:center">PREPARE</p>
+        <h2 class="section-title reveal" style="text-align:center">Pre-Build-a-Thon Workshops</h2>
+        <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto;">Get a head start. These free workshops equip you with the skills and frameworks you need to hit the ground running.</p>
+
+        <div class="workshops-grid">
+          <div class="workshop-card reveal reveal-delay-1">
+            <div class="workshop-number">01</div>
+            <h3>Human-Centered Design Thinking &amp; Need Finding</h3>
+            <div class="workshop-meta">
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Thursday, April 3rd
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                In-Person
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                1 Hour
+              </span>
+            </div>
+            <ul class="workshop-topics">
+              <li>Introduction to design thinking for AI-powered business solutions</li>
+              <li>Need finding techniques: empathy interviews, observation, and identifying real business pain points</li>
+              <li>Framing problem statements and opportunity areas for AI agent development</li>
+              <li>Mapping Gies business unit challenges to potential AI workflow solutions</li>
+            </ul>
+            <a class="workshop-cta" href="https://luma.com/yq8hn4uw" target="_blank" rel="noopener">
+              RSVP on Luma
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+          <div class="workshop-card reveal reveal-delay-2">
+            <div class="workshop-number">02</div>
+            <h3>Introduction to AI Agents &amp; Vibe Coding Tools</h3>
+            <div class="workshop-meta">
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Thursday, April 9th
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                In-Person
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                1 Hour
+              </span>
+            </div>
+            <ul class="workshop-topics">
+              <li>Overview of no-code AI development platforms</li>
+              <li>Hands-on tutorial with selected vibe coding tools</li>
+              <li>Understanding business workflow automation fundamentals</li>
+            </ul>
+            <a class="workshop-cta" href="https://luma.com/t31u4esg" target="_blank" rel="noopener">
+              RSVP on Luma
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+          <div class="workshop-card reveal reveal-delay-3">
+            <div class="workshop-number">03</div>
+            <h3>Building Your First Agent</h3>
+            <div class="workshop-meta">
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Thursday, April 10th
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                In-Person
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                1 Hour
+              </span>
+            </div>
+            <ul class="workshop-topics">
+              <li>Setting up your first AI agent from scratch</li>
+              <li>Connecting agents to APIs and data sources</li>
+              <li>Prompt engineering fundamentals for agent behavior</li>
+              <li>Testing and iterating on agent responses</li>
+            </ul>
+            <a class="workshop-cta" href="https://luma.com/event/manage/evt-shJsFD3KZAHe8k8" target="_blank" rel="noopener">
+              RSVP on Luma
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+          <div class="workshop-card reveal reveal-delay-4">
+            <div class="workshop-number">04</div>
+            <h3>Pitching &amp; Presenting Your Project</h3>
+            <div class="workshop-meta">
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Wednesday, April 16th
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                In-Person
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                1 Hour
+              </span>
+            </div>
+            <ul class="workshop-topics">
+              <li>Structuring a compelling hackathon pitch</li>
+              <li>Storytelling techniques for technical demos</li>
+              <li>Presenting to judges: what they look for</li>
+              <li>Live demo best practices and backup plans</li>
+            </ul>
+            <a class="workshop-cta" href="https://luma.com/d3lrygj6" target="_blank" rel="noopener">
+              RSVP on Luma
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+          <div class="workshop-card reveal reveal-delay-5">
+            <div class="workshop-number">05</div>
+            <h3>Building Advanced Workflows with Multi-Agents</h3>
+            <div class="workshop-meta">
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Thursday, April 17th
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                In-Person
+              </span>
+              <span class="workshop-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                1 Hour
+              </span>
+            </div>
+            <ul class="workshop-topics">
+              <li>Designing multi-agent architectures and orchestration patterns</li>
+              <li>Agent-to-agent communication and task delegation</li>
+              <li>Building complex business workflow automations</li>
+              <li>Debugging and monitoring multi-agent systems</li>
+            </ul>
+            <a class="workshop-cta" href="https://luma.com/event/manage/evt-dtf7dZRYCRsdnkx" target="_blank" rel="noopener">
+              RSVP on Luma
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
     <!-- FAQ -->
     <section id="faq" class="section">
       <div class="container">
@@ -1675,7 +1967,7 @@
               <div class="faq-icon" aria-hidden="true"></div>
             </button>
             <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">You can register with a pre-formed team or sign up solo. We'll host a team-forming mixer at the start of the event to help individuals find teammates with complementary skills.</div>
+              <div class="faq-answer-inner">Teams must have 2 to 4 members &mdash; solo participation is not allowed. You can register with a pre-formed team or sign up individually, and we'll host a team-forming mixer at the start of the event to help you find teammates with complementary skills.</div>
             </div>
           </div>
 
@@ -1723,10 +2015,7 @@
         <div class="sponsors-tier">
           <div class="sponsor-cards">
             <div class="sponsor-card featured reveal-scale reveal-delay-1" data-tilt>
-              <a href="https://giesbusiness.illinois.edu/" target="_blank" rel="noopener"><img src="assets/logos/logo-gies.png" alt="Gies College of Business" class="sponsor-logo"></a>
-            </div>
-            <div class="sponsor-card featured reveal-scale reveal-delay-2" data-tilt>
-              <a href="https://home.google.com/welcome/" target="_blank" rel="noopener"><img src="assets/logos/logo-google.png" alt="Google" class="sponsor-logo"></a>
+              <a href="https://giesbusiness.illinois.edu/" target="_blank" rel="noopener"><img src="assets/logos/logo-gies.png" alt="Gies College of Business" class="sponsor-logo" style="max-width: 550px;"></a>
             </div>
           </div>
         </div>
