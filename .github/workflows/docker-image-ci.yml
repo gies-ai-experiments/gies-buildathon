@@ -39,7 +39,10 @@ jobs:
           set -euo pipefail
 
           HARBOR_USER_CLEAN="$(printf '%s' "$HARBOR_USER" | tr -d '\r\n')"
+          # Allow secrets saved as "robot$name" or 'robot$name' by stripping wrapper quotes.
+          HARBOR_USER_CLEAN="$(printf '%s' "$HARBOR_USER_CLEAN" | sed -e 's/^"//' -e 's/"$//' -e "s/^'//" -e "s/'$//")"
           HARBOR_PASSWORD_CLEAN="$(printf '%s' "$HARBOR_PASSWORD" | tr -d '\r\n')"
+          HARBOR_PASSWORD_CLEAN="$(printf '%s' "$HARBOR_PASSWORD_CLEAN" | sed -e 's/^"//' -e 's/"$//' -e "s/^'//" -e "s/'$//")"
 
           echo "Harbor user length: ${#HARBOR_USER_CLEAN}"
           if [ "$HARBOR_USER" != "$HARBOR_USER_CLEAN" ] || [ "$HARBOR_PASSWORD" != "$HARBOR_PASSWORD_CLEAN" ]; then
