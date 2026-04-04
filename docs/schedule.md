@@ -1,4 +1,4 @@
-# Draft for Task force discussion - Gies AI For Impact Challenge
+# Gies AI for Impact Challenge
 
 [Shorter version for circulation to College Leadership/Google](https://docs.google.com/document/d/1ApPWdY7ZlyrFTl9_s7hkrhfQDDmTzTPGdsTIT2it3-Q/edit?tab=t.0)
 
@@ -135,16 +135,17 @@ Attendee List: Gies students, Gies AI Taskforce, select faculty/staff
 - Will hand out flyers for rules of the format
 - Final team registration
 
+**5:45 PM - 6:00 PM: Move to Deloitte**
+
 **6:00 PM - 7:00 PM: Opening Ceremony (Deloitte)**
-- Welcome from Gies leadership (30 mins)
-  - Dean (Welcome)
-  - Vishal (Intro to Challenge, Intro to Mentors — 5 function members)
-  - Ash (Rules and Format, Logistics — Rooms, Food, Bot, credit to Student Organization and organizers)
+- 6:00 - 6:15: Welcome from Gies leadership
+  - Vishal (Welcome and Why we are doing this)
+  - Adam (Intro to tracks, challenge description, and Mentors — 5 function members)
+  - Vishal - Welcome Keynote speaker
+- 6:15 - 6:45: Keynote speaker
+- 6:45 - 7:00: Ash (Rules and Format, Logistics — Rooms, Food, Bot, credit to Student Organization and organizers)
   - Agentic AI @ UIUC (Technical)
   - Disruption Lab (Operations)
-- Keynote speaker (industry professional or faculty on AI in business) (30 mins)
-  - Intro to Sponsor (5 mins)
-  - Google Speaker in Person - 25 mins
 
 **7:00 PM - 9:00 PM: Dinner, Initial Planning, Meet Mentors (Atrium)**
 - Teams finalize ideas
@@ -166,11 +167,10 @@ Attendee List: Gies students, Gies AI Taskforce, select faculty/staff
 
 ### Day 2 - April 24th
 
-**Room Booking:** Atrium 12-5 pm, Deloitte 3-5 pm (Reconfirm)
-
 **8:00 AM - 12:00 PM: Hacking Session 2**
-- Breakfast served (8:00 AM) (Mentors will also be present)
-- Morning project champions office hours (9-11 am) (Manage plan for mentor meetings - Sahib)
+- Breakfast and snacks in BIF 3001 and BIF 3003 (8:00 AM) (Mentors will also be present)
+- Morning project champions office hours (9-11 am) in BIF 1049 (Manage plan for mentor meetings - Sahib)
+- Student hacking continues in BIF 3001 and BIF 3003
 - Final development push
 
 **12:00 PM - 1:00 PM: Box Lunch & Submission Preparation**
@@ -195,12 +195,12 @@ Attendee List: Gies students, Gies AI Taskforce, select faculty/staff
   - Live demonstrations
   - 2-minute Q&A with judges
 - Judges select top 1 team from each track (5 finalists total) (2:05 - 2:30)
-- Judges will have a rubric which will be shared with the students, with the students getting feedback
+- Judges will have a rubric which will be shared with the students, with the students getting feedback after the event
 - Light refreshments will be provided to judges and participants
 - Finalists prepare for final round (2:40 pm announcement)
 - Judges convene to align scoring
 
-**Round 2 (Final Group of 5 Industry Judges): Finals (3:15 PM - 4:00 PM) (Room TBD)**
+**Round 2 (Final Group of 5 Industry Judges): Finals (3:15 PM - 4:00 PM) (Deloitte - BIF 1001)**
 - Top 5 finalist teams present to combined judging panel
 - 5-minute presentations with live demos
 - 3-minute Q&A
@@ -227,7 +227,7 @@ Attendee List: Gies students, Gies AI Taskforce, select faculty/staff
 
 ### Round 1 - Preliminary Judging (6-9 judges)
 
-Split across 5 tracks, with 2-3 judges per track:
+Split across 5 tracks, with 2-3 judges per track
 
 - **Finance & Accounting Track:** 2-3 judges
 - **HR:** 2-3 judges
@@ -238,6 +238,7 @@ Split across 5 tracks, with 2-3 judges per track:
 ### Round 2 - Finals (can be same judges)
 
 - All judges reconvene as a combined panel for the top 5 finalists
+- Or you could use a smaller "head judge" panel of 3-5 if preferred
 - Or you could use a smaller "head judge" panel of 3-5 if preferred
 
 ### Suggested Judge Profiles
@@ -284,9 +285,8 @@ Split across 5 tracks, with 2-3 judges per track:
 - **Subtotal: $800**
 
 ### Miscellaneous
-- Judge appreciation (5 judges @ $50): $250
 - Emergency fund/contingency: $600
-- **Subtotal: $850**
+- **Subtotal: $600**
 
 ### Awards & Recognition
 - 1st Place Team: $500 scholarship per member (4 members = $2,000)
@@ -297,7 +297,7 @@ Split across 5 tracks, with 2-3 judges per track:
 
 ### Reserve
 - For additional costs
-- **Subtotal: $2,350**
+- **Subtotal: $2,600**
 
 **TOTAL BUDGET: $15,000**
 
