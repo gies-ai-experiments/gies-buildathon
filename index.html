@@ -109,7 +109,7 @@
     }
     @media (pointer: coarse) {
       .cursor-dot, .cursor-ring { display: none; }
-      body { cursor: auto; }
+      body, a, button, .btn-primary, .btn-secondary, .hamburger, .faq-question, .register-form input, .register-form button, .skip-link { cursor: auto; }
     }
 
     /* ===== CURSOR GLOW ===== */
@@ -1251,6 +1251,7 @@
     }
     .sponsor-logo {
       display: block;
+      width: 100%;
       max-width: 420px;
       height: auto;
       margin: 0 auto;
@@ -1275,6 +1276,10 @@
       padding: 1.5rem 2.5rem;
       transition: border-color 0.4s, transform 0.4s;
       cursor: default;
+    }
+    .partner-logo {
+      width: 100%;
+      height: auto;
     }
     .partner-card:hover {
       border-color: var(--white-20);
@@ -1465,7 +1470,7 @@
         min-width: 0;
       }
       .sponsor-logo {
-        max-width: 280px;
+        max-width: 280px !important;
       }
       .partner-cards {
         flex-direction: column;
