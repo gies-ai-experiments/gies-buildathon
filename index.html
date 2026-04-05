@@ -772,12 +772,17 @@
 
     /* ===== TRACKS ===== */
     .tracks-grid {
-      display: grid;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1.25rem;
       margin-top: 3rem;
     }
-    @media (min-width: 768px) { .tracks-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .tracks-grid { grid-template-columns: repeat(3, minmax(0, 380px)); justify-content: center; } }
+    .tracks-grid > * {
+      width: 100%;
+    }
+    @media (min-width: 768px) { .tracks-grid > * { width: calc(50% - 0.625rem); } }
+    @media (min-width: 1024px) { .tracks-grid > * { width: calc(33.333% - 0.834rem); max-width: 380px; } }
 
     .track-card {
       background: var(--navy-card);
@@ -1617,6 +1622,7 @@
           <span class="typewriter-text" data-text="Agentic AI Build-a-Thon"></span><span class="typewriter-cursor" aria-hidden="true"></span>
         </p>
         <p class="hero-location">Gies College of Business &bull; University of Illinois Urbana-Champaign</p>
+        <p style="font-weight:900; font-size:clamp(1.1rem,2.5vw,1.4rem); color:var(--orange); letter-spacing:0.05em; margin-bottom:1.5rem; opacity:0; transform:translateY(20px); animation:fadeUp 0.8s var(--ease-out) 1s forwards;">APPLICATIONS ARE LIVE!</p>
         <div class="hero-buttons">
           <a class="btn-primary magnetic" href="https://forms.gle/RxQGQBsRutTZQme29" target="_blank" rel="noopener">Apply Now</a>
           <a class="btn-secondary magnetic" href="#about">Learn More</a>
@@ -1718,23 +1724,23 @@
           <div class="track-card reveal-scale reveal-delay-4" data-tilt>
             <div class="track-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
-              </svg>
-            </div>
-            <h3>General Innovation</h3>
-            <p>Got a bold idea that defies categories? This open track welcomes any innovative solution that pushes boundaries and challenges the status quo.</p>
-            <span class="track-badge">Open Track</span>
-          </div>
-
-          <div class="track-card reveal-scale reveal-delay-5" data-tilt>
-            <div class="track-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
               </svg>
             </div>
             <h3>Business Technology</h3>
             <p>Develop infrastructure, automation, and enterprise solutions that power modern business operations.</p>
             <span class="track-badge">2&ndash;3 Judges</span>
+          </div>
+
+          <div class="track-card reveal-scale reveal-delay-5" data-tilt>
+            <div class="track-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+              </svg>
+            </div>
+            <h3>General Innovation</h3>
+            <p>Got a bold idea that defies categories? This open track welcomes any innovative solution that pushes boundaries and challenges the status quo.</p>
+            <span class="track-badge">Open Track</span>
           </div>
         </div>
       </div>
@@ -2063,6 +2069,7 @@
         <a href="#about">About</a>
         <a href="#tracks">Tracks</a>
         <a href="#faq">FAQ</a>
+        <a href="https://www.linkedin.com/showcase/gies-buildathon/?viewAsMember=true" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <p class="footer-copy">Gies College of Business &bull; University of Illinois Urbana-Champaign</p>
       <p class="footer-copy">Agentic AI @ UIUC &bull; Disruption Lab &bull; Data Science Research Services</p>
