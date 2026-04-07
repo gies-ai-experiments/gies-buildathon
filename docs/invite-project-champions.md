@@ -4,7 +4,7 @@
 
 Dear Colleague,
 
-We're hosting the first **[Gies AI For Impact Challenge](https://go.gies.illinois.edu/ai-challenge)** — a 24-hour event where 80-120 Gies students will build AI agents that automate common business workflows. We'd love your involvement, and there are several ways to participate — from hands-on to hands-off.
+We're hosting the first **Gies AI For Impact Challenge** ([go.gies.illinois.edu/ai-challenge](https://go.gies.illinois.edu/ai-challenge)) — a 24-hour event where 80-120 Gies students will build AI agents that automate common business workflows. We'd love your involvement, and there are several ways to participate — from hands-on to hands-off.
 
 ## Step 1: Shape the Challenge — Champion Kickoff (April 10)
 
@@ -80,7 +80,7 @@ As a participant, you're invited to join us for:
 
 Not sure yet? **Just join the April 10 kickoff** and decide after.
 
-**Event Website:** [build-a-thon.dsrs.illinois.edu](https://go.gies.illinois.edu/ai-challenge)
+**Event Website:** [go.gies.illinois.edu/ai-challenge](https://go.gies.illinois.edu/ai-challenge)
 
 **Info Night (Wednesday, April 22):** Join us the night before the event for a walkthrough of the schedule, rooms, logistics, and Q&A. [RSVP on Luma](https://luma.com/sjzwtaso)
 
