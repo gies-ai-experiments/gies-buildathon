@@ -84,6 +84,8 @@ Not sure yet? **Just join the April 10 kickoff** and decide after.
 
 **Info Night (Wednesday, April 22):** Join us the night before the event for a walkthrough of the schedule, rooms, logistics, and Q&A. [RSVP on Luma](https://luma.com/sjzwtaso)
 
+**Start here — join the April 10 kickoff:** [Register for Zoom](https://illinois.zoom.us/meeting/register/maGKNSuOQR2NP4IAMwdfQA) (Friday, April 10, 2:00 - 3:00 PM)
+
 Questions? Reach out to Vishal Sachdev or Adam King.
 
 ---
