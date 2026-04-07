@@ -4,15 +4,19 @@
 
 Dear Colleague,
 
-We're hosting the first **Gies AI For Impact Challenge** — a 24-hour event where 80-120 Gies students will build AI agents that automate common business workflows. We'd love your involvement, and there are several ways to participate — from hands-on to hands-off.
+We're hosting the first **[Gies AI For Impact Challenge](https://build-a-thon.dsrs.illinois.edu/)** — a 24-hour event where 80-120 Gies students will build AI agents that automate common business workflows. We'd love your involvement, and there are several ways to participate — from hands-on to hands-off.
 
-## Start Here: Orientation on April 10 (No Commitment)
+## Step 1: Shape the Challenge — Champion Kickoff (April 10)
 
-Before you decide anything, join us for an online orientation on **Friday, April 10 from 2:00 - 3:00 PM on MS Teams** with **Jake Myers**, Lead for Enterprise GenAI Solutions working with the Office of the CIO at the University of Illinois Urbana-Champaign.
+Join us **Friday, April 10 from 2:00 - 3:00 PM on Zoom** for the champion kickoff with **Jake Myers**, Lead for Enterprise GenAI Solutions working with the Office of the CIO at the University of Illinois Urbana-Champaign.
 
-Jake will walk through what kinds of business process automations are possible today using tools like **Microsoft Copilot Studio** — the same platform available to Gies staff. Come see what's out there, ask questions, and then decide if and how you'd like to be involved in the challenge.
+**Part 1:** Vishal Sachdev will give an overview of the event — what students will build, how the tracks work, and what we need from champions.
 
-**This session is open to anyone curious about automation — no commitment to the challenge required.**
+**Part 2:** Jake Myers will demo the kinds of business process automations that are possible today using tools like **Microsoft Copilot Studio**. Students will use these tools to build working prototypes during the challenge — and you'll get to see firsthand what the platform can do. If the results are compelling for your area, this event can help make the case for broader Copilot Studio access within your unit.
+
+**You don't have to go it alone.** Bring a colleague from your unit — you can share the champion role and split the time commitment. The more perspectives at the table, the better the challenges.
+
+**Zoom link:** [Register here](https://illinois.zoom.us/meeting/register/maGKNSuOQR2NP4IAMwdfQA)
 
 ## Ways to Participate
 
@@ -47,13 +51,13 @@ This is a learning exercise for students and a window into what's possible for s
 
 | When | What | Duration |
 |------|------|----------|
-| **Fri, April 10** | Online orientation with Jake Myers — no commitment, just come see what's possible | 1 hour |
+| **Fri, April 10** | Shape the Challenge kickoff — see what's possible, start defining your track's challenge | 1 hour |
 | **Before the event** | Optional call to shape your challenge (we'll help frame it) | 30 min |
 | **Thu, April 23** | Dinner with students — share your challenge or just meet teams | 7:00 - 9:00 PM |
 | **Fri, April 24** | Morning office hours — students come to you for feedback | 9:00 - 11:00 AM |
 | **Fri, April 24** | Judging presentations for your track (required for champions) | 1:00 - 2:30 PM |
 
-You don't need to attend everything. The April 10 orientation and Thursday dinner are the best starting points. From there, participate in as much or as little as your schedule allows.
+You don't need to attend everything. The April 10 kickoff and Thursday dinner are the best starting points. From there, participate in as much or as little as your schedule allows.
 
 ## Meals On Us
 
@@ -65,8 +69,8 @@ As a participant, you're invited to join us for:
 
 ## What You Get Out of It
 
-- **See automation in action.** Students will build solutions using tools like Microsoft Copilot Studio. Watching your challenge get tackled gives you concrete insights into what's possible — and what you might want to explore in your own work.
-- **Build your own intuition for AI tools.** Even without touching a system, you'll walk away understanding what Copilot Studio and similar platforms can do, and where they hit limits.
+- **See automation in action.** Students will build working prototypes using tools like Microsoft Copilot Studio. Watching your challenge get tackled gives you concrete evidence of what's possible — and whether it's worth pursuing expanded access for your team.
+- **Build your own intuition for AI tools.** Without needing a license yourself, you'll see what Copilot Studio and similar platforms can do, where they hit limits, and whether they're worth investing in for your unit.
 - **Support student career development.** Students gain professional experience working on realistic business problems. Your participation gives their portfolio projects the credibility that comes from real business context.
 - **Low effort, high visibility.** Connect with students, faculty, and leadership in a setting that showcases Gies innovation.
 
@@ -77,7 +81,11 @@ Reply with:
 2. Which option appeals to you (A: propose a challenge, B: mentor, or C: both)
 3. If proposing a challenge: a one-sentence description of the type of process you'd like to see automated
 
-Not sure yet? **Just attend the April 10 orientation** and decide after.
+Not sure yet? **Just join the April 10 kickoff** and decide after.
+
+**Event Website:** [build-a-thon.dsrs.illinois.edu](https://build-a-thon.dsrs.illinois.edu/)
+
+**Info Night (Wednesday, April 22):** Join us the night before the event for a walkthrough of the schedule, rooms, logistics, and Q&A. [RSVP on Luma](https://luma.com/sjzwtaso)
 
 Questions? Reach out to Vishal Sachdev or Adam King.
 
