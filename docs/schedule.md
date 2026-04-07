@@ -137,17 +137,29 @@ Attendee List: Gies students, Gies AI Taskforce, select faculty/staff
 
 **5:45 PM - 6:00 PM: Move to Deloitte**
 
-**6:00 PM - 7:00 PM: Opening Ceremony (Deloitte)**
+**6:00 PM - 7:10 PM: Opening Ceremony (Deloitte)**
 - 6:00 - 6:15: Welcome from Gies leadership
   - Vishal (Welcome and Why we are doing this)
   - Adam (Intro to tracks, challenge description, and Mentors — 5 function members)
-  - Vishal - Welcome Keynote speaker
-- 6:15 - 6:45: Keynote speaker
-- 6:45 - 7:00: Ash (Rules and Format, Logistics — Rooms, Food, Bot, credit to Student Organization and organizers)
+  - Vishal - Introduce keynote speaker
+- 6:15 - 7:00: Keynote — **Paul Hsu, Decasonic**
+  - **"The Modern VC Firm: AI Teammates, Augmentation, and Why Builders Win"**
+  - How VC is being reshaped by AI agents — sourcing, diligence, decision-making
+  - Augmentation > automation: AI amplifies judgment rather than replaces it
+  - Why builder skills are the new moat for business students
+  - Agents + Web3: ownership and coordination in an agent-driven economy
+  - Build to Learn: practical frameworks for rapid experimentation
+- 7:00 - 7:10: Ash (Rules and Format, Logistics — Rooms, Food, Bot, credit to Student Organization and organizers)
   - Agentic AI @ UIUC (Technical)
   - Disruption Lab (Operations)
 
-**7:00 PM - 9:00 PM: Dinner, Initial Planning, Meet Mentors (Atrium)**
+**Paul Hsu logistics:**
+- Arriving 4:30 PM, staying till 8:00 PM
+- 4:30 - 5:30 PM: Pre-event faculty/staff session (smaller group, AI capabilities + Decasonic agent expertise)
+- Parking spot reserved at BIF (515 E. Gregory Dr)
+- Decasonic contacts: Ayanna Tan (ayanna@decasonic.com, marketing), Abdul Al Ali (abdul@decasonic.com)
+
+**7:10 PM - 9:00 PM: Dinner, Initial Planning, Meet Mentors (Atrium)**
 - Teams finalize ideas
 - Access to mentors for guidance
   - Action point for Vishal/Adam to sort the mentors

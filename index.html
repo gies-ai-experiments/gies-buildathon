@@ -691,6 +691,70 @@
       max-width: 600px;
     }
 
+    /* ===== KEYNOTE ===== */
+    .keynote-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    @media (min-width: 768px) {
+      .keynote-card {
+        flex-direction: row;
+        text-align: left;
+        gap: 3rem;
+      }
+    }
+    .keynote-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--orange);
+      flex-shrink: 0;
+    }
+    .keynote-info h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+      color: var(--white-90);
+      margin: 0 0 0.25rem;
+    }
+    .keynote-role {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--orange);
+      margin: 0 0 1rem;
+    }
+    .keynote-talk-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      font-weight: 700;
+      font-style: italic;
+      color: var(--white-70);
+      margin: 0 0 1rem;
+    }
+    .keynote-description {
+      font-size: 1.05rem;
+      color: var(--white-50);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+    .keynote-meta {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--white-40);
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      .keynote-meta { justify-content: flex-start; }
+    }
+
     /* ===== SECTION BACKGROUNDS ===== */
     .section-bg {
       position: absolute;
@@ -1575,6 +1639,7 @@
         <a href="#about">About</a>
         <a href="#tracks">Tracks</a>
         <a href="#how-it-works">How It Works</a>
+        <a href="#keynote">Keynote</a>
         <a href="#workshops">Workshops</a>
         <a href="#faq">FAQ</a>
         <a href="#sponsors">Sponsors</a>
@@ -1591,6 +1656,7 @@
     <a href="#about">About</a>
     <a href="#tracks">Tracks</a>
     <a href="#how-it-works">How It Works</a>
+    <a href="#keynote">Keynote</a>
     <a href="#workshops">Workshops</a>
     <a href="#faq">FAQ</a>
     <a href="#sponsors">Sponsors</a>
@@ -1772,6 +1838,31 @@
             <div class="step-number">3</div>
             <h3>Pitch</h3>
             <p>Present your project to industry judges. Top teams win prizes and get connected with industry leaders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Keynote -->
+    <section id="keynote" class="section">
+      <div class="container">
+        <p class="section-label reveal" style="text-align:center">KEYNOTE</p>
+        <h2 class="section-title reveal" style="text-align:center">Opening Night Speaker</h2>
+
+        <div class="keynote-card reveal">
+          <img class="keynote-photo" src="assets/images/paul-hsu-headshot.jpeg" alt="Paul Hsu, Managing General Partner at Decasonic">
+          <div class="keynote-info">
+            <h3><a href="https://www.linkedin.com/in/paulhsu/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; border-bottom: 2px solid var(--orange);">Paul Hsu</a></h3>
+            <p class="keynote-role">Managing General Partner, Decasonic</p>
+            <p class="keynote-talk-title">&ldquo;The Modern VC Firm: AI Teammates, Augmentation, and Why Builders Win&rdquo;</p>
+            <p class="keynote-description">How venture capital is being reshaped by AI agents &mdash; and why students who can rapidly prototype, iterate, and deploy ideas gain a decisive advantage over those focused only on theory.</p>
+            <div class="keynote-meta">
+              <span>Thursday, April 23</span>
+              <span>6:15 &ndash; 7:00 PM</span>
+              <span>Deloitte Auditorium</span>
+            </div>
           </div>
         </div>
       </div>
