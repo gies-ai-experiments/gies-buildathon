@@ -30,11 +30,18 @@ Landing page for the Gies Buildathon, a 24-hour hackathon for Gies undergrad and
 
 ## Session Log
 
-### 2026-04-07
+### 2026-04-07 (session 2)
+- Completed: Added keynote section to website — Paul Hsu (Decasonic), "The Modern VC Firm: AI Teammates, Augmentation, and Why Builders Win," headshot, LinkedIn link, 6:15-7:00 PM Thu April 23. Updated schedule with keynote details, 4:30 PM faculty session, and Decasonic contacts.
+- Completed: Updated champion invite — short URL (go.gies.illinois.edu/ai-challenge), dates in Meals section, champion form CTA placeholder (CHAMPION_FORM_URL).
+- Completed: Page load optimization — converted all images to WebP (2.3MB → 280KB, 88% reduction), added lazy loading, preloaded hero image.
+- Completed: Fixed 15 UI/UX issues from frontend audit — duplicate workshop card, WCAG contrast (white-50→white-65), cursor:none safety, FAQ truncation, focus-visible outlines, consolidated scroll handlers, particle system mobile optimization, CSS Grid for tracks, mobile menu Escape key, dead code removal.
+- Carry-forward: Champion form URL placeholder (CHAMPION_FORM_URL) needs real Google Form link once branching is set up.
+- Next: Send champion invites. Fill Project Champion names by track. Add workshop materials as sessions happen.
+
+### 2026-04-07 (session 1)
 - Completed: Revised project champion invitation — renamed orientation to "Shape the Challenge — Champion Kickoff," added two-part agenda (Vishal overview + Jake demo), reframed Copilot Studio as student-built prototypes that help staff evaluate whether to pursue broader access, added Zoom registration link, shared champion role pitch, and website link.
 - Completed: Added Workshop 06 (Build-a-Thon Info Night, Wed April 22) to landing page with Luma RSVP link, synced from live site at build-a-thon.dsrs.illinois.edu.
 - Website URL: https://build-a-thon.dsrs.illinois.edu/
-- Next: Fill Project Champion names by track. Confirm keynote speaker. Add workshop materials as sessions happen. Send champion invites.
 
 ### 2026-04-04
 - Completed: Set up Google Doc → GitHub markdown sync workflow. Pulled full event schedule via Chrome browser automation (published URL + read_page). Created `docs/` folder with schedule.md, invite-project-champions.md, and resources.md.
