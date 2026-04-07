@@ -4,7 +4,7 @@
 
 Dear Colleague,
 
-We're hosting the first **[Gies AI For Impact Challenge](https://build-a-thon.dsrs.illinois.edu/)** — a 24-hour event where 80-120 Gies students will build AI agents that automate common business workflows. We'd love your involvement, and there are several ways to participate — from hands-on to hands-off.
+We're hosting the first **[Gies AI For Impact Challenge](https://go.gies.illinois.edu/ai-challenge)** — a 24-hour event where 80-120 Gies students will build AI agents that automate common business workflows. We'd love your involvement, and there are several ways to participate — from hands-on to hands-off.
 
 ## Step 1: Shape the Challenge — Champion Kickoff (April 10)
 
@@ -63,9 +63,9 @@ You don't need to attend everything. The April 10 kickoff and Thursday dinner ar
 
 As a participant, you're invited to join us for:
 
-- **Thursday dinner** (7:00 PM) — pizza, sandwiches, and networking with student teams
-- **Friday breakfast** (8:00 AM) — bagels, donuts, coffee, and fruit
-- **Friday box lunch** (12:00 PM) — catered lunch during submission prep
+- **Thursday, April 23 dinner** (7:00 PM) — pizza, sandwiches, and networking with student teams
+- **Friday, April 24 breakfast** (8:00 AM) — bagels, donuts, coffee, and fruit
+- **Friday, April 24 box lunch** (12:00 PM) — catered lunch during submission prep
 
 ## What You Get Out of It
 
@@ -76,14 +76,11 @@ As a participant, you're invited to join us for:
 
 ## Interested?
 
-Reply with:
-1. Your name and functional area
-2. Which option appeals to you (A: propose a challenge, B: mentor, or C: both)
-3. If proposing a challenge: a one-sentence description of the type of process you'd like to see automated
+**[Sign up as a Champion](CHAMPION_FORM_URL)** — pick your role (propose a challenge, mentor, or both) and tell us about your area.
 
 Not sure yet? **Just join the April 10 kickoff** and decide after.
 
-**Event Website:** [build-a-thon.dsrs.illinois.edu](https://build-a-thon.dsrs.illinois.edu/)
+**Event Website:** [build-a-thon.dsrs.illinois.edu](https://go.gies.illinois.edu/ai-challenge)
 
 **Info Night (Wednesday, April 22):** Join us the night before the event for a walkthrough of the schedule, rooms, logistics, and Q&A. [RSVP on Luma](https://luma.com/sjzwtaso)
 
