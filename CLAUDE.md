@@ -30,6 +30,12 @@ Landing page for the Gies Buildathon, a 24-hour hackathon for Gies undergrad and
 
 ## Session Log
 
+### 2026-04-07
+- Completed: Revised project champion invitation — renamed orientation to "Shape the Challenge — Champion Kickoff," added two-part agenda (Vishal overview + Jake demo), reframed Copilot Studio as student-built prototypes that help staff evaluate whether to pursue broader access, added Zoom registration link, shared champion role pitch, and website link.
+- Completed: Added Workshop 06 (Build-a-Thon Info Night, Wed April 22) to landing page with Luma RSVP link, synced from live site at build-a-thon.dsrs.illinois.edu.
+- Website URL: https://build-a-thon.dsrs.illinois.edu/
+- Next: Fill Project Champion names by track. Confirm keynote speaker. Add workshop materials as sessions happen. Send champion invites.
+
 ### 2026-04-04
 - Completed: Set up Google Doc → GitHub markdown sync workflow. Pulled full event schedule via Chrome browser automation (published URL + read_page). Created `docs/` folder with schedule.md, invite-project-champions.md, and resources.md.
 - Completed: Reviewed event schedule for coherence issues. Fixed 6 items across Google Doc and schedule.md: Room TBD → Deloitte, 6→5 finalists, 3→5 tracks in judges section, removed stale Day 2 room note, restructured Opening Ceremony timing, assigned Day 2 rooms (BIF 1049 for champions, 3001/3003 for hacking).
