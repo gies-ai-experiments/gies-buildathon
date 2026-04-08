@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gies AI for Impact Challenge — Agentic AI Build-a-Thon 2026</title>
-  <meta name="description" content="24-hour innovation competition for Gies College of Business students at UIUC. Build solutions across Finance, HR, Marketing, Technology, and more. April 2026.">
+  <meta name="description" content="24-hour innovation competition for Gies College of Business students at the University of Illinois. Build solutions across Finance, HR, Marketing, Technology, and more. April 2026.">
   <meta property="og:title" content="Gies AI for Impact Challenge 2026">
-  <meta property="og:description" content="Agentic AI Build-a-Thon. April 2026 at Gies College of Business, UIUC.">
+  <meta property="og:description" content="Agentic AI Build-a-Thon. April 2026 at Gies College of Business, University of Illinois.">
   <meta property="og:type" content="website">
   <link rel="preload" as="image" type="image/webp" href="assets/images/gies-exterior-night.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,9 +48,6 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
-    body.cursor-ready { cursor: none; }
-    body.cursor-ready a, body.cursor-ready button { cursor: none; }
-
     /* Noise overlay */
     body::after {
       content: '';
@@ -73,59 +70,6 @@
       width: 0%;
       transition: width 0.05s linear;
       box-shadow: 0 0 10px var(--orange-glow);
-    }
-
-    /* ===== CUSTOM CURSOR ===== */
-    .cursor-dot {
-      position: fixed;
-      width: 8px;
-      height: 8px;
-      background: var(--orange);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 10000;
-      transform: translate(-50%, -50%);
-      transition: width 0.2s, height 0.2s, background 0.2s;
-      mix-blend-mode: difference;
-    }
-    .cursor-ring {
-      position: fixed;
-      width: 40px;
-      height: 40px;
-      border: 1.5px solid var(--orange);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 10000;
-      transform: translate(-50%, -50%);
-      transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out), border-color 0.3s, opacity 0.3s;
-      opacity: 0.5;
-    }
-    .cursor-ring.hovering {
-      width: 60px;
-      height: 60px;
-      border-color: var(--orange-light);
-      opacity: 0.8;
-    }
-    .cursor-dot.hovering {
-      width: 12px;
-      height: 12px;
-    }
-    @media (pointer: coarse) {
-      .cursor-dot, .cursor-ring { display: none; }
-      body, a, button, .btn-primary, .btn-secondary, .hamburger, .faq-question, .register-form input, .register-form button, .skip-link { cursor: auto; }
-    }
-
-    /* ===== CURSOR GLOW ===== */
-    .cursor-glow {
-      position: fixed;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(232, 74, 39, 0.07) 0%, transparent 60%);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 1;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.3s;
     }
 
     /* Skip link */
@@ -1638,19 +1582,12 @@
       .hero-date, .hero h1, .hero-tagline, .hero-location, .hero-buttons, .scroll-indicator {
         opacity: 1; transform: none;
       }
-      .cursor-dot, .cursor-ring, .cursor-glow { display: none; }
-      body { cursor: auto; }
     }
   </style>
 </head>
 <body>
   <!-- Scroll progress -->
   <div class="scroll-progress" aria-hidden="true"></div>
-
-  <!-- Custom cursor -->
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
 
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -2092,7 +2029,7 @@
               <div class="faq-icon" aria-hidden="true"></div>
             </button>
             <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">The Gies Buildathon is a 24-hour innovation competition exclusively for Gies College of Business students at UIUC. Teams build solutions to real business challenges across five industry tracks, with mentorship from industry professionals and judging by experts.</div>
+              <div class="faq-answer-inner">The Gies Buildathon is a 24-hour innovation competition exclusively for Gies College of Business students at the University of Illinois. Teams build solutions to real business challenges across five industry tracks, with mentorship from industry professionals and judging by experts.</div>
             </div>
           </div>
 
@@ -2179,7 +2116,7 @@
           <p class="tier-label reveal">Brought to You By</p>
           <div class="partner-cards">
             <div class="partner-card reveal reveal-delay-1" style="background: transparent; border: none;">
-              <img src="assets/logos/logo-agenticai.webp" alt="Agentic AI @ UIUC" class="partner-logo" style="height: 60px; width: auto;" loading="lazy">
+              <img src="assets/logos/logo-agenticai.webp" alt="Agentic AI @ University of Illinois" class="partner-logo" style="height: 60px; width: auto;" loading="lazy">
             </div>
             <div class="partner-card reveal reveal-delay-2" style="background: transparent; border: none;">
               <img src="assets/logos/logo-dlab.webp" alt="Disruption Lab" class="partner-logo" style="height: 60px; width: auto;" loading="lazy">
@@ -2215,52 +2152,17 @@
         <a href="#faq">FAQ</a>
         <a href="https://www.linkedin.com/showcase/gies-buildathon/?viewAsMember=true" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-      <p class="footer-copy">Gies College of Business &bull; University of Illinois Urbana-Champaign</p>
-      <p class="footer-copy">Agentic AI @ UIUC &bull; Disruption Lab &bull; Data Science Research Services</p>
+      <p class="footer-copy">An initiative of <strong>Data Science Research Services (DSRS)</strong> at Gies College of Business &bull; University of Illinois</p>
+      <p class="footer-copy">In partnership with Agentic AI @ U of I and the Disruption Lab</p>
+      <p class="footer-copy">Questions? Contact <a href="mailto:vishal@illinois.edu" style="color: var(--orange);">vishal@illinois.edu</a></p>
     </div>
   </footer>
 
   <script>
-    /* ===== CUSTOM CURSOR ===== */
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorRing = document.querySelector('.cursor-ring');
-    const cursorGlow = document.querySelector('.cursor-glow');
-    if (cursorDot && cursorRing && window.matchMedia('(pointer: fine)').matches) {
-      document.body.classList.add('cursor-ready');
-    }
     let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
-
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      cursorDot.style.left = mouseX + 'px';
-      cursorDot.style.top = mouseY + 'px';
-      cursorGlow.style.left = mouseX + 'px';
-      cursorGlow.style.top = mouseY + 'px';
-    });
-
-    // Smooth ring follow
-    function animateCursor() {
-      ringX += (mouseX - ringX) * 0.15;
-      ringY += (mouseY - ringY) * 0.15;
-      cursorRing.style.left = ringX + 'px';
-      cursorRing.style.top = ringY + 'px';
-      requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    // Hover states
-    const hoverTargets = document.querySelectorAll('a, button, .track-card, .about-card, .faq-item');
-    hoverTargets.forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursorDot.classList.add('hovering');
-        cursorRing.classList.add('hovering');
-      });
-      el.addEventListener('mouseleave', () => {
-        cursorDot.classList.remove('hovering');
-        cursorRing.classList.remove('hovering');
-      });
     });
 
     /* ===== CONSOLIDATED SCROLL HANDLER ===== */
