@@ -76,7 +76,7 @@ As a participant, you're invited to join us for:
 
 ## Interested?
 
-**[Sign up as a Champion](CHAMPION_FORM_URL)** — pick your role (propose a challenge, mentor, or both) and tell us about your area.
+**[Sign up as a Champion](https://docs.google.com/forms/d/e/1FAIpQLSfzArV3W-cSYe_cdO121pwrBg3Ar4HvfE6YlWj7JMHLMU0A4g/viewform?usp=header)** — pick your role (propose a challenge, mentor, or both) and tell us about your area.
 
 Not sure yet? **Just join the April 10 kickoff** and decide after.
 
