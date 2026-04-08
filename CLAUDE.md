@@ -30,7 +30,16 @@ Landing page for the Gies Buildathon, a 24-hour hackathon for Gies undergrad and
 
 ## Session Log
 
-### 2026-04-08
+### 2026-04-08 (session 2)
+- Completed: Branding fixes per marcom — replaced "UIUC" with "University of Illinois" / "U of I" throughout site and meta tags.
+- Completed: Removed custom circle cursor entirely for accessibility (standard arrow now).
+- Completed: Clarified ownership in footer — "An initiative of DSRS at Gies College of Business" with partner attributions. Added contact email.
+- Completed: Added "on-campus" qualifier to all 4 eligibility statements (not open to online students).
+- Completed: Removed "Powered by Gies Business" wordmark from Disruption Lab logo per marcom request (cropped image, kept white "Disruption Lab" text).
+- Investigated: Partner logos (agenticai, dsrs) reported as missing on live site — images serve correctly, likely browser cache or deploy propagation delay.
+- Next: Verify logos render on live site after cache clear. Send champion invites.
+
+### 2026-04-08 (session 1)
 - Completed: Reframed April 10 kickoff as info session — "AI Agents: What's Possible and How You Can Get Involved." Updated agenda: Adam/Vishal 15min, Jake Myers 30min, Q&A 15min. Less committal framing given short lead time.
 - Completed: Added champion sign-up Google Form link (replaced CHAMPION_FORM_URL placeholder).
 - Completed: Generated HTML email version of invite for Outlook paste (docs/invite-project-champions.html).
