@@ -64,6 +64,30 @@ const server = createServer(async (req, res) => {
     return;
   }
 
+  // Person lookup — web search to customize the conversation
+  if (req.method === 'POST' && req.url === '/api/lookup') {
+    try {
+      const { name, unit, email } = await parseBody(req);
+      const query = `${name} ${unit} Gies College of Business University of Illinois`;
+
+      const response = await openai.responses.create({
+        model: 'gpt-4o-mini',
+        tools: [{ type: 'web_search_preview' }],
+        input: `Search for "${query}" and return a brief professional profile (3-5 sentences). Include: their role/title, what they work on, any recent projects or initiatives mentioned online. If you can't find them, say "No profile found" and nothing else. Do not fabricate information.`,
+      });
+
+      const profile = response.output_text || 'No profile found';
+
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ profile }));
+    } catch (error) {
+      console.error('Lookup error:', error);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ profile: 'No profile found' }));
+    }
+    return;
+  }
+
   if (req.method === 'GET' && req.url === '/api/health') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ status: 'ok' }));

@@ -507,6 +507,9 @@
 
   <script>
     // ── Constants ──────────────────────────────────────────
+    // For local dev: set API_BASE to 'http://localhost:3001' and open this file directly.
+    // For production (behind nginx proxy): leave as empty string.
+    const API_BASE = '';
     const SHEETS_WEBHOOK_URL = 'REPLACE_WITH_APPS_SCRIPT_URL';
     const VALID_TRACKS = [
       'Finance & Accounting',
@@ -520,6 +523,9 @@
     // ── State ──────────────────────────────────────────────
     let messages = []; // { role: 'user'|'assistant', content: string }
     let isWaiting = false;
+    let lookupDone = false;
+    let lookupProfile = null;
+    let userMessageCount = 0;
 
     // ── DOM refs ───────────────────────────────────────────
     const welcomeScreen   = document.getElementById('welcome-screen');
@@ -717,6 +723,25 @@
       }, 2200);
     }
 
+    // ── Person lookup ─────────────────────────────────────
+    async function lookupPerson(userText) {
+      if (lookupDone) return;
+      lookupDone = true;
+      try {
+        const res = await fetch(API_BASE + '/api/lookup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: userText, unit: '', email: '' }),
+        });
+        const data = await res.json();
+        if (data.profile && data.profile !== 'No profile found') {
+          lookupProfile = data.profile;
+        }
+      } catch (e) {
+        console.log('Lookup failed (non-critical):', e);
+      }
+    }
+
     // ── Streaming fetch ────────────────────────────────────
     async function sendMessage(userText) {
       if (isWaiting) return;
@@ -727,6 +752,21 @@
       if (userText !== null) {
         messages.push({ role: 'user', content: userText });
         addMessageBubble('user', escapeHtml(userText));
+        userMessageCount++;
+
+        // Fire lookup after first user message (contains name/unit/email)
+        if (userMessageCount === 1) {
+          lookupPerson(userText);
+        }
+      }
+
+      // Inject profile context if lookup completed
+      const messagesForApi = [...messages];
+      if (lookupProfile && userMessageCount >= 2) {
+        messagesForApi.splice(1, 0, {
+          role: 'system',
+          content: `[PROFILE] Background on this person from web search: ${lookupProfile}. Use this to customize your questions and challenge suggestions. Reference specifics naturally — don't quote the profile verbatim.`
+        });
       }
 
       showTyping();
@@ -735,10 +775,10 @@
       let assistantBubble = null;
 
       try {
-        const res = await fetch('/api/chat', {
+        const res = await fetch(API_BASE + '/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages }),
+          body: JSON.stringify({ messages: messagesForApi }),
         });
 
         if (!res.ok) {
