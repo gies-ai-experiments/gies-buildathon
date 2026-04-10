@@ -1,0 +1,217 @@
+Timestamp,First and Last Name,Gies Department or Unit,Illinois Email address,How will you be involved as a Champion?,Challenge Title ,Describe the current workflow and what needs to be automated,What is the impact?,What data and tools are involved?,Track
+4/7/2026 19:20:32,Vishal Sachdev,BADM,vishal@illinois.edu,Option A - I'll propose a challenge,Gies Undergrad Majors - Real time status,"Every semester, academic directors and other stakeholders need counts on the majors in their program, and everytime, there are two or three different numbers being reported by different people. What it, we could have some automation that reads data from some system or combination of systems and routes to a human in the loop to approve the number , which then goes into a dashboard, which is updated in realtime. ",Will save about 3 hours of effort for each person involved each quarter. About 20 person hours every quarter. ,student enrollment data by major and semester. ,General Innovation
+4/8/2026 17:35:54,Charlie Farhoodi,Magelli Office of Experiential Learning,charlesf@illinois.edu,Option C - I'll do both A & B,Automate Prospect Identification for Consulting Engagements,"The Magelli Office of Experiential Learning sources 200+ clients for student consulting engagements each semester. These projects are primarily primarily sourced through relationships, referrals, repeat partners, and professional networks of Gies staff. This works well but is inherently bounded by human capacity.
+
+Public job postings contain signals that could identify new prospects outside the existing network for example a startup posting its ""first marketing hire"" probably needs marketing strategy now, a mid-size firm posting several data roles likely has analytics infrastructure gaps it can't fill fast enough. These are companies that would benefit from student consulting help but have no reason to know our programs exist. Nobody is systematically doing this prospecting today because manually scanning thousands of postings and pattern-matching across them isn't realistic.
+
+The challenge is to build an agent that monitors job postings, recognizes signals that map to consulting engagement opportunities, and surfaces qualified prospects the team wouldn't otherwise encounter.","The relationship-driven model for project sourcing works well but has a natural ceiling as you can only know so many people. An automated discovery layer would complement the existing approach by surfacing prospects from outside the team's network, potentially adding dozens of qualified leads per week that would otherwise never be identified. It opens a second sourcing channel that scales independently of headcount or personal connections. All leads would still be contacted and vetted by human staff members.","Public job posting data from aggregators (Indeed, LinkedIn Jobs, Glassdoor), company profile data (size, industry, location, funding stage), and a CRM or spreadsheet where qualified prospects would be tracked. The agent would pull job postings via API or scraping, apply classification logic to flag high-signal postings (e.g., ""first hire"" language, cluster hiring in a domain, roles suggesting a new initiative), enrich with company data, score fit against criteria like industry, geography, size, and project type alignment, and output a ranked prospect list with context on why each was flagged. Synthetic data would include sample job postings and a mock scoring rubric.","Marketing & Sales, Business Technology, General Innovation"
+4/9/2026 9:24:08,Andrew Allen,SCC,andrewa@illinois.edu,Option A - I'll propose a challenge,Scheduling a group meeting,"Scheduling a meeting with four or more people is a headache and a very manual process. Outlook calendar helps identify a time when everyone is available, but what if the first open time everyone has is 4 weeks from now? Or what if one person in the group doesn't use Outlook? Currently, I ask an administrative assistant to schedule the meeting and give them a few parameters (i.e. 45 minutes long, in-person if possible, within the next two weeks, etc.). Then that person contacts the administrative assistants of the other people in the group or contacts the individuals directly. If schedules don't align, they all work together to see if some people can move things on their calendars so that they can be available. This process may involve a lot of emails back and forth and can take multiple days to complete.",Time - from my administrative assistant and the administrative assistants of everyone else involved. It also can slow down work if we can't get something scheduled out for 2-3 weeks.,"Currently, we use Outlook calendars, email, MS Teams messaging.","Business Technology, General Innovation"
+4/9/2026 13:09:02,Lindsey Halfar,Marcom,lsavoie@illinois.edu,Option C - I'll do both A & B,Automating Multi-Campaign Paid Media Management and Performance Tracking,"A marketing team manages multiple paid media campaigns simultaneously, each tied to a different program, product, or initiative. Each campaign includes its own budget, timeline, channels, and creative requirements.
+The workflow typically follows these steps:
+
+1. Campaign Intake & Setup 
+o Receive campaign plans and media schedules from an external agency 
+o Review required tactics, timelines, and creative asset specifications 
+o Manually input campaign details into a tracking system (Airtable, Asana, Budget Spreadsheet 
+
+2. Creative Asset Coordination 
+o Translate agency-provided asset requirements into internal tasks 
+o Assign work to designers, copywriters, or stakeholders in Asana
+o Track progress and approvals for each asset 
+o Ensure assets are delivered on time and meet specifications 
+
+3. Task & Timeline Management 
+o Break campaigns into individual tactics (e.g., social ads, display ads, sponsored content) 
+o Create and manage tasks tied to launch dates, asset deadlines, and campaign milestones 
+o Manually track multiple overlapping timelines across campaigns 
+
+4. Campaign Execution & Monitoring 
+o Coordinate with the agency to launch campaigns once assets are ready 
+o Monitor campaign status across multiple tactics and platforms 
+o Track when campaigns go live, pause, or require updates 
+
+5. Creative Rotation & Updates 
+o Monitor performance trends provided by Agency or on owned Google Analytics platform
+o Identify when ads need to be refreshed or rotated 
+o Coordinate new asset creation and ensure timely updates 
+
+6. Performance Tracking & Analysis 
+o Pull performance data from multiple sources (ad platforms, analytics tools, manual reports or spreadsheets) 
+o Consolidate metrics into a central location 
+o Evaluate campaign effectiveness and identify underperforming tactics 
+
+7. Reporting & Communication 
+o Compile recurring reports (monthly/quarterly) 
+o Share updates with internal stakeholders and external partners 
+o Communicate campaign changes, delays, and performance insights 
+
+Where the process is time-consuming:
+•Translating agency media plans into actionable internal tasks 
+•Coordinating asset creation, approvals, and delivery across stakeholders 
+•Managing multiple timelines and dependencies across campaigns 
+•Manually tracking campaign status and updates 
+•Aggregating performance data from multiple platforms 
+•Building and distributing reports 
+•Maintaining consistent communication across teams 
+
+What needs to be automated:
+•Converting media plans into structured tasks and timelines 
+•Tracking asset production and approval workflows 
+•Automated deadline reminders and dependency tracking 
+•Centralized campaign status visibility 
+•Automated data collection and performance monitoring 
+•Alerts for campaign changes or underperformance 
+•Automated reporting and stakeholder updates 
+
+
+
+","This process is high-frequency and affects multiple stakeholders across marketing teams.
+
+Time impact:
+Teams may spend several hours per week per campaign coordinating assets, tracking timelines, and compiling reports. Across multiple campaigns, this can total dozens of hours per week. 
+
+Scale impact:
+Each campaign can include 5–25 individual tactics, and teams may manage many campaigns simultaneously, resulting in hundreds of active assets and tasks at once. 
+
+Operational impact: 
+o Delays in asset delivery can postpone campaign launches 
+o Missed deadlines or miscommunication can disrupt campaign performance 
+o Inconsistent monitoring may lead to inefficient ad spend 
+o Manual reporting slows optimization and decision-making 
+
+People affected:
+Marketing managers, creative teams, analysts, and external agency partners all rely on timely coordination and accurate data. 
+","Types of data
+•	Campaign plans and media schedules (from agency) 
+•	Creative asset requirements (formats, sizes, messaging) 
+•	Task and workflow tracking data 
+•	Asset status (in progress, approved, delivered, live) 
+•	Performance metrics (impressions, clicks, conversions, cost metrics) 
+•	Website analytics data (traffic, conversions by source/campaign) 
+•	Communication and approval records 
+
+Sources of data:
+•	Spreadsheets or databases (campaign tracking systems, Airtable) 
+•	Agency-provided documents or media plans 
+•	Web analytics tools (e.g., Google Analytics, Looker Studio) 
+•	Project management tools (Asana)
+•	Email or messaging platforms (Outlook)
+",Marketing & Sales
+4/9/2026 13:55:13,Lindsey Halfar,Marcom,lsavoie@illinois.edu,Option C - I'll do both A & B,AI-Assisted Webpage Creation Using Modular Components,"A marketing and web team is responsible for building and maintaining webpages using a predefined set of approved components (e.g., hero banners, text blocks, image sections, calls-to-action). These components ensure brand and design consistency but require manual assembly.
+
+There are two common scenarios when creating new pages:
+
+Scenario 1: Copy is Fully Provided
+
+1.Content Intake 
+o Writers or stakeholders provide web copy 
+o Content may include headings, body text, calls-to-action, and images 
+
+2. Page Structuring 
+o A web manager determines how to structure the page 
+o Selects appropriate components (e.g., hero, text + image, cards, etc.) 
+o Decides the order and layout of sections 
+
+3. Content Mapping 
+o Manually maps provided content into selected components 
+o Adjusts formatting to fit component constraints 
+
+4. Review & Iteration 
+o	Page is reviewed for usability, clarity, and visual flow by multiple parties
+o	Revisions are made to structure or content placement 
+
+Scenario 2: Only Bullet Points or Inputs are Provided
+
+1. Content Intake 
+o Stakeholders provide high-level inputs (e.g., bullet points, notes, goals) 
+o Content is often incomplete or not web-ready 
+
+2. Content Development 
+o Marketing or web team expands inputs into full web copy 
+o Ensures tone, clarity, and consistency with brand standards 
+
+3. Page Structuring 
+o Determine the appropriate page layout and components 
+o Organize content into a logical flow 
+
+4. Content Mapping & Build 
+o Insert content into components 
+o Format and refine content for web presentation 
+
+5.	Review & Iteration 
+o Multiple rounds of edits between stakeholders and web team 
+
+Where the process is time-consuming:
+•	Deciding how to structure pages using available components 
+•	Translating content into the correct component formats 
+•	Writing or expanding content from incomplete inputs 
+•	Ensuring consistency in tone, layout, and user experience 
+•	Iterating between stakeholders and web managers 
+•	Rebuilding similar page types repeatedly from scratch 
+
+What needs to be automated:
+Students should design a system that helps automate webpage creation using predefined components under both scenarios:
+
+For Scenario 1 (Copy Provided):
+•	Recommend an optimal page structure based on content 
+•	Automatically map content into appropriate components 
+•	Suggest improvements to layout and flow 
+
+For Scenario 2 (Bullet Points Provided):
+•	Generate web-ready copy from structured inputs 
+•	Propose a full page layout using available components 
+•	Align content with best practices (clarity, hierarchy, calls-to-action) 
+
+For both scenarios:
+•	Enforce design and component usage rules 
+•	Ensure consistency across pages 
+•	Reduce manual assembly and iteration time 
+•       Review for UX/Accessibility/SEO/AEO (bonus!)
+
+
+","• Time savings:
+Building a single webpage can take several hours to days depending on complexity. Automation could significantly reduce build and iteration time. 
+
+• Scale impact:
+Teams often manage dozens to hundreds of pages across multiple sites, many with similar structures but rebuilt manually each time. 
+
+• Consistency impact:
+Variability in page structure and content quality can lead to inconsistent user experiences and brand presentation. 
+
+• Operational impact: 
+o Faster turnaround for new pages 
+o Reduced back-and-forth between stakeholders 
+o Improved adherence to design and content standards 
+
+• People affected:
+Web managers, marketers, content writers, designers, and stakeholders requesting pages. ","
+Types of data:
+•	Web copy (headings, body text, CTAs) 
+•	Bullet point inputs or content briefs 
+•	Component definitions (structure, fields, constraints, https://builder3.toolkit.illinois.edu) 
+•	Page templates or examples 
+•	Brand and content guidelines 
+•	Photos, icons, videos
+
+Sources of data:
+•	Documents (content briefs, drafts) (Asana)
+•	Spreadsheets or intake forms (Airtable)
+•	Content management systems (Sitefinity)
+•	Component libraries/design systems 
+
+Systems involved:
+•	Content management system (CMS – Sitefinity)
+•	Component or design system library (Canto for Photo Search, YouTube for Videos)
+•	Document and content collaboration tools  (Asana, Airtable)
+",Marketing & Sales
+4/10/2026 13:43:53,Martin Maurer,Office of the Dean,maurer1@illinois.edu,Option B - I'll provided business context as a mentor,,,,,General Innovation
+4/10/2026 15:14:14,Martin Maurer,Office of the Dean,maurer1@illinois.edu,Option A - I'll propose a challenge,"Build an AI agent that transforms raw assessment data into meaningful, decision-ready insights for academic leaders","The challenge is to build AI agents that focus on a single common program learning outcome in Gies programs (e.g., ""Critical Reasoning Skills"") assessed across 2-3 courses in over the course of 3-4 years. The agent(s) should:
+
+--Extract assessment data (assignment scores, rubric results) for designated learning outcome-aligned assignments (we would need to provide a set of anonymized data for the challenge.  In actuality, that data would be extracted directly from Canvas.)
+--Analyze performance patterns and trends to identify the percentage of students meeting/exceeding/failing to meet a hypothetical competency threshold. 
+--Generate a preliminary assessment summary report including:
+----Overall performance statistics and trends
+----Identification of specific areas of strength and weakness
+----2-3 evidence-based recommendations for pedagogical or curricular adjustments
+----Format outputs in a template suitable for accreditation documentation (I can provide that)
+","Success would reduce the time to collect, review, and analyze assessment data from weeks to hours, improve data-driven decision-making, and help ensure timely compliance with accreditation reporting requirements. ","An anonymized CSV export from Canvas with assignments, rubric scores, and outcome tags",General Innovation
