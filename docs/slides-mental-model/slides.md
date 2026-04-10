@@ -10,6 +10,7 @@ fonts:
 unocss: true
 colorSchema: 'auto'
 transition: slide-left
+toc: false
 ---
 
 <div class="relative h-full flex flex-col items-center justify-center text-center pb-10">
@@ -69,7 +70,7 @@ transition: slide-left
 
 <div class="p-6 bg-orange-50 dark:bg-orange-900 rounded-xl">
 
-### Agent
+<div class="text-2xl font-bold text-orange-600 dark:text-orange-300">Agent</div>
 
 <div class="text-lg mt-4 space-y-2">
 
@@ -87,7 +88,7 @@ transition: slide-left
 
 <div class="p-6 bg-blue-50 dark:bg-blue-900 rounded-xl">
 
-### Workflow (Agent Flow)
+<div class="text-2xl font-bold text-blue-600 dark:text-blue-300">Workflow (Agent Flow)</div>
 
 <div class="text-lg mt-4 space-y-2">
 

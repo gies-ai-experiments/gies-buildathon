@@ -10,6 +10,7 @@ fonts:
 unocss: true
 colorSchema: 'auto'
 transition: slide-left
+toc: false
 ---
 
 <div class="relative h-full flex flex-col items-center justify-center text-center pb-10">
