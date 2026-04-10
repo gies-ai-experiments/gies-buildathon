@@ -20,6 +20,8 @@ Students will use these tools to build working prototypes during the challenge â
 
 **Zoom link:** [Register here](https://illinois.zoom.us/meeting/register/maGKNSuOQR2NP4IAMwdfQA)
 
+**Recording:** [Watch: AI Agents â€” What's Possible and How You Can Get Involved](https://mediaspace.illinois.edu/media/t/1_l32681b7)
+
 ## Ways to Participate
 
 There's no single way to be involved. Pick the role that fits your interest and availability:
