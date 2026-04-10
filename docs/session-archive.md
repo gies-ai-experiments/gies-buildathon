@@ -1,5 +1,8 @@
 # Session Archive — Gies Buildathon
 
+### 2026-04-09
+- Completed: Added Magelli Office of Experiential Learning as partner (text card + footer mention, linked to giesbusiness.illinois.edu/experience/experiential-learning).
+
 ### 2026-04-08 (session 2)
 - Completed: Branding fixes per marcom — replaced "UIUC" with "University of Illinois" / "U of I" throughout site and meta tags.
 - Completed: Removed custom circle cursor entirely for accessibility (standard arrow now).

@@ -27,11 +27,28 @@ Landing page for the Gies Buildathon, a 24-hour hackathon for Gies undergrad and
 - `docs/schedule.md` — Full event schedule, room bookings, budget, judging criteria (synced from Google Doc)
 - `docs/invite-project-champions.md` — Staff invitation for project champions (3 participation options)
 - `docs/resources.md` — Workshop materials, Copilot Studio playlist, judging rubric
+- `docs/README-workshop-slides.md` — Editor guide for Slidev decks (for Jeremy and organizers)
+- `docs/workshop-activity-i-do-you-do.md` — Facilitator script for I Do / You Do workshop
+- `docs/slides-mental-model/` — Slidev deck: Copilot Studio mental model (7 slides)
+- `docs/slides-workshop-activity/` — Slidev deck: Workshop activity (10 slides)
+
+## Workshop Slide URLs
+- Mental Model: https://gies-ai-experiments.github.io/gies-buildathon/docs/slides-mental-model/dist/index.html
+- Workshop Activity: https://gies-ai-experiments.github.io/gies-buildathon/docs/slides-workshop-activity/dist/index.html
+
+## Reference Material
+- `reference_material/microsoft-copilot-studio.pdf` — Full MS Learn docs (1,778 pages)
+- `reference_material/PDF-INDEX.md` — Indexed sections with page ranges and relevance
+- `reference_material/Gies AI for Impact_...csv` — Champion challenge submissions
 
 ## Session Log
 
-### 2026-04-09
-- Completed: Added Magelli Office of Experiential Learning as partner (text card + footer mention, linked to giesbusiness.illinois.edu/experience/experiential-learning).
-- Next: Send champion invites. Add workshop materials as sessions happen. Get Magelli logo if available.
+### 2026-04-10
+- Completed: Extracted Granola transcript from 2 PM staff meeting with CIO AI team (Jake Myers, Paul Traska). Saved to `transcripts/`.
+- Completed: Researched and validated Copilot Studio mental model (Agent vs Workflow vs Agent Flow, building blocks: Knowledge, Topics, Tools, Flows). Indexed full 1,778-page MS Learn PDF with 4 subagents.
+- Completed: Created two Slidev workshop decks — Mental Model (7 slides) + I Do / You Do Activity (10 slides). Deployed to GitHub Pages.
+- Completed: Enabled GitHub Pages on repo (static deploy workflow). Created editor guide for Jeremy.
+- Completed: Ingested 6 champion challenge submissions (Vishal, Charlie Farhoodi, Andrew Allen, Lindsey Halfar x2, Martin Maurer).
+- Next: Scope champion challenges into hackathon-ready briefs with low floor / high ceiling tiers. Build rubric. Test Copilot Studio demo in browser. Get Magelli logo if available.
 
 *Older entries archived to `docs/session-archive.md`*
