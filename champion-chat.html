@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Champion Challenge Builder — Gies AI For Impact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #13294B;
+      --orange: #E84A27;
+      --orange-light: #f4795e;
+      --cream: #faf8f5;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-500: #6b7280;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --green-50: #f0fdf4;
+      --green-300: #86efac;
+      --green-600: #16a34a;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--cream);
+      color: var(--gray-900);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* ── WELCOME SCREEN ────────────────────────────────── */
+    #welcome-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      width: 100%;
+    }
+
+    .welcome-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(19, 41, 75, 0.12);
+      max-width: 520px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .welcome-card .logo-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-bar .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo-bar .logo-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
+    .logo-bar .logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+
+    .welcome-card h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+    }
+
+    .welcome-card .subtitle {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--orange);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .welcome-card p {
+      font-size: 1rem;
+      color: var(--gray-700);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .time-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gray-100);
+      border-radius: 20px;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      margin-bottom: 1.75rem;
+    }
+
+    .time-note::before {
+      content: '⏱';
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      letter-spacing: 0.02em;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-light);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
+
+    /* ── CHAT INTERFACE ────────────────────────────────── */
+    #chat-screen {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      max-width: 720px;
+      height: 100vh;
+      height: 100dvh;
+    }
+
+    .chat-header {
+      background: var(--navy);
+      color: #fff;
+      padding: 1rem 1.25rem;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .chat-header-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--orange);
+      flex-shrink: 0;
+    }
+
+    .chat-header-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .chat-header-sub {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      margin-top: 1px;
+    }
+
+    .messages-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: var(--cream);
+    }
+
+    /* Message bubbles */
+    .msg {
+      display: flex;
+      flex-direction: column;
+      max-width: 85%;
+      animation: msgIn 0.2s ease;
+    }
+
+    @keyframes msgIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .msg.assistant {
+      align-self: flex-start;
+    }
+
+    .msg.user {
+      align-self: flex-end;
+    }
+
+    .msg-bubble {
+      padding: 0.75rem 1rem;
+      border-radius: 16px;
+      font-size: 0.975rem;
+      line-height: 1.55;
+      word-break: break-word;
+    }
+
+    .msg.assistant .msg-bubble {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-bottom-left-radius: 4px;
+      color: var(--gray-900);
+    }
+
+    .msg.user .msg-bubble {
+      background: var(--navy);
+      color: #fff;
+      border-bottom-right-radius: 4px;
+    }
+
+    /* Typing indicator */
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0.65rem 1rem;
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      border-bottom-left-radius: 4px;
+      width: fit-content;
+      align-self: flex-start;
+    }
+
+    .typing-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gray-500);
+      animation: bounce 1.2s infinite;
+    }
+
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes bounce {
+      0%, 60%, 100% { transform: translateY(0); }
+      30%           { transform: translateY(-6px); }
+    }
+
+    /* Input area */
+    .input-area {
+      flex-shrink: 0;
+      background: #fff;
+      border-top: 1px solid var(--gray-200);
+      padding: 0.75rem 1rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-end;
+    }
+
+    .input-area textarea {
+      flex: 1;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.975rem;
+      padding: 0.6rem 0.875rem;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      resize: none;
+      outline: none;
+      color: var(--gray-900);
+      background: var(--gray-100);
+      min-height: 42px;
+      max-height: 120px;
+      line-height: 1.4;
+      transition: border-color 0.15s;
+    }
+
+    .input-area textarea:focus {
+      border-color: var(--navy);
+      background: #fff;
+    }
+
+    .input-area textarea::placeholder {
+      color: var(--gray-500);
+    }
+
+    .send-btn {
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      padding: 0 1.1rem;
+      height: 42px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.15s;
+      letter-spacing: 0.02em;
+    }
+
+    .send-btn:hover { background: var(--orange-light); }
+    .send-btn:disabled {
+      background: var(--gray-200);
+      color: var(--gray-500);
+      cursor: not-allowed;
+    }
+
+    /* ── CHALLENGE CARD ──────────────────────────────── */
+    .challenge-card {
+      background: var(--green-50);
+      border: 1.5px solid var(--green-300);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .challenge-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .challenge-card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--green-600);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.03em;
+    }
+
+    .status-badge::before {
+      content: '✓';
+      font-size: 0.8rem;
+    }
+
+    .challenge-dl {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.4rem 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .challenge-dl dt {
+      font-weight: 600;
+      color: var(--gray-700);
+      white-space: nowrap;
+    }
+
+    .challenge-dl dd {
+      color: var(--gray-900);
+    }
+
+    /* ── CONFIRMATION SCREEN ─────────────────────────── */
+    #confirmed-screen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      width: 100%;
+    }
+
+    #confirmed-screen .confirm-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(19, 41, 75, 0.12);
+      max-width: 520px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    #confirmed-screen h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    #confirmed-screen p {
+      color: var(--gray-700);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 375px) {
+      .welcome-card { padding: 1.75rem 1.25rem; }
+      .welcome-card h1 { font-size: 1.4rem; }
+      .chat-header-title { font-size: 0.9rem; }
+      .msg { max-width: 92%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── WELCOME SCREEN ──────────────────────────────── -->
+  <div id="welcome-screen">
+    <div class="welcome-card">
+      <div class="logo-bar">
+        <div class="logo-block">
+          <div class="logo-dot"></div>
+          <span class="logo-text">Gies AI For Impact Challenge</span>
+        </div>
+      </div>
+      <h1>Champion Challenge Builder</h1>
+      <div class="subtitle">Gies Buildathon 2026</div>
+      <p>
+        I'll ask about your work, show you what students can build with
+        <strong>Microsoft Copilot Studio</strong>, and help you turn a real
+        workflow pain point into a challenge that students can tackle in 24 hours.
+      </p>
+      <div class="time-note">Takes about 5 minutes</div>
+      <button class="btn-primary" id="start-btn">Let's get started</button>
+    </div>
+  </div>
+
+  <!-- ── CHAT SCREEN ─────────────────────────────────── -->
+  <div id="chat-screen">
+    <div class="chat-header">
+      <div class="chat-header-dot"></div>
+      <div>
+        <div class="chat-header-title">Champion Challenge Builder</div>
+        <div class="chat-header-sub">Gies AI For Impact Challenge</div>
+      </div>
+    </div>
+
+    <div class="messages-area" id="messages-area"></div>
+
+    <div class="input-area">
+      <textarea
+        id="user-input"
+        placeholder="Type your message…"
+        rows="1"
+      ></textarea>
+      <button class="send-btn" id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <!-- ── CONFIRMED SCREEN ────────────────────────────── -->
+  <div id="confirmed-screen">
+    <div class="confirm-card">
+      <div style="font-size:2.5rem;margin-bottom:0.75rem;">🎉</div>
+      <h2>Challenge Submitted!</h2>
+      <p>
+        Thanks for contributing to Gies Buildathon. The organizing team will
+        be in touch to confirm details before the event.
+      </p>
+      <div id="confirmed-challenge-container"></div>
+    </div>
+  </div>
+
+  <script>
+    // ── Constants ──────────────────────────────────────────
+    const SHEETS_WEBHOOK_URL = 'REPLACE_WITH_APPS_SCRIPT_URL';
+    const VALID_TRACKS = [
+      'Finance & Accounting',
+      'HR',
+      'Marketing & Sales',
+      'Business Technology',
+      'General Innovation',
+    ];
+    const SESSION_ID = 'session-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
+
+    // ── State ──────────────────────────────────────────────
+    let messages = []; // { role: 'user'|'assistant', content: string }
+    let isWaiting = false;
+
+    // ── DOM refs ───────────────────────────────────────────
+    const welcomeScreen   = document.getElementById('welcome-screen');
+    const chatScreen      = document.getElementById('chat-screen');
+    const confirmedScreen = document.getElementById('confirmed-screen');
+    const messagesArea    = document.getElementById('messages-area');
+    const userInput       = document.getElementById('user-input');
+    const sendBtn         = document.getElementById('send-btn');
+    const startBtn        = document.getElementById('start-btn');
+
+    // ── Helpers ────────────────────────────────────────────
+
+    /** Escape HTML entities to prevent XSS */
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+
+    /**
+     * Render assistant text: escape first, then apply markdown-lite.
+     * Bold: **text** → <strong>text</strong>
+     * Newlines: \n → <br>
+     */
+    function formatText(raw) {
+      let s = escapeHtml(raw);
+      // Bold
+      s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      // Newlines
+      s = s.replace(/\n/g, '<br>');
+      return s;
+    }
+
+    /** Scroll messages area to the bottom */
+    function scrollBottom() {
+      messagesArea.scrollTop = messagesArea.scrollHeight;
+    }
+
+    /** Add a message bubble to the DOM; returns the bubble element */
+    function addMessageBubble(role, htmlContent) {
+      const msgEl = document.createElement('div');
+      msgEl.className = 'msg ' + role;
+
+      const bubble = document.createElement('div');
+      bubble.className = 'msg-bubble';
+      bubble.innerHTML = htmlContent;
+
+      msgEl.appendChild(bubble);
+      messagesArea.appendChild(msgEl);
+      scrollBottom();
+      return bubble;
+    }
+
+    /** Show / hide typing indicator */
+    let typingEl = null;
+
+    function showTyping() {
+      typingEl = document.createElement('div');
+      typingEl.className = 'msg assistant';
+      typingEl.innerHTML = `
+        <div class="typing-indicator">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>`;
+      messagesArea.appendChild(typingEl);
+      scrollBottom();
+    }
+
+    function hideTyping() {
+      if (typingEl) {
+        typingEl.remove();
+        typingEl = null;
+      }
+    }
+
+    /** Parse and strip the CHALLENGE_CONFIRMED block from a message */
+    function parseChallengeBlock(text) {
+      const re = /```CHALLENGE_CONFIRMED\s*\n([\s\S]*?)\n```/;
+      const match = text.match(re);
+      if (!match) return null;
+      try {
+        const data = JSON.parse(match[1]);
+        return data;
+      } catch {
+        return null;
+      }
+    }
+
+    function stripChallengeBlock(text) {
+      return text.replace(/```CHALLENGE_CONFIRMED\s*\n[\s\S]*?\n```/, '').trim();
+    }
+
+    /** Validate challenge data fields */
+    function validateChallenge(data) {
+      const required = ['name', 'unit', 'email', 'title', 'currentWorkflow', 'track'];
+      const missing = required.filter(f => !data[f] || String(data[f]).trim() === '');
+      if (missing.length) {
+        return { valid: false, error: 'Missing required fields: ' + missing.join(', ') };
+      }
+      if (!data.email.includes('@')) {
+        return { valid: false, error: 'Email address does not appear valid.' };
+      }
+      if (!VALID_TRACKS.includes(data.track)) {
+        return {
+          valid: false,
+          error: `Track must be one of: ${VALID_TRACKS.join(', ')}.`,
+        };
+      }
+      return { valid: true };
+    }
+
+    /** Build the challenge card HTML */
+    function buildChallengeCard(data) {
+      const fields = [
+        ['Name',             data.name],
+        ['Unit / Dept',      data.unit],
+        ['Email',            data.email],
+        ['Challenge Title',  data.title],
+        ['Track',            data.track],
+        ['Current Workflow', data.currentWorkflow],
+      ];
+      if (data.successMetric)  fields.push(['Success Metric', data.successMetric]);
+      if (data.resources)      fields.push(['Resources',      data.resources]);
+      if (data.notes)          fields.push(['Notes',          data.notes]);
+
+      const rows = fields
+        .map(([dt, dd]) => `<dt>${escapeHtml(dt)}</dt><dd>${escapeHtml(String(dd || ''))}</dd>`)
+        .join('');
+
+      return `
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <div class="challenge-card-title">Your Challenge</div>
+            <div class="status-badge">Submitted to organizing team</div>
+          </div>
+          <dl class="challenge-dl">${rows}</dl>
+        </div>`;
+    }
+
+    /** Submit to Google Sheets webhook (fire-and-forget) */
+    function submitToSheets(challengeData) {
+      if (SHEETS_WEBHOOK_URL === 'REPLACE_WITH_APPS_SCRIPT_URL') return;
+      fetch(SHEETS_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          challenge: challengeData,
+          transcript: messages,
+          sessionId: SESSION_ID,
+        }),
+      }).catch(() => {/* opaque response — ignore errors */});
+    }
+
+    /** Handle a confirmed challenge: validate → show card or ask for more info */
+    function handleConfirmed(data, displayText) {
+      const validation = validateChallenge(data);
+
+      if (!validation.valid) {
+        // Show the thank-you text but then ask for missing info
+        if (displayText) {
+          messages.push({ role: 'assistant', content: displayText });
+          addMessageBubble('assistant', formatText(displayText));
+        }
+        const errMsg = `I need a bit more information before we finalize:\n\n${validation.error}\n\nCould you provide those details?`;
+        messages.push({ role: 'assistant', content: errMsg });
+        addMessageBubble('assistant', formatText(errMsg));
+        return;
+      }
+
+      // Valid — show text + card in chat, then transition
+      if (displayText) {
+        messages.push({ role: 'assistant', content: displayText });
+        addMessageBubble('assistant', formatText(displayText));
+      }
+
+      const cardHtml = buildChallengeCard(data);
+
+      // Show card inline in the chat
+      const cardEl = document.createElement('div');
+      cardEl.innerHTML = cardHtml;
+      messagesArea.appendChild(cardEl);
+      scrollBottom();
+
+      // Submit to Sheets
+      submitToSheets(data);
+
+      // Transition to confirmation screen after a short pause
+      setTimeout(() => {
+        chatScreen.style.display = 'none';
+        const container = document.getElementById('confirmed-challenge-container');
+        container.innerHTML = cardHtml;
+        confirmedScreen.style.display = 'flex';
+      }, 2200);
+    }
+
+    // ── Streaming fetch ────────────────────────────────────
+    async function sendMessage(userText) {
+      if (isWaiting) return;
+      isWaiting = true;
+      sendBtn.disabled = true;
+
+      // Add user message (unless this is the auto-greeting call)
+      if (userText !== null) {
+        messages.push({ role: 'user', content: userText });
+        addMessageBubble('user', escapeHtml(userText));
+      }
+
+      showTyping();
+
+      let fullResponse = '';
+      let assistantBubble = null;
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ messages }),
+        });
+
+        if (!res.ok) {
+          throw new Error('API error ' + res.status);
+        }
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+
+        hideTyping();
+        assistantBubble = addMessageBubble('assistant', '');
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          const chunk = decoder.decode(value, { stream: true });
+          fullResponse += chunk;
+
+          // Strip the CHALLENGE_CONFIRMED block from display while streaming
+          const displayText = stripChallengeBlock(fullResponse);
+          assistantBubble.innerHTML = formatText(displayText);
+          scrollBottom();
+        }
+
+        // Final processing
+        const challengeData = parseChallengeBlock(fullResponse);
+        const displayText   = stripChallengeBlock(fullResponse);
+
+        if (challengeData) {
+          // Remove the streaming bubble — handleConfirmed will re-add the text
+          if (assistantBubble && assistantBubble.parentElement) {
+            assistantBubble.parentElement.remove();
+          }
+          handleConfirmed(challengeData, displayText);
+        } else {
+          // Normal message — update bubble with final formatted text
+          assistantBubble.innerHTML = formatText(displayText);
+          messages.push({ role: 'assistant', content: displayText });
+        }
+
+      } catch (err) {
+        hideTyping();
+        const errText = 'Sorry, something went wrong. Please try again.';
+        if (assistantBubble) {
+          assistantBubble.innerHTML = escapeHtml(errText);
+        } else {
+          addMessageBubble('assistant', escapeHtml(errText));
+        }
+        console.error(err);
+      } finally {
+        isWaiting = false;
+        sendBtn.disabled = false;
+        userInput.focus();
+        scrollBottom();
+      }
+    }
+
+    // ── Event Listeners ────────────────────────────────────
+
+    startBtn.addEventListener('click', () => {
+      welcomeScreen.style.display = 'none';
+      chatScreen.style.display = 'flex';
+      // Trigger initial greeting (empty messages)
+      sendMessage(null);
+    });
+
+    sendBtn.addEventListener('click', () => {
+      const text = userInput.value.trim();
+      if (!text) return;
+      userInput.value = '';
+      autoResize();
+      sendMessage(text);
+    });
+
+    userInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendBtn.click();
+      }
+    });
+
+    // Auto-resize textarea
+    function autoResize() {
+      userInput.style.height = 'auto';
+      userInput.style.height = Math.min(userInput.scrollHeight, 120) + 'px';
+    }
+    userInput.addEventListener('input', autoResize);
+  </script>
+</body>
+</html>
