@@ -33,7 +33,11 @@ We have five tracks:
 
 Champions from **Marcom**, **Magelli Office of Experiential Learning**, **SCC**, and the **Office of the Dean** have already submitted challenges — from automating prospect identification to transforming assessment data into decision-ready insights. We want yours too.
 
-**[Sign up as a Champion](https://docs.google.com/forms/d/e/1FAIpQLSfzArV3W-cSYe_cdO121pwrBg3Ar4HvfE6YlWj7JMHLMU0A4g/viewform?usp=header)** — pick your role and tell us about your area.
+**Two ways to submit:**
+
+1. **[Chat with the Challenge Builder](https://champion-chat-swart.vercel.app)** (recommended) — an AI-powered conversation that asks about your work, shows you what Copilot Studio can do with examples relevant to your area, and helps you shape a challenge. Takes about 5 minutes. You can ask it questions — treat it like a conversation, not a form.
+
+2. **[Fill out the Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfzArV3W-cSYe_cdO121pwrBg3Ar4HvfE6YlWj7JMHLMU0A4g/viewform?usp=header)** — if you already know what you want to submit and prefer a traditional form.
 
 ## About the Data: Nothing Real, Nothing Live
 
