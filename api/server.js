@@ -1,6 +1,12 @@
 import { createServer } from 'node:http';
+import { writeFileSync, readFileSync, existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import OpenAI from 'openai';
 import { SYSTEM_PROMPT } from './system-prompt.js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const SUBMISSIONS_FILE = join(__dirname, '..', 'champion-submissions.json');
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const PORT = 3001;
@@ -84,6 +90,29 @@ const server = createServer(async (req, res) => {
       console.error('Lookup error:', error);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ profile: 'No profile found' }));
+    }
+    return;
+  }
+
+  // Save challenge submission + transcript locally
+  if (req.method === 'POST' && req.url === '/api/submit') {
+    try {
+      const data = await parseBody(req);
+      const submissions = existsSync(SUBMISSIONS_FILE)
+        ? JSON.parse(readFileSync(SUBMISSIONS_FILE, 'utf-8'))
+        : [];
+      submissions.push({
+        ...data,
+        submittedAt: new Date().toISOString(),
+      });
+      writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2));
+      console.log(`Challenge saved: ${data.challenge?.title || 'untitled'} (${submissions.length} total)`);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ status: 'ok', count: submissions.length }));
+    } catch (error) {
+      console.error('Submit error:', error);
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Failed to save submission' }));
     }
     return;
   }
