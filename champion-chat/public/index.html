@@ -470,6 +470,18 @@
     </div>
   </div>
 
+  <!-- ── WELCOME BACK SCREEN ──────────────────────────── -->
+  <div id="welcome-back-screen" style="display:none;">
+    <div class="welcome-card">
+      <h1>Welcome back!</h1>
+      <p id="wb-message">It looks like you started a conversation before.</p>
+      <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-top:1rem;">
+        <button class="btn-primary" id="resume-btn">Pick up where I left off</button>
+        <button class="btn-secondary" id="fresh-btn" style="padding:0.75rem 1.5rem;border-radius:10px;border:1px solid var(--gray-200);background:white;font-family:'Montserrat',sans-serif;font-weight:600;font-size:0.95rem;cursor:pointer;color:var(--gray-700);">Start fresh</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ── CHAT SCREEN ─────────────────────────────────── -->
   <div id="chat-screen">
     <div class="chat-header">
@@ -526,6 +538,52 @@
     let lookupDone = false;
     let lookupProfile = null;
     let userMessageCount = 0;
+    let detectedEmail = null;
+
+    // ── Session persistence (localStorage) ────────────────
+    const STORAGE_KEY = 'champion-chat-sessions';
+
+    function getAllSessions() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+      catch { return {}; }
+    }
+
+    function saveSession() {
+      if (!detectedEmail) return;
+      const sessions = getAllSessions();
+      sessions[detectedEmail] = {
+        messages,
+        sessionId: SESSION_ID,
+        lookupProfile,
+        userMessageCount,
+        savedAt: new Date().toISOString(),
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(sessions));
+    }
+
+    function getSession(email) {
+      return getAllSessions()[email] || null;
+    }
+
+    function clearSession(email) {
+      const sessions = getAllSessions();
+      delete sessions[email];
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(sessions));
+    }
+
+    function extractEmail(text) {
+      const match = text.match(/[\w.+-]+@[\w.-]+\.\w{2,}/);
+      return match ? match[0].toLowerCase() : null;
+    }
+
+    function findAnySavedSession() {
+      const sessions = getAllSessions();
+      const entries = Object.entries(sessions);
+      if (entries.length === 0) return null;
+      // Return the most recent session
+      entries.sort((a, b) => (b[1].savedAt || '').localeCompare(a[1].savedAt || ''));
+      return { email: entries[0][0], ...entries[0][1] };
+    }
 
     // ── DOM refs ───────────────────────────────────────────
     const welcomeScreen   = document.getElementById('welcome-screen');
@@ -768,6 +826,14 @@
         // Fire lookup after first user message (contains name/unit/email)
         if (userMessageCount === 1) {
           lookupPerson(userText);
+          // Detect email for session persistence
+          const email = extractEmail(userText);
+          if (email) detectedEmail = email;
+        }
+        // Also try to detect email in later messages if missed
+        if (!detectedEmail) {
+          const email = extractEmail(userText);
+          if (email) detectedEmail = email;
         }
       }
 
@@ -844,15 +910,61 @@
         sendBtn.disabled = false;
         userInput.focus();
         scrollBottom();
+        // Persist session after each exchange
+        saveSession();
       }
     }
+
+    // ── Session Resume ──────────────────────────────────────
+
+    const welcomeBackScreen = document.getElementById('welcome-back-screen');
+    const resumeBtn = document.getElementById('resume-btn');
+    const freshBtn = document.getElementById('fresh-btn');
+    const wbMessage = document.getElementById('wb-message');
+
+    function restoreSession(saved) {
+      messages = saved.messages || [];
+      lookupProfile = saved.lookupProfile || null;
+      userMessageCount = saved.userMessageCount || 0;
+      detectedEmail = saved.email || null;
+      lookupDone = !!detectedEmail;
+
+      // Render all restored messages
+      messagesArea.innerHTML = '';
+      for (const msg of messages) {
+        const content = msg.role === 'assistant' ? formatText(stripChallengeBlock(msg.content)) : escapeHtml(msg.content);
+        addMessageBubble(msg.role, content);
+      }
+
+      welcomeBackScreen.style.display = 'none';
+      chatScreen.style.display = 'flex';
+      userInput.focus();
+    }
+
+    // Check for saved session on page load
+    const savedSession = findAnySavedSession();
+    if (savedSession) {
+      const name = savedSession.messages?.find(m => m.role === 'user')?.content?.split(',')[0] || 'there';
+      wbMessage.textContent = `Hi ${name} — it looks like you started a conversation before.`;
+      welcomeScreen.style.display = 'none';
+      welcomeBackScreen.style.display = 'flex';
+    }
+
+    resumeBtn.addEventListener('click', () => {
+      restoreSession(savedSession);
+    });
+
+    freshBtn.addEventListener('click', () => {
+      if (savedSession?.email) clearSession(savedSession.email);
+      welcomeBackScreen.style.display = 'none';
+      welcomeScreen.style.display = 'flex';
+    });
 
     // ── Event Listeners ────────────────────────────────────
 
     startBtn.addEventListener('click', () => {
       welcomeScreen.style.display = 'none';
       chatScreen.style.display = 'flex';
-      // Trigger initial greeting (empty messages)
       sendMessage(null);
     });
 
