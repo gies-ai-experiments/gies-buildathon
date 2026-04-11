@@ -41,14 +41,17 @@ Landing page for the Gies Buildathon, a 24-hour hackathon for Gies undergrad and
 - `reference_material/PDF-INDEX.md` — Indexed sections with page ranges and relevance
 - `reference_material/Gies AI for Impact_...csv` — Champion challenge submissions
 
+## Champion Chat Bot
+- **Live URL:** https://champion-chat-swart.vercel.app
+- **Deploy:** `cd champion-chat && npx vercel --prod`
+- **Env:** OPENAI_API_KEY set in Vercel production
+- **Submissions:** Logged to Vercel function logs (filter `/api/submit`). Google Sheets webhook attempted but university account blocks it.
+
 ## Session Log
 
-### 2026-04-10
-- Completed: Extracted Granola transcript from 2 PM staff meeting with CIO AI team (Jake Myers, Paul Traska). Saved to `transcripts/`.
-- Completed: Researched and validated Copilot Studio mental model (Agent vs Workflow vs Agent Flow, building blocks: Knowledge, Topics, Tools, Flows). Indexed full 1,778-page MS Learn PDF with 4 subagents.
-- Completed: Created two Slidev workshop decks — Mental Model (7 slides) + I Do / You Do Activity (10 slides). Deployed to GitHub Pages.
-- Completed: Enabled GitHub Pages on repo (static deploy workflow). Created editor guide for Jeremy.
-- Completed: Ingested 6 champion challenge submissions (Vishal, Charlie Farhoodi, Andrew Allen, Lindsey Halfar x2, Martin Maurer).
-- Next: Scope champion challenges into hackathon-ready briefs with low floor / high ceiling tiers. Build rubric. Test Copilot Studio demo in browser. Get Magelli logo if available.
+### 2026-04-10 (evening)
+- Completed: Built and deployed champion challenge chat bot to Vercel. Conversational interview interface that discovers staff workflows, educates about Copilot Studio, and produces structured challenge submissions. Features: OpenAI GPT-5.4 streaming, web search person lookup, analogical priming with Gies-specific context, Anthropic interviewer techniques, session persistence via localStorage.
+- Completed: Revised champion invite — trimmed, added session recording + mental model deck links, social proof from existing submissions.
+- Next: Scope champion challenges into hackathon-ready briefs. Build rubric. Test Copilot Studio demo in browser. Fix Google Sheets webhook (university account restriction). Set OPENAI_API_KEY on Docker/Harbor for production deployment.
 
 *Older entries archived to `docs/session-archive.md`*

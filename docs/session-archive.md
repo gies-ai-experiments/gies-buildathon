@@ -37,3 +37,10 @@
 - Completed: Created project champion invitation with 3 participation options (propose challenge, mentor, or both), April 10 orientation with Jake Myers (CIO), no-commitment framing, Copilot Studio value prop, and clear "no real data" messaging.
 - Completed: Removed judge appreciation from budget (staff judges), updated subtotals ($850→$600 misc, $2350→$2600 reserve), total stays $15K.
 - Completed: Created resources page with all 5 workshop topics, Luma RSVP links, and Microsoft Copilot Studio playlist.
+
+### 2026-04-10 (afternoon)
+- Completed: Extracted Granola transcript from 2 PM staff meeting with CIO AI team (Jake Myers, Paul Traska). Saved to `transcripts/`.
+- Completed: Researched and validated Copilot Studio mental model (Agent vs Workflow vs Agent Flow, building blocks: Knowledge, Topics, Tools, Flows). Indexed full 1,778-page MS Learn PDF with 4 subagents.
+- Completed: Created two Slidev workshop decks — Mental Model (7 slides) + I Do / You Do Activity (10 slides). Deployed to GitHub Pages.
+- Completed: Enabled GitHub Pages on repo (static deploy workflow). Created editor guide for Jeremy.
+- Completed: Ingested 6 champion challenge submissions (Vishal, Charlie Farhoodi, Andrew Allen, Lindsey Halfar x2, Martin Maurer).
