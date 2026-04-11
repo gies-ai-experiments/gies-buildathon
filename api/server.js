@@ -39,7 +39,7 @@ const server = createServer(async (req, res) => {
       const { messages } = await parseBody(req);
 
       const stream = await openai.chat.completions.create({
-        model: 'gpt-5.4',
+        model: 'gpt-4.1',
         stream: true,
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
