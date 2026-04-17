@@ -1,11 +1,19 @@
 import OpenAI from 'openai';
+import { rateLimit, clientIp } from '../rate-limit';
 
 export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
+  const ip = clientIp(request);
+  if (!rateLimit(`lookup:${ip}`, 10, 10 * 60 * 1000)) {
+    return Response.json({ profile: 'No profile found' }, { status: 429 });
+  }
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
   try {
     const { name, unit } = await request.json();
+    if (typeof name !== 'string' || name.length > 200 || typeof unit !== 'string' || unit.length > 200) {
+      return Response.json({ profile: 'No profile found' }, { status: 400 });
+    }
     const query = `${name} ${unit} Gies College of Business University of Illinois`;
 
     const response = await openai.responses.create({
