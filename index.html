@@ -1131,6 +1131,98 @@
       margin: 0 auto;
     }
 
+    /* ===== PRIZES ===== */
+    .prizes-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media (min-width: 768px) {
+      .prizes-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .prize-card {
+      background: var(--navy-card);
+      border: 1px solid var(--white-10);
+      border-radius: 14px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+    }
+    .prize-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(232,74,39,0.1) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .prize-card:hover::after { opacity: 1; }
+    .prize-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(232, 74, 39, 0.15);
+    }
+    .prize-card.prize-first {
+      border-color: var(--orange);
+      background: linear-gradient(180deg, rgba(232,74,39,0.08) 0%, var(--navy-card) 60%);
+    }
+    @media (min-width: 768px) {
+      .prize-card.prize-first { transform: scale(1.05); }
+      .prize-card.prize-first:hover { transform: scale(1.05) translateY(-6px); }
+    }
+    .prize-place {
+      font-family: var(--font-emphasis);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--white-50);
+      margin-bottom: 0.75rem;
+    }
+    .prize-card.prize-first .prize-place { color: var(--orange); }
+    .prize-amount {
+      font-family: var(--font-stats);
+      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .prize-card.prize-first .prize-amount {
+      color: var(--orange);
+    }
+    .prize-per {
+      font-size: 0.85rem;
+      color: var(--white-50);
+      margin-bottom: 0.25rem;
+    }
+    .prize-note {
+      font-size: 0.8rem;
+      color: var(--white-50);
+      margin-top: 1.5rem;
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .hero-scholarship {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: var(--white-70);
+      margin-bottom: 0.75rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s var(--ease-out) 0.85s forwards;
+    }
+    .hero-scholarship strong {
+      color: var(--orange);
+      font-weight: 700;
+    }
+
     /* ===== FAQ ===== */
     .faq-list {
       max-width: 720px;
@@ -1599,6 +1691,7 @@
         <a href="#about">About</a>
         <a href="#tracks">Tracks</a>
         <a href="#how-it-works">How It Works</a>
+        <a href="#prizes">Prizes</a>
         <a href="#keynote">Keynote</a>
         <a href="#workshops">Workshops</a>
         <a href="#faq">FAQ</a>
@@ -1616,6 +1709,7 @@
     <a href="#about">About</a>
     <a href="#tracks">Tracks</a>
     <a href="#how-it-works">How It Works</a>
+    <a href="#prizes">Prizes</a>
     <a href="#keynote">Keynote</a>
     <a href="#workshops">Workshops</a>
     <a href="#faq">FAQ</a>
@@ -1649,6 +1743,7 @@
           <span class="typewriter-text" data-text="Agentic AI Build-a-Thon"></span><span class="typewriter-cursor" aria-hidden="true"></span>
         </p>
         <p class="hero-location">Gies College of Business &bull; University of Illinois Urbana-Champaign</p>
+        <p class="hero-scholarship">Win up to <strong>$500 scholarship</strong> per team member &mdash; <a href="#prizes" style="color:var(--orange-light);text-decoration:underline;">see prizes</a></p>
         <p class="hero-cta-label">APPLICATIONS ARE LIVE!</p>
         <div class="hero-buttons">
           <a class="btn-primary magnetic" href="https://forms.gle/RxQGQBsRutTZQme29" target="_blank" rel="noopener">Apply Now</a>
@@ -1800,6 +1895,41 @@
             <p>Present your project to industry judges. Top teams win prizes and get connected with industry leaders.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Prizes -->
+    <section id="prizes" class="section">
+      <div class="container">
+        <p class="section-label reveal" style="text-align:center">SCHOLARSHIPS</p>
+        <h2 class="section-title reveal" style="text-align:center">Prizes</h2>
+        <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto;">Cash scholarships awarded to every member of a winning team, applied directly to your student account.</p>
+
+        <div class="prizes-grid">
+          <div class="prize-card reveal reveal-delay-1 prize-first">
+            <div class="prize-place">1st Place</div>
+            <div class="prize-amount">$500</div>
+            <div class="prize-per">per team member</div>
+          </div>
+          <div class="prize-card reveal reveal-delay-2">
+            <div class="prize-place">2nd Place</div>
+            <div class="prize-amount">$300</div>
+            <div class="prize-per">per team member</div>
+          </div>
+          <div class="prize-card reveal reveal-delay-3">
+            <div class="prize-place">3rd Place</div>
+            <div class="prize-amount">$200</div>
+            <div class="prize-per">per team member</div>
+          </div>
+          <div class="prize-card reveal reveal-delay-4">
+            <div class="prize-place">Track Winners</div>
+            <div class="prize-amount">$100</div>
+            <div class="prize-per">per team member</div>
+          </div>
+        </div>
+        <p class="prize-note reveal">Teams of up to 4 members. Up to $2,000 per winning team. Track winners are awarded separately from overall placement.</p>
       </div>
     </section>
 
