@@ -49,9 +49,8 @@ Landing page for the Gies Buildathon, a 24-hour hackathon for Gies undergrad and
 
 ## Session Log
 
-### 2026-04-10 (evening)
-- Completed: Built and deployed champion challenge chat bot to Vercel. Conversational interview interface that discovers staff workflows, educates about Copilot Studio, and produces structured challenge submissions. Features: OpenAI GPT-5.4 streaming, web search person lookup, analogical priming with Gies-specific context, Anthropic interviewer techniques, session persistence via localStorage.
-- Completed: Revised champion invite — trimmed, added session recording + mental model deck links, social proof from existing submissions.
-- Next: Scope champion challenges into hackathon-ready briefs. Build rubric. Test Copilot Studio demo in browser. Fix Google Sheets webhook (university account restriction). Set OPENAI_API_KEY on Docker/Harbor for production deployment.
+### 2026-04-17
+- Completed: Added scholarship prizes section to landing page (hero callout + dedicated section with $500/$300/$200/$100 per member cards, nav links). Added API rate limiting to champion chat endpoints. Fixed chat bot 400 error caused by empty messages validation rejecting the greeting call. Committed and deployed all changes.
+- Next: Scope champion challenges into hackathon-ready briefs. Build rubric. Test Copilot Studio demo in browser.
 
 *Older entries archived to `docs/session-archive.md`*
