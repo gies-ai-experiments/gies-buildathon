@@ -21,7 +21,7 @@ export async function POST(request: Request) {
 
     const { messages } = await request.json();
 
-    if (!Array.isArray(messages) || messages.length === 0) {
+    if (!Array.isArray(messages)) {
       return new Response(JSON.stringify({ error: 'Invalid messages' }), { status: 400 });
     }
     if (messages.length > MAX_MESSAGES) {
