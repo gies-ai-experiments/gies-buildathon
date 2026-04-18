@@ -1,5 +1,9 @@
 # Session Archive — Gies Buildathon
 
+### 2026-04-10 (evening)
+- Completed: Built and deployed champion challenge chat bot to Vercel. Conversational interview interface that discovers staff workflows, educates about Copilot Studio, and produces structured challenge submissions. Features: OpenAI GPT-5.4 streaming, web search person lookup, analogical priming with Gies-specific context, Anthropic interviewer techniques, session persistence via localStorage.
+- Completed: Revised champion invite — trimmed, added session recording + mental model deck links, social proof from existing submissions.
+
 ### 2026-04-09
 - Completed: Added Magelli Office of Experiential Learning as partner (text card + footer mention, linked to giesbusiness.illinois.edu/experience/experiential-learning).
 
