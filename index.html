@@ -1675,6 +1675,93 @@
         opacity: 1; transform: none;
       }
     }
+
+    /* ===== SCHEDULE ===== */
+    .schedule-days {
+      display: grid;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    @media (min-width: 1024px) {
+      .schedule-days { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    }
+    .schedule-day {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+    }
+    @media (min-width: 768px) { .schedule-day { padding: 2.5rem 2rem; } }
+    .schedule-day-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--orange);
+    }
+    .schedule-day-label {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      color: var(--orange);
+      text-transform: uppercase;
+    }
+    .schedule-day-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+      color: var(--white);
+      line-height: 1.15;
+    }
+    .schedule-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .schedule-item {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .schedule-item:last-child { border-bottom: none; padding-bottom: 0; }
+    @media (min-width: 600px) {
+      .schedule-item {
+        grid-template-columns: 160px 1fr;
+        gap: 1.25rem;
+        align-items: baseline;
+      }
+    }
+    .schedule-time {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--orange-light, var(--orange));
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .schedule-body h4 {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      margin: 0 0 0.3rem;
+      line-height: 1.35;
+    }
+    .schedule-location {
+      font-size: 0.9rem;
+      color: var(--white-65);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .schedule-location strong { color: var(--white); font-weight: 600; }
   </style>
 </head>
 <body>
@@ -1693,6 +1780,7 @@
         <a href="#how-it-works">How It Works</a>
         <a href="#prizes">Prizes</a>
         <a href="#keynote">Keynote</a>
+        <a href="#schedule">Schedule</a>
         <a href="#workshops">Workshops</a>
         <a href="#faq">FAQ</a>
         <a href="#sponsors">Sponsors</a>
@@ -1711,6 +1799,7 @@
     <a href="#how-it-works">How It Works</a>
     <a href="#prizes">Prizes</a>
     <a href="#keynote">Keynote</a>
+    <a href="#schedule">Schedule</a>
     <a href="#workshops">Workshops</a>
     <a href="#faq">FAQ</a>
     <a href="#sponsors">Sponsors</a>
@@ -1953,6 +2042,120 @@
               <span>6:15 &ndash; 7:00 PM</span>
               <span>Deloitte Auditorium</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Schedule -->
+    <section id="schedule" class="section">
+      <div class="container">
+        <p class="section-label reveal" style="text-align:center">EVENT SCHEDULE</p>
+        <h2 class="section-title reveal" style="text-align:center">24 Hours, Start to Finish</h2>
+        <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto;">Check-in Thursday evening. Ship Friday afternoon. Here&rsquo;s the full run-of-show.</p>
+
+        <div class="schedule-days">
+          <div class="schedule-day reveal">
+            <div class="schedule-day-header">
+              <span class="schedule-day-label">Day 1</span>
+              <h3 class="schedule-day-title">Thursday, April 23</h3>
+            </div>
+            <ul class="schedule-list">
+              <li class="schedule-item">
+                <div class="schedule-time">4:30 &ndash; 5:00 PM</div>
+                <div class="schedule-body">
+                  <h4>Student Check-In</h4>
+                  <p class="schedule-location"><strong>BIF West</strong> &middot; beside the coffee shop</p>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">5:00 &ndash; 5:45 PM</div>
+                <div class="schedule-body">
+                  <h4>Networking &amp; Team Formation</h4>
+                  <p class="schedule-location"><strong>Atrium</strong> &middot; welcome, rule flyers, final team registration</p>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">5:45 &ndash; 6:00 PM</div>
+                <div class="schedule-body">
+                  <h4>Move to Deloitte</h4>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">6:00 &ndash; 7:00 PM</div>
+                <div class="schedule-body">
+                  <h4>Opening Ceremony</h4>
+                  <p class="schedule-location"><strong>Deloitte</strong> &middot; welcome from Gies leadership, challenge &amp; mentor intros, keynote speaker</p>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">7:00 &ndash; 9:00 PM</div>
+                <div class="schedule-body">
+                  <h4>Dinner, Initial Planning &amp; Meet Mentors</h4>
+                  <p class="schedule-location"><strong>Atrium</strong> &middot; dinner from Moe&rsquo;s delivered ~6:45 PM &middot; mentors available 8:00 &ndash; 9:00 PM</p>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">9:00 PM &ndash; 12:00 AM</div>
+                <div class="schedule-body">
+                  <h4>Hacking Session 1</h4>
+                  <p class="schedule-location"><strong>BIF 2001, 2007, 2011</strong> &middot; mentors and snacks available</p>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">12:00 &ndash; 8:00 AM</div>
+                <div class="schedule-body">
+                  <h4>Overnight Hacking or Rest</h4>
+                  <p class="schedule-location">Building is closed and locked at midnight</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="schedule-day reveal reveal-delay-1">
+            <div class="schedule-day-header">
+              <span class="schedule-day-label">Day 2</span>
+              <h3 class="schedule-day-title">Friday, April 24</h3>
+            </div>
+            <ul class="schedule-list">
+              <li class="schedule-item">
+                <div class="schedule-time">8:00 AM &ndash; 12:00 PM</div>
+                <div class="schedule-body">
+                  <h4>Hacking Session 2</h4>
+                  <p class="schedule-location">Breakfast from Panera at 8:00 AM in the <strong>BIF Atrium</strong> &middot; Project Champion / mentor office hours 9:00 &ndash; 11:00 AM</p>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">12:00 &ndash; 1:00 PM</div>
+                <div class="schedule-body">
+                  <h4>Lunch &amp; Submission Preparation</h4>
+                  <p class="schedule-location">Lunch from Panera delivered ~11:45 AM</p>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">1:00 &ndash; 3:00 PM</div>
+                <div class="schedule-body">
+                  <h4>Project Submissions &amp; Round 1 Preliminary Judging</h4>
+                  <p class="schedule-location"><strong>BIF 3001 &amp; BIF 3003</strong> &middot; 7-minute presentations in parallel across 5 tracks &middot; 5 finalists selected by 2:30 PM</p>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">3:15 &ndash; 4:00 PM</div>
+                <div class="schedule-body">
+                  <h4>Final Judging</h4>
+                  <p class="schedule-location"><strong>Deloitte (BIF 1001)</strong> &middot; top 5 finalists present to a combined panel &middot; 5-minute pitch + 3-minute Q&amp;A</p>
+                </div>
+              </li>
+              <li class="schedule-item">
+                <div class="schedule-time">4:00 &ndash; 5:00 PM</div>
+                <div class="schedule-body">
+                  <h4>Awards Ceremony &amp; Closing</h4>
+                  <p class="schedule-location"><strong>Deloitte Auditorium</strong> &middot; winner announcements, prize distribution, closing remarks</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
