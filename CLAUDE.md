@@ -49,8 +49,8 @@ Landing page for the Gies Buildathon, a 24-hour hackathon for Gies undergrad and
 
 ## Session Log
 
-### 2026-04-18
-- Completed: Added email notifications for champion challenge submissions via Resend API (sends to vishal@illinois.edu). Env vars RESEND_API_KEY + NOTIFY_EMAIL set in Vercel production. Deployed to production.
-- Next: Scope champion challenges into hackathon-ready briefs. Build rubric. Test Copilot Studio demo in browser.
+### 2026-04-24
+- Completed: Drafted three champion challenge briefs in `docs/champion-challenges/` — Andrew Allen's group-meeting scheduler, Lindsey Halfar's campaign ops agent (merged media-plan intake + asset tracking from her paid-media submission), and Lindsey's AI-assisted webpage builder with modular components. Each brief scopes MVP + stretch goals for Copilot Studio. Added `.claude/` to `.gitignore`.
+- Next: Build rubric. Follow up with Lindsey on CMS + component catalog questions for webpage builder. Scope remaining champion submissions.
 
 *Older entries archived to `docs/session-archive.md`*

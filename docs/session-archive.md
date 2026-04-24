@@ -1,5 +1,9 @@
 # Session Archive — Gies Buildathon
 
+### 2026-04-18
+- Completed: Added email notifications for champion challenge submissions via Resend API (sends to vishal@illinois.edu). Env vars RESEND_API_KEY + NOTIFY_EMAIL set in Vercel production. Deployed to production.
+- Next: Scope champion challenges into hackathon-ready briefs. Build rubric. Test Copilot Studio demo in browser.
+
 ### 2026-04-17
 - Completed: Added scholarship prizes section to landing page (hero callout + dedicated section with $500/$300/$200/$100 per member cards, nav links). Added API rate limiting to champion chat endpoints. Fixed chat bot 400 error caused by empty messages validation rejecting the greeting call. Committed and deployed all changes.
 
