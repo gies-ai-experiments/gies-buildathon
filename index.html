@@ -1210,6 +1210,154 @@
       margin-right: auto;
       line-height: 1.6;
     }
+    #winners { position: relative; }
+    .balloon-layer {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    #winners > .container { position: relative; z-index: 2; }
+    .balloon {
+      position: absolute;
+      bottom: -140px;
+      width: 38px;
+      height: 48px;
+      border-radius: 50% 50% 48% 48% / 55% 55% 45% 45%;
+      opacity: 0;
+      transform-origin: 50% 100%;
+      filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
+    }
+    .balloon::before {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      transform: translateX(-50%) rotate(45deg);
+      background: inherit;
+    }
+    .balloon::after {
+      content: '';
+      position: absolute;
+      top: 12%;
+      left: 22%;
+      width: 22%;
+      height: 30%;
+      background: rgba(255,255,255,0.55);
+      border-radius: 50%;
+      filter: blur(0.5px);
+    }
+    .balloon.b-orange  { background: linear-gradient(160deg, #FF8A5C 0%, #E84A27 70%); }
+    .balloon.b-navy    { background: linear-gradient(160deg, #2A4878 0%, #13294B 70%); }
+    .balloon.b-gold    { background: linear-gradient(160deg, #FFD86B 0%, #E0A526 70%); }
+    .balloon.b-white   { background: linear-gradient(160deg, #ffffff 0%, #d8dde7 70%); }
+    .balloon.b-coral   { background: linear-gradient(160deg, #FF6F3C 0%, #C4391B 70%); }
+    .balloon.popping {
+      animation: balloonRise var(--rise, 3.2s) cubic-bezier(0.22, 0.61, 0.36, 1) forwards,
+                 balloonPop 0.45s ease-out forwards;
+      animation-delay: 0s, var(--rise, 3.2s);
+    }
+    @keyframes balloonRise {
+      0%   { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.85); }
+      10%  { opacity: 1; }
+      50%  { transform: translate(var(--sway, 18px), -55vh) rotate(-6deg) scale(1); }
+      100% { opacity: 1; transform: translate(calc(var(--sway, 18px) * -1), -110vh) rotate(6deg) scale(1.05); }
+    }
+    @keyframes balloonPop {
+      0%   { opacity: 1; transform: translate(calc(var(--sway, 18px) * -1), -110vh) rotate(6deg) scale(1.05); }
+      40%  { opacity: 1; transform: translate(calc(var(--sway, 18px) * -1), -110vh) rotate(6deg) scale(1.6); filter: brightness(1.4) drop-shadow(0 0 18px rgba(255,180,90,0.7)); }
+      100% { opacity: 0; transform: translate(calc(var(--sway, 18px) * -1), -110vh) rotate(6deg) scale(0.2); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .balloon { display: none; }
+    }
+    .winners-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+    @media (min-width: 640px) {
+      .winners-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .winners-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+    .winner-card {
+      background: var(--navy-card);
+      border: 1px solid var(--white-10);
+      border-radius: 14px;
+      padding: 2rem 1.25rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+    }
+    .winner-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(232,74,39,0.12) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .winner-card:hover::after { opacity: 1; }
+    .winner-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(232, 74, 39, 0.18);
+    }
+    .winner-card.winner-first {
+      border-color: var(--orange);
+      background: linear-gradient(180deg, rgba(232,74,39,0.12) 0%, var(--navy-card) 60%);
+    }
+    @media (min-width: 1024px) {
+      .winner-card.winner-first { transform: scale(1.05); }
+      .winner-card.winner-first:hover { transform: scale(1.05) translateY(-6px); }
+    }
+    .winner-place {
+      font-family: var(--font-emphasis);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--white-50);
+      margin-bottom: 0.85rem;
+    }
+    .winner-card.winner-first .winner-place { color: var(--orange); }
+    .winner-team {
+      font-family: var(--font-stats);
+      font-weight: 900;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 0.6rem;
+      word-break: break-word;
+    }
+    .winner-card.winner-first .winner-team { color: var(--orange); }
+    .winner-track {
+      font-size: 0.85rem;
+      color: var(--white-70);
+      letter-spacing: 0.02em;
+    }
+    .winners-note {
+      font-size: 0.85rem;
+      color: var(--white-50);
+      margin-top: 1.75rem;
+      text-align: center;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
     .hero-scholarship {
       font-size: clamp(0.95rem, 2vw, 1.1rem);
       color: var(--white-70);
@@ -1775,6 +1923,7 @@
     <div class="container nav-inner">
       <a class="nav-logo" href="#">GIES <span>BUILDATHON</span></a>
       <div class="nav-links">
+        <a href="#winners">Winners</a>
         <a href="#about">About</a>
         <a href="#tracks">Tracks</a>
         <a href="#how-it-works">How It Works</a>
@@ -1785,7 +1934,6 @@
         <a href="#faq">FAQ</a>
         <a href="#sponsors">Sponsors</a>
       </div>
-      <a class="nav-cta" href="https://forms.gle/RxQGQBsRutTZQme29" target="_blank" rel="noopener">Apply</a>
       <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -1794,6 +1942,7 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="#winners">Winners</a>
     <a href="#about">About</a>
     <a href="#tracks">Tracks</a>
     <a href="#how-it-works">How It Works</a>
@@ -1803,7 +1952,6 @@
     <a href="#workshops">Workshops</a>
     <a href="#faq">FAQ</a>
     <a href="#sponsors">Sponsors</a>
-    <a class="mobile-cta" href="https://forms.gle/RxQGQBsRutTZQme29" target="_blank" rel="noopener">Apply</a>
   </div>
 
   <main id="main">
@@ -1833,9 +1981,8 @@
         </p>
         <p class="hero-location">Gies College of Business &bull; University of Illinois Urbana-Champaign</p>
         <p class="hero-scholarship">Win up to <strong>$500 scholarship</strong> per team member &mdash; <a href="#prizes" style="color:var(--orange-light);text-decoration:underline;">see prizes</a></p>
-        <p class="hero-cta-label">APPLICATIONS ARE LIVE!</p>
         <div class="hero-buttons">
-          <a class="btn-primary magnetic" href="https://forms.gle/RxQGQBsRutTZQme29" target="_blank" rel="noopener">Apply Now</a>
+          <a class="btn-secondary magnetic" href="#winners">See Winners</a>
           <a class="btn-secondary magnetic" href="#about">Learn More</a>
         </div>
       </div>
@@ -1856,6 +2003,47 @@
         <path d="M0,60 C360,0 720,0 1080,30 C1260,45 1380,60 1440,60 L1440,60 L0,60 Z" fill="var(--navy-deep)"/>
       </svg>
     </div>
+
+    <!-- Winners -->
+    <section id="winners" class="section">
+      <div class="balloon-layer" aria-hidden="true"></div>
+      <div class="container">
+        <p class="section-label reveal" style="text-align:center">CHAMPIONS</p>
+        <h2 class="section-title reveal" style="text-align:center">2026 Build-a-Thon Winners</h2>
+        <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto;">Congratulations to the teams who shipped the future on April 23&ndash;24.</p>
+
+        <div class="winners-grid">
+          <div class="winner-card winner-first reveal">
+            <div class="winner-place">1st Place</div>
+            <div class="winner-team">007</div>
+            <div class="winner-track">Business Technology</div>
+          </div>
+          <div class="winner-card reveal reveal-delay-1">
+            <div class="winner-place">2nd Place</div>
+            <div class="winner-team">Geese</div>
+            <div class="winner-track">HR</div>
+          </div>
+          <div class="winner-card reveal reveal-delay-2">
+            <div class="winner-place">3rd Place</div>
+            <div class="winner-team">YTBD</div>
+            <div class="winner-track">Marketing</div>
+          </div>
+          <div class="winner-card reveal reveal-delay-3">
+            <div class="winner-place">4th Place</div>
+            <div class="winner-team">MindMatrix</div>
+            <div class="winner-track">General Innovation</div>
+          </div>
+          <div class="winner-card reveal reveal-delay-4">
+            <div class="winner-place">5th Place</div>
+            <div class="winner-team">Herledger</div>
+            <div class="winner-track">Finance &amp; Accounting</div>
+          </div>
+        </div>
+        <p class="winners-note reveal">All five finalists are also champions of their respective tracks.</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
 
     <!-- About -->
     <section id="about" class="section has-bg">
@@ -2468,12 +2656,9 @@
     <!-- Final CTA / Register -->
     <section id="register" class="final-cta">
       <div class="container">
-        <h2 class="section-title reveal">Ready to Build?</h2>
-        <p class="section-subtitle reveal" style="margin: 0 auto;">24 hours. Five tracks. One chance to build something that matters. Sign up now and secure your spot.</p>
-        <div class="reveal" style="margin-top: 2.5rem;">
-          <a class="btn-primary magnetic" href="https://forms.gle/RxQGQBsRutTZQme29" target="_blank" rel="noopener" style="font-size:1.1rem; padding: 1.1rem 3rem;">Apply Now</a>
-        </div>
-        <p class="reveal" style="margin-top:1rem; font-size:0.8rem; color: var(--white-50);">Open to all on-campus Gies undergrad &amp; grad students.</p>
+        <h2 class="section-title reveal">That&rsquo;s a Wrap.</h2>
+        <p class="section-subtitle reveal" style="margin: 0 auto;">24 hours. Five tracks. One unforgettable build. Thank you to everyone who shipped, judged, and showed up.</p>
+        <p class="reveal" style="margin-top:1rem; font-size:0.85rem; color: var(--white-50);">See you next year.</p>
       </div>
     </section>
   </main>
@@ -2769,6 +2954,48 @@
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
       revealObserver.observe(el);
     });
+
+    /* ===== BALLOON POPS ON CLICK FOR TOP-3 WINNERS ===== */
+    (() => {
+      const layer = document.querySelector('#winners .balloon-layer');
+      const targets = document.querySelectorAll('#winners .winner-card.winner-first, #winners .winner-card.reveal-delay-1, #winners .winner-card.reveal-delay-2');
+      if (!layer || !targets.length) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const colors = ['b-orange', 'b-navy', 'b-gold', 'b-white', 'b-coral'];
+
+      function spawnBalloon(xvw) {
+        const b = document.createElement('div');
+        b.className = 'balloon ' + colors[Math.floor(Math.random() * colors.length)];
+        b.style.left = xvw.toFixed(2) + 'vw';
+        b.style.setProperty('--rise', (2.4 + Math.random() * 2.4).toFixed(2) + 's');
+        b.style.setProperty('--sway', ((Math.random() - 0.5) * 140).toFixed(0) + 'px');
+        const scale = 0.65 + Math.random() * 0.95;
+        b.style.width = (38 * scale) + 'px';
+        b.style.height = (48 * scale) + 'px';
+        layer.appendChild(b);
+        requestAnimationFrame(() => b.classList.add('popping'));
+        setTimeout(() => b.remove(), 5800);
+      }
+
+      function burstAcrossScreen(count) {
+        // Sweep from left edge to right edge across the whole viewport
+        for (let i = 0; i < count; i++) {
+          const t = i / (count - 1);                 // 0 → 1
+          const baseX = t * 100;                     // 0vw → 100vw
+          const jitter = (Math.random() - 0.5) * 6;  // ±3vw scatter
+          const xvw = Math.max(0, Math.min(100, baseX + jitter));
+          setTimeout(() => spawnBalloon(xvw), i * 25);
+        }
+      }
+
+      targets.forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+          burstAcrossScreen(60);
+        });
+      });
+    })();
 
     /* ===== STEP AUTO-CYCLE ===== */
     (() => {
