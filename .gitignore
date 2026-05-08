@@ -8,3 +8,8 @@ node_modules/
 docs/impact-report/teams.xlsx
 docs/impact-report/linkedin-raw.md
 docs/impact-report/community-posts-fetched.md
+docs/impact-report/student-posts-fetched.md
+docs/impact-report/photos/
+
+# Champion challenge submissions (Google Form export with names + emails)
+reference_material/*.csv
