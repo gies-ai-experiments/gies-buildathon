@@ -55,3 +55,7 @@
 - Completed: Created two Slidev workshop decks — Mental Model (7 slides) + I Do / You Do Activity (10 slides). Deployed to GitHub Pages.
 - Completed: Enabled GitHub Pages on repo (static deploy workflow). Created editor guide for Jeremy.
 - Completed: Ingested 6 champion challenge submissions (Vishal, Charlie Farhoodi, Andrew Allen, Lindsey Halfar x2, Martin Maurer).
+
+### 2026-04-24
+- Completed: Drafted three champion challenge briefs in `docs/champion-challenges/` — Andrew Allen's group-meeting scheduler, Lindsey Halfar's campaign ops agent (merged media-plan intake + asset tracking from her paid-media submission), and Lindsey's AI-assisted webpage builder with modular components. Each brief scopes MVP + stretch goals for Copilot Studio. Added `.claude/` to `.gitignore`.
+- Next: Build rubric. Follow up with Lindsey on CMS + component catalog questions for webpage builder. Scope remaining champion submissions.

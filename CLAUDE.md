@@ -49,8 +49,8 @@ Landing page for the Gies Buildathon, a 24-hour hackathon for Gies undergrad and
 
 ## Session Log
 
-### 2026-04-24
-- Completed: Drafted three champion challenge briefs in `docs/champion-challenges/` — Andrew Allen's group-meeting scheduler, Lindsey Halfar's campaign ops agent (merged media-plan intake + asset tracking from her paid-media submission), and Lindsey's AI-assisted webpage builder with modular components. Each brief scopes MVP + stretch goals for Copilot Studio. Added `.claude/` to `.gitignore`.
-- Next: Build rubric. Follow up with Lindsey on CMS + component catalog questions for webpage builder. Scope remaining champion submissions.
+### 2026-05-08
+- Completed: Built post-event impact report for Spring 2026 Build-A-Thon. Two stakeholder docs in `docs/impact-report/` — `impact-narrative.md/pdf` (story-driven, for champions/mentors/judges/keynote/provost/sponsors, 13 pages) and `impact-report.md/pdf` (structured operational record, 16 pages). Pulled source material from LinkedIn export (~263 reactions triaged via Chrome browser automation, ~12 buildathon hits identified) + Box challenge briefs + teams.xlsx (22 finishing teams, 72 students). All 5 winning team photos embedded. Linked every named person (champions, judges, mentors, keynote) to LinkedIn profiles where available. Confirmed 5 tracks + 5 champions: Charlie Farhoodi (Business Tech), Adam King (Finance & Accounting), Skylar Zhang (General Innovation / Career Navigator), Julia Shubina Sabin (HR), Lindsey Savoie Halfar (Marketing & Sales). Top 5 = one per track winner. Added Paul Hsu (keynote) post-event reflection (113+ reactions, 5 reposts) as top-tier external endorsement. Privacy: photos/, student-posts-fetched.md, teams.xlsx, linkedin-raw.md, community-posts-fetched.md gitignored from public repo.
+- Next: Run student survey for additional finisher data; replace `Gies AI for Impact Build-A-Thon Report.pdf` (the original short version) once narrative becomes the canonical artifact; consider whether to publish a public web version (without photos) on the gies-buildathon landing page.
 
 *Older entries archived to `docs/session-archive.md`*
