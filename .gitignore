@@ -3,3 +3,8 @@ node_modules/
 .DS_Store
 .vercel
 .claude/
+
+# Impact report — files with PII or raw LinkedIn URN history
+docs/impact-report/teams.xlsx
+docs/impact-report/linkedin-raw.md
+docs/impact-report/community-posts-fetched.md
