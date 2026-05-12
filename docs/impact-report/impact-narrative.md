@@ -34,7 +34,7 @@ Five Gies leaders gave students problems they actually needed solved.
 
 **[Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/)** at the Magelli Office of Experiential Learning sources 200+ consulting clients each semester through relationships and referrals. Public job postings contain signals — "first marketing hire," "Director of Revenue Operations" — that map to consulting opportunities the Office would otherwise never know about. Charlie's challenge: build an agent that decodes those signals continuously.
 
-**[Adam King](https://www.linkedin.com/in/king-adam/)** in Finance asked students to think like a CFO making capital reallocation decisions: every month, which innovation projects to stop, which to scale, where to redeploy freed capital. The current process is manual, subjective, and slow.
+**[Adam King](https://www.linkedin.com/in/king-adam/)** from Gies Innovation & Transformation asked students to think like a CFO making capital reallocation decisions: every month, which innovation projects to stop, which to scale, where to redeploy freed capital. The current process is manual, subjective, and slow.
 
 **[Julia Shubina Sabin](https://www.linkedin.com/in/juliasabin/)** brought a hiring problem: how do you eliminate scoring drift in candidate evaluation when different reviewers use different mental rubrics? Build a multi-agent system that scores against a defined rubric, ingests interview transcripts, and produces an auditable hiring recommendation.
 
@@ -121,7 +121,7 @@ The mentors and judges saw the same thing from the other side of the table.
 
 > *"Build to Learn. Learn to Build. Experimental learning is thriving at Illinois. … Clear from the conversations with students, faculty, and organizers that this was more than a typical hackathon. It was a focused effort to translate emerging ideas in agentic AI into real, working systems that had impact on the university and broadly the world. … What really stood out to me was the mindset of the student teams: an energy toward building, experimentation, and iteration. I was impressed by the level of engagement, engineering rigor and the emphasis on building real solutions. … Higher education transforms students when it is aligned with applied research and hands-on building, especially in fields that are actively shaping industry innovation. The key skills of tomorrow are imagination, invention and execution."*
 
-[**Sid Chakravarty**](https://www.linkedin.com/in/sidharthachakravarty/), judge and Adjunct Professor:
+[**Sid Chakravarty**](https://www.linkedin.com/in/sidharthachakravarty/), judge — VP, Performance Insights (Advanced Analytics) at Synchrony:
 
 > *"I was truly impressed by the depth of research each team conducted to decompose complex problem statements into multi-agent systems — designing agents that could effectively coordinate to achieve a shared objective. As AI matures, the role of the AI engineer is evolving into that of an Orchestrator. Success will belong to those who maintain an end-to-end view of the system, treating individual components like Lego blocks to be assembled with precision. For large, established firms, the goal is clear: we must cultivate the next generation of AI Orchestrators."* ([source](https://www.linkedin.com/feed/update/urn:li:ugcPost:7453796119290990592/))
 
@@ -196,7 +196,7 @@ The Build-A-Thon is what experiential AI education looks like when business and 
 [Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/) · [Adam King](https://www.linkedin.com/in/king-adam/) · [Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/) · [Julia Shubina Sabin](https://www.linkedin.com/in/juliasabin/) · [Lindsey Savoie Halfar](https://www.linkedin.com/in/savoie/)
 
 **Judges**
-[Jacob Kinsey](https://www.linkedin.com/in/jacobkinsey/) · [Sid Chakravarty](https://www.linkedin.com/in/sidharthachakravarty/) · [Tarkan Bolat](https://www.linkedin.com/in/tarkanbolat/) · [Mark Moran](https://www.linkedin.com/in/moranmarkd/)
+[Jacob Kinsey](https://www.linkedin.com/in/jacobkinsey/) (Senior Director, Illinois Ventures) · [Sid Chakravarty](https://www.linkedin.com/in/sidharthachakravarty/) (VP, Performance Insights — Advanced Analytics, Synchrony) · [Tarkan Bolat](https://www.linkedin.com/in/tarkanbolat/) (Senior Consultant, KPMG Ignition) · [Mark Moran](https://www.linkedin.com/in/moranmarkd/) (VP, Data, Systems & Intelligence — Plant Biotech, Bayer)
 
 **Mentors**
 [Lindsey Savoie Halfar](https://www.linkedin.com/in/savoie/) · [Amber Glynn](https://www.linkedin.com/in/amber-glynn-425271180/) · [Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/) · [Jake Myers](https://www.linkedin.com/in/jake-myers/) · [Jamie Nelson](https://www.linkedin.com/in/wickedthirteen/) · [Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/) · [Julia Shubina Sabin](https://www.linkedin.com/in/juliasabin/)
@@ -211,7 +211,7 @@ The Build-A-Thon is what experiential AI education looks like when business and 
 [Adam King](https://www.linkedin.com/in/king-adam/) · [Jamie Nelson](https://www.linkedin.com/in/wickedthirteen/) · [Chris Tidrick](https://www.linkedin.com/in/christophertidrick/) · [Matias Carrasco Kind](https://www.linkedin.com/in/matiasck/) · [W. Brooke Elliott](https://www.linkedin.com/in/w-brooke-elliott-4a46634/)
 
 **Sponsoring Organizations**
-[Gies College of Business](https://www.linkedin.com/company/giesbusiness/) · Agentic AI @ UIUC · Disruption Lab at Gies · BuildIllinois · Magelli Office of Experiential Learning · Data Science Research Services — Gies College of Business
+[Gies College of Business](https://www.linkedin.com/company/giesbusiness/) · Agentic AI @ UIUC · Gies Disruption Lab · BuildIllinois · Magelli Office of Experiential Learning · Data Science Research Services — Gies College of Business
 
 **The 22 Teams Who Finished**
 007 · Bob the Builders · BuildForce · ByteCrawl · Catalyst · Colabs · Condescending · Geese · Gies Intelligence · HanuMind · HerLedger · Interstellar · JKR · LogicRay · Market Matrix · MindMatrix · Monkes Never Cramp · S.M.B · Team Beta · Uncharted · Winners · YTBD
