@@ -135,6 +135,37 @@ Jake's post ended with a sentence that, for an event like this, is the highest p
 
 A weekend sprint became a hiring pipeline.
 
+### What Students Told Us Privately
+
+A handful of students went public on LinkedIn. To hear from the rest, we ran a post-event survey. Fourteen students have responded so far — a representative cross-section of the 72 finishers (9 graduate, 5 undergraduate, spanning Finance, Accountancy, Marketing, Information Systems, MSBA, MS Tech Mgmt, and MSF) — with the window still open.
+
+The headline numbers:
+
+- **9.0 / 10** average likelihood to recommend a future event to another student
+- **85%** better understand how AI agents support real business workflows
+- **85%** better understand how to identify a business process that's a good fit for automation
+- **78%** feel more prepared to use AI tools in internships, jobs, coursework, or student-organization work
+- **78%** better understand responsible AI — data privacy, transparency, human review
+- **71%** gained practical experience using no-code or low-code AI tools
+
+Some of what they said (anonymized; quoted with permission):
+
+> *"The most valuable part was the constraint itself. Twenty-four hours forces you to make real decisions fast, and that pressure taught me more about product thinking than most semester-long projects."* — Graduate student, MSBA
+
+> *"This event gives students something a classroom rarely does — the experience of building something real under pressure and seeing if it actually works. That gap between knowing and doing is where most learning happens. Keep investing in it."* — Graduate student, MSBA
+
+> *"That you actually don't need to know how to code for buildathons like these."* — Undergraduate, Finance (answering what they learned that they didn't know going in)
+
+### What We'll Change
+
+Three honest critiques surfaced in the same survey, and they will shape iteration #2:
+
+1. **Overnight mentor coverage.** Mentors were available in workshops and during daytime hours, but several students noted that overnight — exactly when many teams were debugging and shipping — there was no one to ask. A paged overnight rotation, or a sharper handoff before mentors sign off, fixes this.
+2. **Foundational onboarding for newcomers.** The five preparatory workshops covered design thinking, no-code platforms, agent fundamentals, presentation craft, and multi-agent orchestration. They did not include a foundational "how Copilot Studio actually works" walkthrough that students with no prior exposure could ride into the build. Several respondents asked for exactly that.
+3. **Format and start time.** Several participants — including some who rated the event highly — argued for an early-morning start instead of overnight, so teams come into the build with full energy rather than burning out late.
+
+Two of fourteen rated overall organization "Fair" and one rated mentor support "Poor." Those rows were read in full, not averaged away. That is the form of feedback an iteration needs.
+
 ---
 
 ## How It Held Together
