@@ -40,7 +40,7 @@ Five Gies leaders gave students problems they actually needed solved.
 
 **[Lindsey Savoie Halfar](https://www.linkedin.com/in/savoie/)** in Gies Marcom runs multiple paid media campaigns simultaneously — each with its own budget, timeline, channels, and creative requirements. Her challenge: unify intake, asset coordination, performance tracking, and stakeholder reporting into one orchestrated workflow.
 
-**[Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/)** sponsored the General Innovation track — the Career Navigator challenge — around something every MSBA student lives: the bewilderment of career navigation when applying broadly, unsure which roles fit, what skills matter, where to focus. The challenge was to turn a student profile into personalized career recommendations, skill gap insights, and a tailored job-search roadmap.
+**[Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/)** and **[Amber Glynn](https://www.linkedin.com/in/amber-glynn-425271180/)** sponsored the General Innovation track — the Career Navigator challenge — around something every MSBA student lives: the bewilderment of career navigation when applying broadly, unsure which roles fit, what skills matter, where to focus. The challenge was to turn a student profile into personalized career recommendations, skill gap insights, and a tailored job-search roadmap.
 
 These challenges came with rubrics that rivaled production specifications. The Business Technology rubric, for example, required scores reproducible within ±6 points across reviewers, formulas with explicit weights, fairness rules forbidding the use of "company name prestige or personal networks as inputs," and audit trails for every decision. Students were not given toy problems. They were given the kind of work the Office of Experiential Learning, the CFO's office, HR, Marcom, and the MSBA program would otherwise pay external vendors to do.
 
@@ -86,7 +86,7 @@ The Marketing & Sales track winner, built on Microsoft Copilot Studio against th
 ### 4️⃣ Team MindMatrix · *Multi-Agent Career Guidance System* · 4th place overall, General Innovation track winner
 
 Lead: Poorva Bhide · [Juan Carlos Zapata](https://www.linkedin.com/feed/update/urn:li:activity:7454367874472673281/) · Yukta Mehta · Nandini Agarwal
-Champion: [Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/)
+Champions: [Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/) · [Amber Glynn](https://www.linkedin.com/in/amber-glynn-425271180/)
 
 > "Multi-agent systems aren't the future — they're already reshaping how decisions get made." — [Juan Carlos Zapata](https://www.linkedin.com/feed/update/urn:li:activity:7454367874472673281/)
 
@@ -224,7 +224,7 @@ The Build-A-Thon is what experiential AI education looks like when business and 
 [Paul Hsu](https://www.linkedin.com/in/paulhsu/) · [Abdul Al Ali](https://www.linkedin.com/in/abdalali/) — *[Decasonic](https://www.linkedin.com/company/decasonic/)*
 
 **Project Champions**
-[Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/) · [Adam King](https://www.linkedin.com/in/king-adam/) · [Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/) · [Julia Shubina Sabin](https://www.linkedin.com/in/juliasabin/) · [Lindsey Savoie Halfar](https://www.linkedin.com/in/savoie/)
+[Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/) · [Adam King](https://www.linkedin.com/in/king-adam/) · [Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/) · [Amber Glynn](https://www.linkedin.com/in/amber-glynn-425271180/) · [Julia Shubina Sabin](https://www.linkedin.com/in/juliasabin/) · [Lindsey Savoie Halfar](https://www.linkedin.com/in/savoie/)
 
 **Judges**
 [Jacob Kinsey](https://www.linkedin.com/in/jacobkinsey/) (Senior Director, Illinois Ventures) · [Sid Chakravarty](https://www.linkedin.com/in/sidharthachakravarty/) (VP, Performance Insights — Advanced Analytics, Synchrony) · [Tarkan Bolat](https://www.linkedin.com/in/tarkanbolat/) (Senior Consultant, KPMG Ignition) · [Mark Moran](https://www.linkedin.com/in/moranmarkd/) (VP, Data, Systems & Intelligence — Plant Biotech, Bayer)
