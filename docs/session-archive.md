@@ -1,5 +1,9 @@
 # Session Archive — Gies Buildathon
 
+### 2026-05-08
+- Completed: Shipped public impact report online. Replaced old tabular `Gies AI for Impact Build-A-Thon Report.pdf` with `impact-narrative.pdf` as the canonical artifact (deleted the old one). Built `docs/impact-report/index.html` — pandoc render of `impact-narrative.md` with all 5 photos stripped, branded styling (Illini Navy + Orange, Source Sans 3 + Montserrat), responsive, with topbar back link to landing. Added "Read the impact report →" link under the winners section on `index.html`. Hardened PII gitignore: `git rm --cached` of `reference_material/...Champions (Responses)...csv` (Google Form export with names + Illinois emails) and added `reference_material/*.csv` + `student-posts-fetched.md` + `photos/` to `.gitignore`. Sent student feedback survey: extracted 72 unique emails from `teams.xlsx`, opened Outlook compose with self in To and 72 students in BCC, Google Form link (https://forms.gle/7X3THM7ywtxDh3oo8), May 15 deadline. Pushed to main as commit `5904e5b`; live at https://gies-ai-experiments.github.io/gies-buildathon/docs/impact-report/.
+- Next: Verify GitHub Pages is serving the new impact-report URL once the build runs. Watch for student survey responses through May 15.
+
 ### 2026-04-18
 - Completed: Added email notifications for champion challenge submissions via Resend API (sends to vishal@illinois.edu). Env vars RESEND_API_KEY + NOTIFY_EMAIL set in Vercel production. Deployed to production.
 - Next: Scope champion challenges into hackathon-ready briefs. Build rubric. Test Copilot Studio demo in browser.
