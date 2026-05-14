@@ -44,6 +44,8 @@ Five Gies leaders gave students problems they actually needed solved.
 
 These challenges came with rubrics that rivaled production specifications. The Business Technology rubric, for example, required scores reproducible within ±6 points across reviewers, formulas with explicit weights, fairness rules forbidding the use of "company name prestige or personal networks as inputs," and audit trails for every decision. Students were not given toy problems. They were given the kind of work the Office of Experiential Learning, the CFO's office, HR, Marcom, and the MSBA program would otherwise pay external vendors to do.
 
+More Gies leaders submitted strong challenges than we could feature in a single 24-hour event — including **Andrew Allen**, **Ravi Mehta**, and **Martin Maurer**. Those submissions shaped the rubric design and the event's scope, and they're a clear signal that the appetite for student-built AI inside Gies is larger than one Build-A-Thon can absorb. They form the backlog for the next iteration.
+
 ---
 
 ## What They Built
@@ -239,7 +241,9 @@ The Build-A-Thon is what experiential AI education looks like when business and 
 [Jeremy Samuel](https://www.linkedin.com/in/jeremy-samuel-col323/) · [Shikhar Mattoo](https://www.linkedin.com/in/shikhar-mattoo/) · [Shreyas Kulkarni](https://www.linkedin.com/in/shreyaskulkarni29/)
 
 **Faculty & Staff Leadership**
-[Adam King](https://www.linkedin.com/in/king-adam/) · [Jamie Nelson](https://www.linkedin.com/in/wickedthirteen/) · [Chris Tidrick](https://www.linkedin.com/in/christophertidrick/) · [Matias Carrasco Kind](https://www.linkedin.com/in/matiasck/) · [W. Brooke Elliott](https://www.linkedin.com/in/w-brooke-elliott-4a46634/)
+[Adam King](https://www.linkedin.com/in/king-adam/) · [Jamie Nelson](https://www.linkedin.com/in/wickedthirteen/) · [Chris Tidrick](https://www.linkedin.com/in/christophertidrick/) · [Matias Carrasco Kind](https://www.linkedin.com/in/matiasck/) · [Jake Myers](https://www.linkedin.com/in/jake-myers/) · [Vishal Sachdev](https://www.linkedin.com/in/vishalsachdev/)
+
+**Additional Challenge Submissions** Andrew Allen · Ravi Mehta · Martin Maurer
 
 **Sponsoring Organizations**
 [Gies College of Business](https://www.linkedin.com/company/giesbusiness/) · Agentic AI @ UIUC · Gies Disruption Lab · BuildIllinois · Magelli Office of Experiential Learning · Data Science Research Services — Gies College of Business
