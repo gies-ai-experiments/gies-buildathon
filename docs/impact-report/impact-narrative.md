@@ -246,7 +246,7 @@ The Build-A-Thon is what experiential AI education looks like when business and 
 **Additional Challenge Submissions** Andrew Allen · Ravi Mehta · Martin Maurer
 
 **Sponsoring Organizations**
-[Gies College of Business](https://www.linkedin.com/company/giesbusiness/) · Agentic AI @ UIUC · Gies Disruption Lab · BuildIllinois · Magelli Office of Experiential Learning · Data Science Research Services — Gies College of Business
+[Gies College of Business](https://www.linkedin.com/company/giesbusiness/) · [Agentic AI @ UIUC](https://one.illinois.edu/agenticai/home/) · [Gies Disruption Lab](https://giesbusiness.illinois.edu/disruption-lab) · BuildIllinois · [Magelli Office of Experiential Learning](https://giesbusiness.illinois.edu/experience/experiential-learning) · [Data Science Research Services — Gies College of Business](https://dsrs.illinois.edu/)
 
 **The 22 Teams Who Finished**
 007 · Bob the Builders · BuildForce · ByteCrawl · Catalyst · Colabs · Condescending · Geese · Gies Intelligence · HanuMind · HerLedger · Interstellar · JKR · LogicRay · Market Matrix · MindMatrix · Monkes Never Cramp · S.M.B · Team Beta · Uncharted · Winners · YTBD
