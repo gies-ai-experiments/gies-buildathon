@@ -32,7 +32,7 @@ This was not a hackathon in the classical sense. Each of the five tracks was anc
 
 Five Gies leaders gave students problems they actually needed solved.
 
-**[Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/)** at the Magelli Office of Experiential Learning sources 200+ consulting clients each semester through relationships and referrals. Public job postings contain signals — "first marketing hire," "Director of Revenue Operations" — that map to consulting opportunities the Office would otherwise never know about. Charlie's challenge: build an agent that decodes those signals continuously.
+**[Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/)** and **[Ken Magrow](https://www.linkedin.com/in/kenmagrow/)** at the Magelli Office of Experiential Learning source 200+ consulting clients each semester through relationships and referrals. Public job postings contain signals — "first marketing hire," "Director of Revenue Operations" — that map to consulting opportunities the Office would otherwise never know about. Their challenge: build an agent that decodes those signals continuously.
 
 **[Adam King](https://www.linkedin.com/in/king-adam/)** from Gies Innovation & Transformation asked students to think like a CFO making capital reallocation decisions: every month, which innovation projects to stop, which to scale, where to redeploy freed capital. The current process is manual, subjective, and slow.
 
@@ -57,7 +57,7 @@ Twenty-two teams. Five tracks. Five winners — one per track — who together f
 ### 🥇 Team 007 · *Magelli Scout* · 1st place overall
 
 Lead: [Prateek Verma](https://www.linkedin.com/feed/update/urn:li:activity:7453787041286361088/) · [Anmol Aggarwal](https://www.linkedin.com/in/anmol-aggarwal3101/) · [Jeswell Mathew](https://www.linkedin.com/in/jeswellmathew/) · [Venkatesh Mehra](https://www.linkedin.com/in/venkatesh-mehra/)
-Champion: [Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/)
+Champions: [Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/) · [Ken Magrow](https://www.linkedin.com/in/kenmagrow/)
 
 > "Every job posting is a company publicly broadcasting what they can't do. A 'Director of Revenue Operations' posting doesn't just mean they're hiring — it means they have no revenue process today. That's a consulting brief hiding in plain sight." — [Prateek Verma](https://www.linkedin.com/feed/update/urn:li:activity:7453787041286361088/)
 
@@ -226,7 +226,7 @@ The Build-A-Thon is what experiential AI education looks like when business and 
 [Paul Hsu](https://www.linkedin.com/in/paulhsu/) · [Abdul Al Ali](https://www.linkedin.com/in/abdalali/) — *[Decasonic](https://www.linkedin.com/company/decasonic/)*
 
 **Project Champions**
-[Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/) · [Adam King](https://www.linkedin.com/in/king-adam/) · [Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/) · [Amber Glynn](https://www.linkedin.com/in/amber-glynn-425271180/) · [Julia Shubina Sabin](https://www.linkedin.com/in/juliasabin/) · [Lindsey Savoie Halfar](https://www.linkedin.com/in/savoie/)
+[Charlie Farhoodi](https://www.linkedin.com/in/charliefarhoodi/) · [Ken Magrow](https://www.linkedin.com/in/kenmagrow/) · [Adam King](https://www.linkedin.com/in/king-adam/) · [Skylar Zhang](https://www.linkedin.com/in/skylar-zhang/) · [Amber Glynn](https://www.linkedin.com/in/amber-glynn-425271180/) · [Julia Shubina Sabin](https://www.linkedin.com/in/juliasabin/) · [Lindsey Savoie Halfar](https://www.linkedin.com/in/savoie/)
 
 **Judges**
 [Jacob Kinsey](https://www.linkedin.com/in/jacobkinsey/) (Senior Director, Illinois Ventures) · [Sid Chakravarty](https://www.linkedin.com/in/sidharthachakravarty/) (VP, Performance Insights — Advanced Analytics, Synchrony) · [Tarkan Bolat](https://www.linkedin.com/in/tarkanbolat/) (Senior Consultant, KPMG Ignition) · [Mark Moran](https://www.linkedin.com/in/moranmarkd/) (VP, Data, Systems & Intelligence — Plant Biotech, Bayer)
