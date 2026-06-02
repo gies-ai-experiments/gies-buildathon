@@ -17,6 +17,9 @@ RUN rm -rf ./*
 COPY index.html ./
 COPY champion-chat.html ./
 COPY assets ./assets
+# Impact report (self-contained HTML; only this file is copied to avoid
+# baking the gitignored PII feedback CSV, PDFs, or xlsx into the public image)
+COPY docs/impact-report/index.html ./docs/impact-report/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy API sidecar
