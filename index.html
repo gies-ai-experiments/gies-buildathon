@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gies AI for Impact Challenge — Agentic AI Build-a-Thon 2026</title>
-  <meta name="description" content="24-hour innovation competition for Gies College of Business students at the University of Illinois. Build solutions across Finance, HR, Marketing, Technology, and more. April 2026.">
-  <meta property="og:title" content="Gies AI for Impact Challenge 2026">
-  <meta property="og:description" content="Agentic AI Build-a-Thon. April 2026 at Gies College of Business, University of Illinois.">
+  <meta name="description" content="In 24 hours, 72 Gies Business students built 22 working agentic AI systems for real Finance, HR, Marketing, Operations, and General Innovation challenges. Read the impact report from the April 2026 Build-a-Thon.">
+  <meta property="og:title" content="Gies AI for Impact Challenge 2026 — Impact Report">
+  <meta property="og:description" content="72 students. 22 agentic AI systems. 24 hours. See what Gies Business students built at the April 2026 Build-a-Thon.">
   <meta property="og:type" content="website">
   <link rel="preload" as="image" type="image/webp" href="assets/images/gies-exterior-night.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1358,17 +1358,36 @@
       margin-right: auto;
       line-height: 1.6;
     }
-    .hero-scholarship {
-      font-size: clamp(0.95rem, 2vw, 1.1rem);
-      color: var(--white-70);
-      margin-bottom: 0.75rem;
+    .hero-stats {
+      list-style: none;
+      margin: 1.75rem 0 0.5rem;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem 2.5rem;
       opacity: 0;
       transform: translateY(20px);
       animation: fadeUp 0.8s var(--ease-out) 0.85s forwards;
     }
-    .hero-scholarship strong {
+    .hero-stats li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.1;
+    }
+    .hero-stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 6vw, 3rem);
       color: var(--orange);
-      font-weight: 700;
+    }
+    .hero-stat-label {
+      font-size: clamp(0.7rem, 1.6vw, 0.85rem);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--white-70);
+      margin-top: 0.25rem;
     }
 
     /* ===== FAQ ===== */
@@ -1923,6 +1942,7 @@
     <div class="container nav-inner">
       <a class="nav-logo" href="#">GIES <span>BUILDATHON</span></a>
       <div class="nav-links">
+        <a href="docs/impact-report/">Impact Report</a>
         <a href="#winners">Winners</a>
         <a href="#about">About</a>
         <a href="#tracks">Tracks</a>
@@ -1942,6 +1962,7 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="docs/impact-report/">Impact Report</a>
     <a href="#winners">Winners</a>
     <a href="#about">About</a>
     <a href="#tracks">Tracks</a>
@@ -1974,16 +1995,21 @@
       <div class="geo geo-9"></div>
 
       <div class="hero-content">
-        <p class="hero-date">APRIL 23, 5 PM &ndash; APRIL 24, 5 PM</p>
+        <p class="hero-date">APRIL 23&ndash;24, 2026 &bull; EVENT COMPLETE</p>
         <h1>GIES<br><span class="highlight">AI FOR IMPACT CHALLENGE</span></h1>
         <p class="hero-tagline">
           <span class="typewriter-text" data-text="Agentic AI Build-a-Thon"></span><span class="typewriter-cursor" aria-hidden="true"></span>
         </p>
         <p class="hero-location">Gies College of Business &bull; University of Illinois Urbana-Champaign</p>
-        <p class="hero-scholarship">Win up to <strong>$500 scholarship</strong> per team member &mdash; <a href="#prizes" style="color:var(--orange-light);text-decoration:underline;">see prizes</a></p>
+        <ul class="hero-stats" aria-label="Event by the numbers">
+          <li><span class="hero-stat-num">72</span><span class="hero-stat-label">Students</span></li>
+          <li><span class="hero-stat-num">22</span><span class="hero-stat-label">Agentic AI systems</span></li>
+          <li><span class="hero-stat-num">24</span><span class="hero-stat-label">Hours, non-stop</span></li>
+          <li><span class="hero-stat-num">5</span><span class="hero-stat-label">Business tracks</span></li>
+        </ul>
         <div class="hero-buttons">
+          <a class="btn-primary magnetic" href="docs/impact-report/">Read the Impact Report</a>
           <a class="btn-secondary magnetic" href="#winners">See Winners</a>
-          <a class="btn-secondary magnetic" href="#about">Learn More</a>
         </div>
       </div>
 
@@ -2154,23 +2180,23 @@
       <div class="container">
         <p class="section-label reveal" style="text-align:center">PROCESS</p>
         <h2 class="section-title reveal" style="text-align:center">How It Works</h2>
-        <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto;">Three steps from idea to impact.</p>
+        <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto;">Three steps from idea to impact &mdash; here&rsquo;s how it ran.</p>
 
         <div class="steps">
           <div class="step reveal reveal-delay-1">
             <div class="step-number">1</div>
-            <h3>Register</h3>
-            <p>Sign up as an individual or team. Open to all on-campus Gies undergrad and grad students.</p>
+            <h3>Registered</h3>
+            <p>Students signed up as individuals or teams &mdash; open to all on-campus Gies undergrad and grad students.</p>
           </div>
           <div class="step reveal reveal-delay-2">
             <div class="step-number">2</div>
-            <h3>Build</h3>
-            <p>Choose a track, form your team, and spend 24 hours building a solution with mentorship and resources.</p>
+            <h3>Built</h3>
+            <p>Teams chose a track and spent 24 hours building an agentic AI solution with mentorship and resources.</p>
           </div>
           <div class="step reveal reveal-delay-3">
             <div class="step-number">3</div>
-            <h3>Pitch</h3>
-            <p>Present your project to industry judges. Top teams win prizes and get connected with industry leaders.</p>
+            <h3>Pitched</h3>
+            <p>Teams presented to industry judges. Top teams won scholarships and connected with industry leaders.</p>
           </div>
         </div>
       </div>
@@ -2357,7 +2383,7 @@
       <div class="container">
         <p class="section-label reveal" style="text-align:center">PREPARE</p>
         <h2 class="section-title reveal" style="text-align:center">Pre-Build-a-Thon Workshops</h2>
-        <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto;">Get a head start. These free workshops equip you with the skills and frameworks you need to hit the ground running.</p>
+        <p class="section-subtitle reveal" style="text-align:center; margin: 0 auto;">In the three weeks before the build, five free workshops equipped students with the skills and frameworks to hit the ground running.</p>
 
         <div class="workshops-grid">
           <div class="workshop-card reveal reveal-delay-1">
@@ -2384,7 +2410,7 @@
               <li>Mapping Gies business unit challenges to potential AI workflow solutions</li>
             </ul>
             <a class="workshop-cta" href="https://luma.com/yq8hn4uw" target="_blank" rel="noopener">
-              RSVP on Luma
+              View on Luma
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
@@ -2412,7 +2438,7 @@
               <li>Understanding business workflow automation fundamentals</li>
             </ul>
             <a class="workshop-cta" href="https://luma.com/t31u4esg" target="_blank" rel="noopener">
-              RSVP on Luma
+              View on Luma
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
@@ -2441,7 +2467,7 @@
               <li>Testing and iterating on agent responses</li>
             </ul>
             <a class="workshop-cta" href="https://luma.com/kxzvfvqw" target="_blank" rel="noopener">
-              RSVP on Luma
+              View on Luma
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
@@ -2470,7 +2496,7 @@
               <li>Live demo best practices and backup plans</li>
             </ul>
             <a class="workshop-cta" href="https://luma.com/d3lrygj6" target="_blank" rel="noopener">
-              RSVP on Luma
+              View on Luma
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
@@ -2499,7 +2525,7 @@
               <li>Debugging and monitoring multi-agent systems</li>
             </ul>
             <a class="workshop-cta" href="https://luma.com/59q2g61d" target="_blank" rel="noopener">
-              RSVP on Luma
+              View on Luma
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
@@ -2527,7 +2553,7 @@
               <li>Tips &amp; tricks to prepare for the Build-a-Thon</li>
             </ul>
             <a class="workshop-cta" href="https://luma.com/sjzwtaso" target="_blank" rel="noopener">
-              RSVP on Luma
+              View on Luma
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
@@ -2561,7 +2587,7 @@
               <div class="faq-icon" aria-hidden="true"></div>
             </button>
             <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">The Gies Buildathon is open to all currently enrolled on-campus Gies College of Business undergraduate and graduate students. Whether you're studying finance, marketing, IS, or any other Gies program &mdash; if you want to build and innovate, you belong here.</div>
+              <div class="faq-answer-inner">The Gies Buildathon was open to all currently enrolled on-campus Gies College of Business undergraduate and graduate students &mdash; spanning finance, marketing, IS, accountancy, MSBA, and more.</div>
             </div>
           </div>
 
@@ -2581,7 +2607,7 @@
               <div class="faq-icon" aria-hidden="true"></div>
             </button>
             <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">Teams must have 2 to 4 members &mdash; solo participation is not allowed. You can register with a pre-formed team or sign up individually, and we'll host a team-forming mixer at the start of the event to help you find teammates with complementary skills.</div>
+              <div class="faq-answer-inner">Teams had 2 to 4 members &mdash; solo participation was not allowed. Students could register with a pre-formed team or sign up individually, and a team-forming mixer at the start of the event helped people find teammates with complementary skills.</div>
             </div>
           </div>
 
@@ -2611,7 +2637,7 @@
               <div class="faq-icon" aria-hidden="true"></div>
             </button>
             <div class="faq-answer" role="region">
-              <div class="faq-answer-inner">No! The Gies Buildathon is completely free to attend. We'll provide meals, snacks, swag, and all the resources you need for the 24 hours.</div>
+              <div class="faq-answer-inner">No &mdash; the Gies Buildathon was completely free to attend. Meals, snacks, swag, and all the resources needed for the 24 hours were provided.</div>
             </div>
           </div>
         </div>

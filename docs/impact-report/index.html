@@ -114,6 +114,43 @@
     border-top: 1px solid var(--rule);
   }
   .footer a { color: var(--muted); }
+  .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin: 0 0 14px;
+  }
+  .statband {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 36px;
+    margin: 24px 0 28px;
+    padding: 22px 24px;
+    background: var(--navy);
+    border-radius: 8px;
+  }
+  .statband li {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+  }
+  .statband-num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    color: #fff;
+  }
+  .statband-label {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin-top: 4px;
+  }
   @media (max-width: 600px) {
     body { font-size: 17px; }
     h1 { font-size: 34px; }
@@ -128,9 +165,16 @@
   <a href="../../index.html">← Gies AI for Impact Build-A-Thon</a>
 </div>
 <main>
+<p class="eyebrow">Event complete &middot; April 23&ndash;24, 2026</p>
 <h1 id="build-to-learn-learn-to-build">Build to Learn, Learn to Build</h1>
 <h3 id="a-24-hour-story-of-what-gies-students-can-ship">A 24-Hour Story of What Gies Students Can Ship</h3>
 <p><em>Spring 2026 · Gies College of Business · University of Illinois Urbana-Champaign</em></p>
+<ul class="statband" aria-label="By the numbers">
+  <li><span class="statband-num">72</span><span class="statband-label">Students</span></li>
+  <li><span class="statband-num">22</span><span class="statband-label">Agentic AI systems</span></li>
+  <li><span class="statband-num">24</span><span class="statband-label">Hours, non-stop</span></li>
+  <li><span class="statband-num">5</span><span class="statband-label">Business tracks</span></li>
+</ul>
 <p><em>Prepared for college leadership, project champions, mentors, judges, the keynote partner, the Office of the Provost, and prospective future sponsors.</em></p>
 <hr />
 <h2 id="the-premise">The Premise</h2>
